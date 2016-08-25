@@ -28,17 +28,10 @@
 <body>
 	@yield('contenido')
 
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore iure aperiam asperiores, alias unde culpa, quisquam veritatis, magnam soluta labore dolor! Perspiciatis repellendus quia commodi, est, maiores corporis labore impedit.
-
 	<script src="{{asset('full-slider/js/jquery.js')}}"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="{{asset('full-slider/js/bootstrap.min.js')}}"></script>
     <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
 	@yield('js')
 </body>
 </html>
