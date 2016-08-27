@@ -1,0 +1,86 @@
+@font-face {
+  font-family: telegrafico;
+  src: url("../fonts/telegrafico.ttf");
+}
+* {
+  font-family: telegrafico;
+}
+a:link,
+a:visited,
+a:hover {
+  text-decoration: none !important;
+  color: #fff;
+}
+.carousel-caption {
+  top: 0;
+}
+.carousel-indicators li {
+  margin-right: 10px !important;
+}
+.scroll-down {
+  width: 100%;
+  over-flow: hidden;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  line-height: 5px;
+  text-decoration: none;
+}
+.scroll-down .btn-scroll {
+  color: #00a651;
+  font-size: 50px;
+}
+.scroll-down .btn-scroll:link,
+.scroll-down .btn-scroll:visited,
+.scroll-down .btn-scroll:hover {
+  text-decoration: none !important;
+}
+.scroll-down .btn-scroll:hover {
+  font-size: 52px;
+}
+.scroll-down .scroll-text {
+  color: #fff;
+  font-size: 18px;
+}
+.busqueda-portada {
+  visibility: hidden;
+}
+@media (min-width: 1200px) {
+  .p {
+    color: #f00;
+  }
+}
+@media (min-width: 1200px) {
+  .carousel-indicators li {
+    float: left;
+    margin-right: 10px !important;
+  }
+  .busqueda-portada {
+    visibility: visible;
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    border: 1px solid #fff;
+    color: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    line-height: 15px;
+    padding: 6px;
+  }
+  .busqueda-portada:hover {
+    color: #fff;
+  }
+  .busqueda-portada .icono-search {
+    padding: 6px 10px 8px 0;
+    border-right: 1px solid #fff;
+  }
+  .formulario-portada {
+    background: #000;
+    width: 350px;
+    min-height: 500px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+  }
+}
