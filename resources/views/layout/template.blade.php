@@ -34,6 +34,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="{{asset('full-slider/js/bootstrap.min.js')}}"></script>
     <!-- Script to Activate the Carousel -->
+    <script src="{{asset('/js/accion.js')}}"></script>
 	@yield('js')
 </body>
 </html>

@@ -2,6 +2,14 @@
   font-family: telegrafico;
   src: url("../fonts/telegrafico.ttf");
 }
+@font-face {
+  font-family: lemon;
+  src: url("../fonts/LemonMilk.otf");
+}
+@font-face {
+  font-family: cobert-regular;
+  src: url("../fonts/Corbert-Regular.otf");
+}
 * {
   font-family: telegrafico;
 }
@@ -10,6 +18,9 @@ a:visited,
 a:hover {
   text-decoration: none !important;
   color: #fff;
+}
+.scrollUp {
+  visibility: hidden;
 }
 .carousel-caption {
   top: 0;
@@ -45,21 +56,147 @@ a:hover {
 .busqueda-portada {
   visibility: hidden;
 }
+.buscar {
+  background: #ee1c24;
+  border: 2px solid #fff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.formulario-portada input,
+.formulario-portada select {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+.carousel-caption {
+  font-family: lemon;
+}
+.destacados {
+  padding: 30px 0 70px 0;
+  background: #000;
+}
+.destacados .wrap {
+  width: 80%;
+  min-height: 50px;
+  overflow: hidden;
+  margin: auto;
+}
+.destacados .wrap .title-destacados {
+  padding: 30px 0;
+}
+.destacados .wrap .title-destacados span {
+  font-size: 30px;
+  font-family: cobert-regular;
+  color: #4b4b4d;
+  position: relative;
+}
+.destacados .wrap .apartamento {
+  border: 1px solid #808080;
+  margin-bottom: 20px;
+}
+.destacados .wrap .apartamento .img-apartamento {
+  max-height: 250px;
+}
+.destacados .wrap .tipo-apartamento {
+  background: #ed1b23;
+  color: #fff;
+  font-size: 19px;
+  padding: 5px 15px;
+}
+.destacados .wrap .descripcion {
+  padding: 7px 20px;
+  color: #fff;
+  font-family: cobert-regular;
+  line-height: 15px;
+}
+.destacados .wrap .descripcion span {
+  color: #ffcc29;
+  font-size: 19px;
+  font-family: cobert-regular;
+  position: relative;
+}
+.destacados .wrap .descripcion span:after,
+.destacados .wrap .descripcion span:before {
+  content: '';
+  width: 45px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  right: -55px;
+}
+.destacados .wrap .descripcion span:before {
+  left: -55px;
+}
+.destacados .wrap .descripcion table {
+  width: 100%;
+  text-align: center;
+}
+.destacados .wrap .descripcion table td {
+  padding: 4px 0;
+}
+.footer {
+  background: #4b4b4d;
+  color: #fff;
+  padding: 30px;
+}
+.footer ul li {
+  font-family: cobert-regular;
+  list-style: none;
+}
+.footer ul li:first-child {
+  position: relative;
+  font-family: telegrafico;
+  font-size: 17px;
+  line-height: 50px;
+}
+.footer ul li:first-child:after {
+  content: '';
+  width: 130px;
+  height: 2px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  background: #fff;
+}
+.footer .copyright {
+  font-family: cobert-regular;
+  padding: 20px 0;
+}
 @media (min-width: 1200px) {
   .p {
     color: #f00;
   }
 }
 @media (min-width: 1200px) {
+  .scrollUp {
+    visibility: visible;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    padding: 4px;
+  }
+  .scrollUp span {
+    font-size: 40px;
+    color: #00a651;
+  }
+  .carousel-indicators {
+    left: 45% !important;
+    bottom: 30px;
+  }
   .carousel-indicators li {
     float: left;
-    margin-right: 10px !important;
+    margin-right: 30px !important;
   }
   .busqueda-portada {
     visibility: visible;
     position: absolute;
-    top: 10%;
-    right: 15%;
+    top: 70px;
+    left: 78%;
     border: 1px solid #fff;
     color: #fff;
     -webkit-border-radius: 2px;
@@ -67,6 +204,7 @@ a:hover {
     border-radius: 2px;
     line-height: 15px;
     padding: 6px;
+    cursor: pointer;
   }
   .busqueda-portada:hover {
     color: #fff;
@@ -76,11 +214,41 @@ a:hover {
     border-right: 1px solid #fff;
   }
   .formulario-portada {
-    background: #000;
-    width: 350px;
+    background: rgba(206,206,206,0.54);
+    display: none;
+    width: 320px;
     min-height: 500px;
+    padding: 50px 20px 30px 20px;
     position: absolute;
-    top: 30px;
-    left: 0;
+    top: 100px;
+    left: 78%;
+  }
+  .item .img-1 {
+    padding-top: 20%;
+  }
+  .item .img-2 {
+    padding-top: 20%;
+  }
+  .item .img-3 {
+    padding-top: 26%;
+  }
+  .item .img-4 {
+    padding-top: 20%;
+  }
+  .item .carousel-caption h2 {
+    font-size: 40px !important;
+  }
+  .destacados .title-destacados span:after,
+  .destacados .title-destacados span:before {
+    content: '';
+    width: 100px;
+    height: 1px;
+    background: #8b8b8d;
+    position: absolute;
+    top: 50%;
+    right: -105px;
+  }
+  .destacados .title-destacados span:before {
+    left: -105px;
   }
 }

@@ -1,5 +1,6 @@
 @extends('layout.template')
 @section('contenido')
+    @include('include.scrollUp')
     <!-- Full Page Image Background Carousel Header -->
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -15,43 +16,83 @@
             <div class="item active">
                 <!-- Set the first background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('/img/portada/01.png')"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 1</h2>
+                <div class="carousel-caption img-1">
+                    <h2 class="text-left">
+                        NUNCA FUE TAN FÁCIL CONSEGUIR <br>
+                        PROPIEDADEN CARTAGENA.
+                    </h2>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('/img/portada/02.png');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 2</h2>
+                <div class="carousel-caption img-2">
+                    <h2 class="text-left pull-right">SU INVERSIÓN EN LAS <br>
+                    MEJORES MANOS.</h2>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('/img/portada/03.png');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 3</h2>
+                <div class="carousel-caption img-3">
+                    <h2 class="text-left pull-right">
+                        AYUDAMOS A NUESTROS <br>
+                        CLIENTES A TOMAR BUENAS <br>
+                        DECISIONES
+                    </h2>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('/img/portada/04.png');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 4</h2>
+                <div class="carousel-caption img-4">
+                    <h2>DÉJAMOS GUIARTE A CASA</h2>
                 </div>
             </div>
         </div>
         {{-- busqueda --}}
-        <a href="#" class="busqueda-portada">
+        <div class="busqueda-portada">
             <span class="icon-search icono-search"></span>
             BUSCAR APARTAMENTO
-            <span class="formulario-portada">
-                
-            </span>
-        </a>
+        </div>
+        <!--Formulario de busqueda-->
+        <div class="formulario-portada">
+            <form action="">
+                <div class="form-group">
+                    <select name="" id="" class="form-control">
+                        <option value="1">Calle Nueva</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select name="" id="" class="form-control">
+                        <option value="1">Calle Nueva</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select name="" id="" class="form-control">
+                        <option value="1">Calle Nueva</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select name="" id="" class="form-control">
+                        <option value="1">Calle Nueva</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select name="" id="" class="form-control">
+                        <option value="1">Calle Nueva</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <a href="" class="btn-danger text-center btn-lg btn-block buscar">
+                        BUSCAR
+                    </a>
+                </div>
+            </form>
+        </div>
         {{-- scroll down --}}
         <div class="scroll-down text-center">
-            <a href="#" class="btn-scroll">
+            <a href="#destacados" class="btn-scroll scroll">
                 <span class="icon-arrow-down arrow-scroll"></span>
                 
                 <p class="scroll-text">
@@ -60,16 +101,62 @@
             </a>
         </div>
     </header>
-    <div class="container">
-        <div class="col-lg-12">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores pariatur accusantium quod facere, temporibus totam placeat perspiciatis, quisquam aut eaque? Sit dolores commodi doloremque, aliquid et hic. Voluptatibus, perferendis dolore.</p>
+    <!-- Destacados-->
+    <div class="destacados" id="destacados">
+        <div class="container">
+            <div class="wrap">
+                <div class="title-destacados text-center">
+                    <span>INMUEBLES DETACADOS</span>
+                </div>
+                <!--Item-->
+                <div class="col-lg-4">
+                    <div class="apartamento">
+                        <div class="img-apartamento img-responsive">
+                            <img class="img-responsive" src="{{asset('img/apartamento.jpg')}}" alt="">
+                        </div>
+                        <div class="tipo-apartamento text-right">
+                            ARRIENDO
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="text-center">APARTAMENTO</h3>
+                            <p class="text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium officia ex esse, numquam ea, nesciunt nihil sunt ratione earum velit, delectus libero? Alias odit, iure omnis eos illum blanditiis, sunt!
+                            </p>
+                            <p class="precio text-center">
+                                <span>
+                                    $ 1.300.000
+                                </span>
+                            </p>
+                            <table width="100%">
+                                <tr>
+                                    <td>Area</td>
+                                    <td>Habs</td>
+                                    <td>Baños</td>
+                                    <td>Parq</td>
+                                </tr>
+                                <tr>
+                                    <td>115M2</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <!--Pie de Pagina-->
+    @include('include.footer')
 @endsection
 @section('js')
     <script>
-        $('.carousel').carousel({
-            interval: 7000 //changes the speed
-        })
+        $(window).on('load', function(){
+            $('.carousel').carousel();
+            $('.busqueda-portada').on('click', function(){
+                $('.formulario-portada').slideToggle();
+            });
+        });
     </script>
 @endsection

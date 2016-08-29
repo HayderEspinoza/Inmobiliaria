@@ -1,12 +1,20 @@
 @font-face
 	font-family: telegrafico
 	src: url("../fonts/telegrafico.ttf")
+@font-face
+	font-family: lemon
+	src: url("../fonts/LemonMilk.otf")
+@font-face
+	font-family: cobert-regular
+	src: url("../fonts/Corbert-Regular.otf")
 *
 	font-family telegrafico
 a
 	&:link, &:visited, &:hover
 		text-decoration none !important
 		color white
+.scrollUp
+	visibility hidden
 .carousel-caption
 	top 0
 .carousel-indicators
@@ -32,3 +40,86 @@ a
 		font-size 18px
 .busqueda-portada
 	visibility hidden
+.buscar
+	background #ee1c24
+	border 2px solid white
+	border-radius 0
+.formulario-portada
+	input, select
+		border-radius 0 !important
+.carousel-caption
+	font-family lemon
+.destacados
+	padding 30px 0 70px 0
+	background #000
+	.wrap
+		width 80%
+		min-height 50px
+		overflow hidden
+		margin auto
+		.title-destacados
+			padding 30px 0
+			span
+				font-size 30px
+				font-family cobert-regular
+				color #4b4b4d
+				position relative				
+		.apartamento
+			border 1px solid grey
+			margin-bottom 20px
+			.img-apartamento
+				max-height 250px
+		.tipo-apartamento
+			background #ed1b23
+			color white
+			font-size 19px
+			padding 5px 15px
+		.descripcion
+			padding 7px 20px
+			color white
+			font-family cobert-regular
+			line-height 15px
+			span
+				color #ffcc29
+				font-size 19px
+				font-family cobert-regular
+				position relative
+				&:after, &:before
+					content ''
+					width 45px
+					height 1px
+					background white
+					position absolute
+					top 50%
+					right -55px
+				&:before
+					left -55px
+			table
+				width 100%
+				text-align center
+				td
+					padding 4px 0
+.footer
+	background #4b4b4d
+	color white
+	padding 30px
+	ul
+		li
+			font-family cobert-regular
+			list-style none
+			&:first-child
+				position relative
+				font-family telegrafico
+				font-size 17px
+				line-height 50px
+				&:after
+					content ''
+					width 130px
+					height 2px
+					position absolute
+					bottom 10px
+					left 0
+					background white
+	.copyright
+		font-family cobert-regular
+		padding 20px 0
