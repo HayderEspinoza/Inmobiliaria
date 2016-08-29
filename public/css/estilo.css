@@ -196,7 +196,7 @@ a:hover {
     visibility: visible;
     position: absolute;
     top: 70px;
-    left: 78%;
+    left: 75%;
     border: 1px solid #fff;
     color: #fff;
     -webkit-border-radius: 2px;
@@ -221,7 +221,7 @@ a:hover {
     padding: 50px 20px 30px 20px;
     position: absolute;
     top: 100px;
-    left: 78%;
+    left: 75%;
   }
   .item .img-1 {
     padding-top: 20%;

@@ -19,7 +19,7 @@
                 <div class="carousel-caption img-1">
                     <h2 class="text-left">
                         NUNCA FUE TAN FÁCIL CONSEGUIR <br>
-                        PROPIEDADEN CARTAGENA.
+                        PROPIEDADES CARTAGENA.
                     </h2>
                 </div>
             </div>
