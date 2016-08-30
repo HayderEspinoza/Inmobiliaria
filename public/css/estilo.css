@@ -76,48 +76,48 @@ a:hover {
   padding: 30px 0 70px 0;
   background: #000;
 }
-.destacados .wrap {
+.wrap {
   width: 80%;
   min-height: 50px;
   overflow: hidden;
   margin: auto;
 }
-.destacados .wrap .title-destacados {
+.title-destacados {
   padding: 30px 0;
 }
-.destacados .wrap .title-destacados span {
+.title-destacados span {
   font-size: 30px;
   font-family: cobert-regular;
   color: #4b4b4d;
   position: relative;
 }
-.destacados .wrap .apartamento {
+.apartamento {
   border: 1px solid #808080;
   margin-bottom: 20px;
 }
-.destacados .wrap .apartamento .img-apartamento {
+.apartamento .img-apartamento {
   max-height: 250px;
 }
-.destacados .wrap .tipo-apartamento {
+.tipo-apartamento {
   background: #ed1b23;
   color: #fff;
   font-size: 19px;
   padding: 5px 15px;
 }
-.destacados .wrap .descripcion {
+.descripcion {
   padding: 7px 20px;
   color: #fff;
   font-family: cobert-regular;
   line-height: 15px;
 }
-.destacados .wrap .descripcion span {
+.descripcion span {
   color: #ffcc29;
   font-size: 19px;
   font-family: cobert-regular;
   position: relative;
 }
-.destacados .wrap .descripcion span:after,
-.destacados .wrap .descripcion span:before {
+.descripcion span:after,
+.descripcion span:before {
   content: '';
   width: 45px;
   height: 1px;
@@ -126,15 +126,55 @@ a:hover {
   top: 50%;
   right: -55px;
 }
-.destacados .wrap .descripcion span:before {
+.descripcion span:before {
   left: -55px;
 }
-.destacados .wrap .descripcion table {
+.descripcion table {
   width: 100%;
   text-align: center;
 }
-.destacados .wrap .descripcion table td {
+.descripcion table td {
   padding: 4px 0;
+}
+.wrap-busqueda {
+  padding: 40px 0 0 0;
+}
+.wrap-busqueda .formulario {
+  background: #4b4b4d;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.wrap-busqueda .formulario .title-formulario {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+  font-size: 18px;
+}
+.wrap-busqueda .formulario input,
+.wrap-busqueda .formulario select {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.text-pagination {
+  color: #fff;
+  font-family: cobert-regular;
+}
+.pagination li a {
+  margin-right: 5px;
+  background: transparent;
+  color: #fff;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
+  font-family: cobert-regular;
+  border-color: #333;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.pagination li a:hover {
+  background: #4b4b4d;
+  color: #fff;
 }
 .footer {
   background: #4b4b4d;

@@ -12,3 +12,5 @@
 */
 
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);	
+Route::get('/apartamentos', ['as' => 'web.apartamentos', 'uses' => 'HomeController@apartamentos']);	
+Route::get('/apartamento/{id?}', ['as' => 'web.detalle', 'uses' => 'HomeController@detalle']);	

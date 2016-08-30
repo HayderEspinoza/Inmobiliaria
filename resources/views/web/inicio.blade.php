@@ -1,6 +1,5 @@
 @extends('layout.template')
 @section('contenido')
-    @include('include.scrollUp')
     <!-- Full Page Image Background Carousel Header -->
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -149,6 +148,8 @@
     </div>
     <!--Pie de Pagina-->
     @include('include.footer')
+    <!--Scroll Up-->
+    @include('include.scrollUp', ['id' => 'myCarousel'])
 @endsection
 @section('js')
     <script>

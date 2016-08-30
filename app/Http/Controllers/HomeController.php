@@ -12,4 +12,12 @@ class HomeController extends Controller
     {
     	return view('web.inicio');
     }
+    public function apartamentos()
+    {
+    	return view('web.apartamentos');
+    }
+    public function detalle($id='')
+    {
+    	return view('web.detalle');
+    }
 }
