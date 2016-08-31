@@ -2,6 +2,7 @@
 @section('contenido')
     <!-- Full Page Image Background Carousel Header -->
     <header id="myCarousel" class="carousel slide">
+        @include('include.menu')
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>

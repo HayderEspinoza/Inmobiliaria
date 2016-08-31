@@ -19,6 +19,55 @@ a:hover {
   text-decoration: none !important;
   color: #fff;
 }
+.logo {
+  font-size: 20px;
+  line-height: 15px;
+}
+.logo .one {
+  color: #fff;
+}
+.logo .two {
+  color: #f1cb3f;
+  font-size: 22px;
+}
+.menu-lista {
+  padding: 100px 0 50px 0;
+  text-align: center;
+  font-size: 24px;
+}
+.menu-lista li {
+  border-bottom: 1px solid #59595b;
+  list-style: none;
+  padding: 10px 0;
+  transition: 0.5s all ease-out;
+}
+.menu-lista li a {
+  font-family: cobert-regular;
+  color: #59595b;
+  transition: 0.5s all ease-out;
+}
+.menu-lista li:hover {
+  border-color: #fff;
+}
+.menu-lista li:hover a {
+  color: #f1cb3f;
+}
+.redes-sociales {
+  list-style: none;
+  padding: 0;
+}
+.redes-sociales li {
+  display: inline-block;
+  width: 19%;
+}
+.redes-sociales li a {
+  font-size: 35px;
+  color: #59595b;
+  transition: 0.7s color ease;
+}
+.redes-sociales li a:hover {
+  color: #fff;
+}
 .scrollUp {
   visibility: hidden;
 }
@@ -210,6 +259,15 @@ a:hover {
   }
 }
 @media (min-width: 1200px) {
+  .menu {
+    background: #030304;
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 90;
+    padding: 100px 80px 0 80px;
+  }
   .scrollUp {
     visibility: visible;
     position: fixed;

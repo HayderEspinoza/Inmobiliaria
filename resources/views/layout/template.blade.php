@@ -15,6 +15,7 @@
 
     <!-- Custom CSS -->
     <link href="{{ asset('full-slider/css/full-slider.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/pace.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/iconos.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/estilo.css') }}" rel="stylesheet">
 
@@ -35,6 +36,8 @@
     <script src="{{asset('full-slider/js/bootstrap.min.js')}}"></script>
     <!-- Script to Activate the Carousel -->
     <script src="{{asset('/js/accion.js')}}"></script>
+    <!--Pace Js-->
+    <script src="{{asset('/js/pace.min.js')}}"></script>
 	@yield('js')
 </body>
 </html>
