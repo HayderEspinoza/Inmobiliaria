@@ -1,8 +1,13 @@
 @extends('layout.template')
+@section('estilos')
+    <style>
+    </style>
+@endsection
 @section('contenido')
+    @include('include.menu')
+    @include('include.toggle')
     <!-- Full Page Image Background Carousel Header -->
     <header id="myCarousel" class="carousel slide">
-        @include('include.menu')
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -10,7 +15,6 @@
             <li data-target="#myCarousel" data-slide-to="2"></li>
             <li data-target="#myCarousel" data-slide-to="3"></li>
         </ol>
-
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
             <div class="item active">
@@ -84,7 +88,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <a href="" class="btn-danger text-center btn-lg btn-block buscar">
+                    <a href="{{route('web.apartamentos')}}" class="btn-danger text-center btn-lg btn-block buscar">
                         BUSCAR
                     </a>
                 </div>
@@ -109,7 +113,79 @@
                     <span>INMUEBLES DETACADOS</span>
                 </div>
                 <!--Item-->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="apartamento">
+                        <div class="img-apartamento img-responsive">
+                            <img class="img-responsive" src="{{asset('img/apartamento.jpg')}}" alt="">
+                        </div>
+                        <div class="tipo-apartamento text-right">
+                            ARRIENDO
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="text-center">APARTAMENTO</h3>
+                            <p class="text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium officia ex esse, numquam ea, nesciunt nihil sunt ratione earum velit, delectus libero? Alias odit, iure omnis eos illum blanditiis, sunt!
+                            </p>
+                            <p class="precio text-center">
+                                <span>
+                                    $ 1.300.000
+                                </span>
+                            </p>
+                            <table width="100%">
+                                <tr>
+                                    <td>Area</td>
+                                    <td>Habs</td>
+                                    <td>Baños</td>
+                                    <td>Parq</td>
+                                </tr>
+                                <tr>
+                                    <td>115M2</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--Item-->
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="apartamento">
+                        <div class="img-apartamento img-responsive">
+                            <img class="img-responsive" src="{{asset('img/apartamento.jpg')}}" alt="">
+                        </div>
+                        <div class="tipo-apartamento text-right">
+                            ARRIENDO
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="text-center">APARTAMENTO</h3>
+                            <p class="text-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium officia ex esse, numquam ea, nesciunt nihil sunt ratione earum velit, delectus libero? Alias odit, iure omnis eos illum blanditiis, sunt!
+                            </p>
+                            <p class="precio text-center">
+                                <span>
+                                    $ 1.300.000
+                                </span>
+                            </p>
+                            <table width="100%">
+                                <tr>
+                                    <td>Area</td>
+                                    <td>Habs</td>
+                                    <td>Baños</td>
+                                    <td>Parq</td>
+                                </tr>
+                                <tr>
+                                    <td>115M2</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--Item-->
+                <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
                             <img class="img-responsive" src="{{asset('img/apartamento.jpg')}}" alt="">

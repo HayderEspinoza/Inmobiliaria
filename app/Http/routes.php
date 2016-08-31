@@ -15,4 +15,6 @@ Route::auth();
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);	
 Route::get('/apartamentos', ['as' => 'web.apartamentos', 'uses' => 'HomeController@apartamentos']);	
 Route::get('/apartamento/{id?}', ['as' => 'web.detalle', 'uses' => 'HomeController@detalle']);	
+Route::get('/servicios', ['as' => 'web.servicios', 'uses' => 'HomeController@servicios']);	
+Route::get('/inmobiliaria', ['as' => 'web.inmobiliaria', 'uses' => 'HomeController@inmobiliaria']);	
 Route::get('/home', 'HomeController@index');

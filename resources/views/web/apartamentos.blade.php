@@ -4,10 +4,19 @@
 		body{
 			background: #191a1c;
 		}
+        .logo-apartamentos{
+            padding: 50px 0 100px 0;
+        }
 	</style>
 @endsection
 @section('contenido')
+    @include('include.menu')
+    @include('include.toggle')
 	<div class="container" id="top">
+        <div class="col-lg-12 logo logo-apartamentos">
+            <span class="one">INMOBILIARIA</span><br>
+            <span class="two">SANTO DOMINGO CARTAGENA</span>
+        </div>
 		<div class="col-lg-12 text-pagination">
 			MOSTRANDO 1 DE 12 INMUEBLES
 		</div>

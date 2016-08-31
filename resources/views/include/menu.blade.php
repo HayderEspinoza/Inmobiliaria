@@ -1,4 +1,4 @@
-<div class="menu">
+<div class="menu menu-hidden">
 	<div class="col-lg-12 logo">
 		<span class="one">INMOBILIARIA</span><br>
 		<span class="two">SANTO DOMINGO CARTAGENA</span>
@@ -6,13 +6,18 @@
 	<div class="col-lg-12">
 		<ul class="menu-lista">
 			<li>
-				<a href="#">
-					SERVICIOS
+				<a href="/">
+					INICIO
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="{{route('web.inmobiliaria')}}">
 					INMOBILIARIA
+				</a>
+			</li>
+			<li>
+				<a href="{{route('web.servicios')}}">
+					SERVICIOS
 				</a>
 			</li>
 			<li>
@@ -61,4 +66,7 @@
 			</li>
 		</ul>
 	</div>
+	<a href="#" class="cerrar">
+		<span class="icon-close"></span>
+	</a>
 </div>	

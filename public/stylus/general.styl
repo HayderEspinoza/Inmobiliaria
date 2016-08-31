@@ -21,8 +21,49 @@ a
 	.two
 		color #f1cb3f
 		font-size 22px
+.toggle
+	background #ffcc29
+	position fixed
+	left 0
+	top 50%
+	z-index 89
+	line-height 12px
+	text-align center
+	padding 37px 12px
+	margin-top -65px
+	.icon-menu
+		font-size 40px
+	.toggle-name
+		font-size 15px
+		color #222
+.menu
+	height 100%
+	background #030304
+	padding 80px 60px 0 100px
+	position fixed
+	transition .5s margin ease
+	left 0
+	z-index 90
+	.cerrar
+		position absolute
+		left 5%
+		top 50%
+		font-size 26px
+		color #59595b
+		margin-top -15px
+		background #121417
+		border-radius(50%)
+		padding 6px
+		line-height 0
+		span
+			transition .5s color ease-in
+		&:hover
+			span
+				color #ccc
+.menu-hidden
+	margin-left -500px	
 .menu-lista
-	padding 100px 0 50px 0
+	padding 50px 0 50px 0
 	text-align center
 	font-size 24px
 	li
@@ -51,7 +92,7 @@ a
 			&:hover
 				color white
 .scrollUp
-	visibility hidden
+	display none
 .carousel-caption
 	top 0
 .carousel-indicators
@@ -82,6 +123,7 @@ a
 	border 2px solid white
 	border-radius 0
 .formulario-portada
+	display none
 	input, select
 		border-radius 0 !important
 .carousel-caption
@@ -105,6 +147,7 @@ a
 	border 1px solid grey
 	margin-bottom 20px
 	.img-apartamento
+		overflow hidden
 		max-height 250px
 .tipo-apartamento
 	background #ed1b23

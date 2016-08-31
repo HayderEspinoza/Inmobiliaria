@@ -25,4 +25,12 @@ class HomeController extends Controller
     {
         return view('web.apartamentos');
     }
+    public function servicios()
+    {
+        return view('web.servicios');   
+    }
+    public function inmobiliaria()
+    {
+        return view('web.inmobiliaria');   
+    }
 }
