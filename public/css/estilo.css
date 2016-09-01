@@ -19,6 +19,10 @@ a:hover {
   text-decoration: none !important;
   color: #fff;
 }
+.block-center {
+  float: none;
+  margin: auto;
+}
 .logo {
   font-size: 20px;
   line-height: 15px;
@@ -38,11 +42,11 @@ a:hover {
   z-index: 89;
   line-height: 12px;
   text-align: center;
-  padding: 37px 12px;
+  padding: 37px 17px;
   margin-top: -65px;
 }
 .toggle .icon-menu {
-  font-size: 40px;
+  font-size: 30px;
 }
 .toggle .toggle-name {
   font-size: 15px;
@@ -306,6 +310,49 @@ a:hover {
 .footer .copyright {
   font-family: cobert-regular;
   padding: 20px 0;
+}
+.inmobiliaria,
+.beneficios {
+  padding: 90px 0;
+  color: #fff;
+}
+.inmobiliaria h2,
+.beneficios h2,
+.inmobiliaria h1,
+.beneficios h1,
+.inmobiliaria p,
+.beneficios p {
+  font-family: cobert-regular;
+}
+.inmobiliaria p,
+.beneficios p {
+  text-align: justify;
+}
+.inmobiliaria .title,
+.beneficios .title {
+  padding-bottom: 40px;
+}
+.inmobiliaria .title h1,
+.beneficios .title h1 {
+  font-size: 60px !important;
+  line-height: 20px;
+}
+.item-beneficios {
+  padding-top: 50px;
+}
+.item-beneficios h3 {
+  padding: 0;
+  line-height: 0;
+  padding-bottom: 15px;
+}
+.servicios {
+  color: #fff;
+  font-family: cobert-regular;
+  padding: 80px 0;
+}
+.servicios p {
+  font-family: cobert-regular;
+  font-size: 16px;
 }
 @media (min-width: 1200px) {
   .p {

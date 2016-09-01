@@ -12,11 +12,30 @@
 @section('contenido')
     @include('include.menu')
     @include('include.toggle')
-	<div class="container" id="top">
-        
+	<div class="img-inmobiliaria" id="top">
+		<img src="{{asset('img/servicios/01.png')}}" alt="" class="img-responsive">
 	</div>
-	<!--Pie de pagina-->
-	@include('include.footer')
+	<div class="container servicios" id="top">
+        <h1 class="text-center">NUESTROS SERVICIOS</h1>
+        <div class="col-lg-8 block-center">
+        	<p class="text-center">
+	        	Contamos con un amplio portafolio y equipo de profesionales altamente capacitados que lo podrán asesorar en la compra y venta de inmuebles.
+	        </p>
+        </div>
+        <div class="col-lg-12">
+        	<a href="#" class="btn">
+        		ARRIENDOS
+        	</a>
+        	<a href="#" class="btn">
+        		VENTAS
+        	</a>
+        	<a href="#" class="btn">
+        		PROYECTOS
+        	</a>
+        </div>
+	</div>
 	<!--Scroll Up-->
 	@include('include.scrollUp', ['id' => 'top'])
+	<!--Pie de pagina-->
+	@include('include.footer')
 @endsection
