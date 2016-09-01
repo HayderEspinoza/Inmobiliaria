@@ -27,12 +27,15 @@
         	<div class="row">
         		<div class="col-lg-6">
         			<p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo omnis quaerat dolor nihil cumque, cum consequuntur, voluptate eaque ad laboriosam quae inventore praesentium ea nulla possimus qui quibusdam quas distinctio!         
+                        Una joven y activa compañía cartagenera de carácter privado legalmente constituida, nutrida de ideas y conceptos innovadores, conformada por profesionales con más de 20 años de experiencia y amplio conocimiento del mercado inmobiliario, orientada a satisfacer con calidad y transparencia las necesidades y expectativas de un público exigente a través de la  prestación de servicios inmobiliarios y administración de bienes: venta, arriendo, avalúos, hipotecas y proyectos inmobiliarios,  que busca ofrecerle el mejor servicios empresarial y las mejores opciones de inversión en bienes raíces para el mejoramiento de su calidad de vida.        
                     </p>
         		</div>
         		<div class="col-lg-6">
         			<p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia debitis, adipisci, inventore excepturi repudiandae non natus blanditiis itaque asperiores pariatur, vero ex distinctio aperiam molestias cumque ipsum, sapiente nihil at.         
+                        Trabajamos con un equipo de humano con gran talento, capacidad y profesionalismo  con una amplia experiencia que se destaca por su excelencia y calidad de servicio en la solución de las necesidades inmobiliarias de todos nuestros clientes, ofreciéndoles seguridad, bienestar y confianza a la hora de invertir en Finca Raíz, actuales y a futuro.        
+                    </p>
+                    <p>
+                        Nos caracterizamos por prestar un servicio integral de alta calidad basado en la eficiencia, responsabilidad, honestidad y transparencia, nuestros pilares valores corporativos, cumpliendo con todos los requisitos establecidos por la ley.
                     </p>
         		</div>
         	</div>
@@ -42,13 +45,16 @@
         		<div class="col-lg-6">
         			<h2 class="text-center">MISIÓN</h2>
         			<p>
-        				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et nobis, eaque obcaecati id, aliquam in rem dolor vitae aspernatur dolore quod neque numquam unde eius architecto laboriosam veniam excepturi animi.
+        				Trabajamos con un equipo de humano con gran talento, capacidad y profesionalismo  con una amplia experiencia que se destaca por su excelencia y calidad de servicio en la solución de las necesidades inmobiliarias de todos nuestros clientes, ofreciéndoles seguridad, bienestar y confianza a la hora de invertir en Finca Raíz, actuales y a futuro.
         			</p>
+                    <p>
+                        Nos caracterizamos por prestar un servicio integral de alta calidad basado en la eficiencia, responsabilidad, honestidad y transparencia, nuestros pilares valores corporativos, cumpliendo con todos los requisitos establecidos por la ley.
+                    </p>
         		</div>
         		<div class="col-lg-6">
         			<h2 class="text-center">VISIÓN</h2>
         			<p>
-        				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem laboriosam repellendus incidunt praesentium maiores repellat tenetur libero dignissimos voluptate maxime, itaque ullam nihil eligendi eveniet molestias. Culpa, voluptatibus vel laboriosam.
+        				Para el 2020, posicionarnos como líder de excelencia y competitividad en asesoría en todos los aspectos que se relacionan con la adecuada concreción de las operaciones comerciales y legales entre las compañías que presten servicios en el sector inmobiliario; ser la mejor opción inmobiliaria de nuestros clientes, ofreciendo un servicio de asesoría inmobiliaria integral y profesional, dando total satisfacción a todas sus necesidades, superando sus expectativas, siendo reconocidos por nuestro profesionalismo, confianza y cumplimiento.
         			</p>
         		</div>
         	</div>
