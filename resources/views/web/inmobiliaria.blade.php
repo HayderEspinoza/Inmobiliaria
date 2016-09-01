@@ -23,7 +23,7 @@
         	<h1>SOMOS</h1>
             <h2>INMOBILIARIA SANTO DOMINGO CARTAGENA</h2>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-10 block-center">
         	<div class="row">
         		<div class="col-lg-6">
         			<p>
@@ -37,7 +37,7 @@
         		</div>
         	</div>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-10 block-center">
         	<div class="row">
         		<div class="col-lg-6">
         			<h2 class="text-center">MISIÓN</h2>
