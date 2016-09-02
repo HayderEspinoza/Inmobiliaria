@@ -151,6 +151,8 @@
             </div>
 		</div>
 	</div>
+    <!--Pie de pagina-->
+    @include('include.contacto')
 	<!--Pie de pagina-->
 	@include('include.footer')
 	<!--Scroll Up-->
