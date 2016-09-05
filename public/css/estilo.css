@@ -350,12 +350,71 @@ a:hover {
 }
 .servicios {
   color: #fff;
-  font-family: cobert-regular;
   padding: 80px 0;
 }
 .servicios p {
-  font-family: cobert-regular;
   font-size: 16px;
+}
+.servicios > * {
+  font-family: cobert-regular;
+}
+.lista-servicios {
+  text-align: right;
+}
+.lista-servicios li {
+  width: 24.7%;
+  margin: 50px 0 80px 0;
+}
+.lista-servicios li a {
+  border: 1px solid #fff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  font-size: 16px;
+  font-family: cobert-regular;
+}
+.lista-servicios li a:hover {
+  background: #615e5d;
+  color: #fff;
+}
+.lista-servicios li.active a {
+  background: #615e5d !important;
+  color: #fff;
+}
+.items-servicios {
+  margin-bottom: 40px;
+}
+.items-servicios li {
+  font-size: 16px;
+  font-family: cobert-regular;
+  position: relative;
+  list-style: none;
+}
+.items-servicios li:before {
+  content: ' ';
+  width: 7px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  left: -15px;
+  top: 45%;
+}
+.items-servicios li:first-child {
+  list-style: none !important;
+  color: #ffcc29;
+  margin-bottom: 15px;
+}
+.items-servicios li:first-child:after {
+  content: ' ';
+  width: 300px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.items-servicios li:first-child:before {
+  width: 0;
 }
 .contacto {
   background: #fff;
@@ -367,7 +426,7 @@ a:hover {
 }
 .contacto h4 {
   font-weight: bold;
-  line-height: 50px;
+  line-height: 65px;
   font-size: 16px;
 }
 .contacto input,

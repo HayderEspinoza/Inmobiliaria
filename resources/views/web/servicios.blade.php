@@ -24,15 +24,24 @@
         </div>
         <div class="col-lg-10 block-center">
             <!-- Nav tabs -->
-            <ul class="nav nav-pills col-lg-12" role="tablist" style="background:red;">
-                <li role="presentation" class="active text-center"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+            <ul class="nav nav-pills lista-servicios" role="tablist">
+                <li class="text-center col-sm-12 active">
+                    <a href="#arriendos" aria-controls="arriendos" role="tab" data-toggle="tab">ARRIENDOS</a>
+                </li>
+                <li class="text-center col-sm-12 ">
+                    <a href="#ventas" aria-controls="ventas" role="tab" data-toggle="tab">VENTAS</a>
+                </li>
+                <li class="text-center col-sm-12">
+                    <a href="#proyectos" aria-controls="proyectos" role="tab" data-toggle="tab">PROYECTOS</a>
+                </li>
+                <li class="text-center col-sm-12">
+                    <a href="#proyectos" aria-controls="proyectos" role="tab" data-toggle="tab">EVALÚOS</a>
+                </li>
             </ul>
             <!-- Tab panes -->
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="home">
-                    <ul>
+                <div role="tabpanel" class="tab-pane active" id="arriendos">
+                    <ul class="items-servicios">
                         <li>SERVICIOS AL PROPIETARIO</li>
                         <li>Gestión Comercial.</li>
                         <li>Garantía Inmobiliaria.</li>
@@ -41,7 +50,7 @@
                         <li>Promoción del inmueble en diverson medios publicitarios.</li>
                         <li>Idóneo servicio de mantenimiento a su inmueble.</li>
                     </ul>
-                    <ul>
+                    <ul class="items-servicios">
                         <li>SERVICIOS AL ARRENDADOR</li>
                         <li>Amplia oferta de inmuebles</li>
                         <li>Tenemos respuesta rápida a su estudio de arriendo.</li>
@@ -74,8 +83,8 @@
                         </div>
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="profile">
-                    <ul>
+                <div role="tabpanel" class="tab-pane" id="ventas">
+                    <ul class="items-servicios">
                         <li>BENEFICIOS PARA QUIEN VENDE</li>
                         <li>Promoción de Inmueble en diferentes medios especializados</li>
                         <li>Publicación del inmueble en nuestra pagina web</li>
@@ -83,7 +92,7 @@
                         <li>Acompañamiento jurídico durante el proceso de la venta de su inmueble</li>
                         <li>Lo asesoramos en el precio de su inmueble que desea poner en venta</li>
                     </ul>
-                    <ul>
+                    <ul class="items-servicios">
                         <li>BENEFICIOS PARA QUIEN COMPRA</li>
                         <li>Amplio inventario de inmuebles</li>
                         <li>Búsqueda ágil a traves de nuestra pagina web</li>
@@ -117,8 +126,8 @@
                         </div>
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="messages">
-                    <ul>
+                <div role="tabpanel" class="tab-pane" id="proyectos">
+                    <ul class="items-servicios">
                         <li>Podemos asesoralo en tipo de proyecto que puede hacer en determinada ubicación</li>
                         <li>Manejo, seguimiento y acompañamientoen la sala de ventas.</li>
                         <li>Elaboración y asesoria de planes de publicidad y comunicación.</li>

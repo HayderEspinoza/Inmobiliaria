@@ -241,11 +241,57 @@
 		padding-bottom 15px
 .servicios
 	color white
-	font-family cobert-regular
 	padding 80px 0
 	p
-		font-family cobert-regular
 		font-size 16px
+	& > *
+		font-family cobert-regular
+.lista-servicios
+	text-align right
+	li
+		width 24.7%
+		margin 50px 0 80px 0
+		a
+			border 1px solid white
+			border-radius(0)
+			font-size 16px
+			font-family cobert-regular
+			&:hover
+				background #615E5D
+				color white
+		&.active
+			a
+				background #615E5D !important
+				color white
+.items-servicios
+	margin-bottom 40px
+	li
+		font-size 16px
+		font-family cobert-regular
+		position relative
+		list-style none
+		&:before
+			content ' '
+			width 7px
+			height 1px
+			background white
+			position absolute
+			left -15px
+			top 45%
+	li:first-child
+		list-style none !important
+		color #FFCC29
+		margin-bottom 15px
+		&:after
+			content ' '
+			width 300px
+			height 1px
+			background white
+			position absolute
+			left 0
+			bottom 0
+		&:before
+			width 0
 //Contacto
 .contacto
 	background white
@@ -255,7 +301,7 @@
 		color #848688
 	h4
 		font-weight bold
-		line-height 50px
+		line-height 65px
 		font-size 16px
 	input, textarea
 		border-radius(0)
