@@ -12,7 +12,7 @@
 					<input type="checkbox" value="">VENDER
 				</label>
 				<label class="checkbox-inline">
-					<input type="checkbox" value="">Option AVALÚO
+					<input type="checkbox" value="">AVALÚO
 				</label>
 				<label class="checkbox-inline">
 					<input type="checkbox" value="">GERENCIA DE PROYECTOS
@@ -36,13 +36,15 @@
 						<input type="text" class="form-control" placeholder="*Teléfono">
 					</div>
 					<div class="col-lg-12 form-group">
-						<textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+						<textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Escriba su mensaje aqui"></textarea>
 					</div>
 				</div>
 			</div>
-			<p>
-				<input type="text" class="btn btn-default" value="Enviar">
-			</p>
+			<div class="row">
+				<div class="col-lg-4 block-center">
+					<input type="submit" class="btn btn-default btn-lg btn-block btn-enviar" value="Enviar">
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
