@@ -4,6 +4,7 @@ function init(e) {
 	$(".scroll").on("click", scroll);
 	$('.cerrar').on('click', cerrar);
 	$('.toggle').on('click', cerrar);
+	$('.wrap-servicio a').on('click', tabServicios);
 	$(window).on('scroll', showArrow);
 }
 function scroll(event){
@@ -22,4 +23,9 @@ function showArrow(e) {
 	} else {
 		$('.scrollUp').fadeOut();
 	}
+}
+function tabServicios(e) {
+	e.preventDefault();
+	$('.wrap-servicio a').removeClass('active');
+	$(this).addClass('active');
 }

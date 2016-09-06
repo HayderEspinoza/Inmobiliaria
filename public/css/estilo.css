@@ -10,6 +10,10 @@
   font-family: cobert-regular;
   src: url("../fonts/Corbert-Regular.otf");
 }
+@font-face {
+  font-family: cobert-italic;
+  src: url("../fonts/Corbert-Italic.otf");
+}
 * {
   font-family: telegrafico;
 }
@@ -26,6 +30,19 @@ a:hover {
   float: none;
   margin: auto;
 }
+.scrollUp {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  padding: 4px;
+}
+.scrollUp span {
+  font-size: 40px;
+  color: #00a651;
+}
 .logo {
   font-size: 20px;
   line-height: 15px;
@@ -41,24 +58,23 @@ a:hover {
   background: #ffcc29;
   position: fixed;
   left: 0;
-  top: 50%;
+  top: 0;
   z-index: 89;
   line-height: 12px;
   text-align: center;
-  padding: 37px 17px;
-  margin-top: -65px;
+  padding: 20px 7px;
 }
 .toggle .icon-menu {
-  font-size: 30px;
+  font-size: 28px;
 }
 .toggle .toggle-name {
-  font-size: 15px;
+  font-size: 14px;
   color: #222;
 }
 .menu {
   height: 100%;
   background: #030304;
-  padding: 80px 60px 0 100px;
+  padding: 70px 20px 0 20px;
   position: fixed;
   transition: 0.5s margin ease;
   left: 0;
@@ -66,8 +82,8 @@ a:hover {
 }
 .menu .cerrar {
   position: absolute;
-  left: 5%;
-  top: 50%;
+  left: 10px;
+  top: 30px;
   font-size: 26px;
   color: #59595b;
   margin-top: -15px;
@@ -180,6 +196,7 @@ a:hover {
 }
 .carousel-caption {
   font-family: lemon;
+  padding-top: 70px;
 }
 .destacados {
   padding: 30px 0 70px 0;
@@ -360,12 +377,12 @@ a:hover {
 }
 .lista-servicios {
   text-align: right;
-}
-.lista-servicios li {
-  width: 24.7%;
   margin: 50px 0 80px 0;
 }
-.lista-servicios li a {
+.lista-servicios .wrap-servicios {
+  background: #808080;
+}
+.lista-servicios a {
   border: 1px solid #fff;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -373,13 +390,10 @@ a:hover {
   font-size: 16px;
   font-family: cobert-regular;
 }
-.lista-servicios li a:hover {
+.lista-servicios a:hover,
+.lista-servicios a.active {
   background: #615e5d;
-  color: #fff;
-}
-.lista-servicios li.active a {
-  background: #615e5d !important;
-  color: #fff;
+  color: #fff !important;
 }
 .items-servicios {
   margin-bottom: 40px;
@@ -415,6 +429,59 @@ a:hover {
 }
 .items-servicios li:first-child:before {
   width: 0;
+}
+.documentos h4 {
+  color: #ffcc29;
+  font-size: 24px;
+}
+.documentos p {
+  font-family: cobert-regular;
+}
+.documentos .btn {
+  font-size: 16px;
+  border: 1px solid #fff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.requisitos {
+  background: #808080;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  line-height: 25px;
+}
+.requisitos li {
+  font-family: cobert-regular;
+}
+.requisitos li:first-child {
+  list-style: none;
+  font-weight: bold;
+}
+.link-avaluos {
+  background: #808080;
+  padding: 20px 0;
+  color: #fff;
+}
+.link-avaluos span {
+  font-family: lemon;
+  padding-right: 40px;
+}
+.link-avaluos .btn {
+  font-family: cobert-regular;
+  background: transparent;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 5px 30px;
+  border: 2px solid #fff !important;
+}
+.link-avaluos .btn:hover {
+  background: #fff;
+  color: #000;
 }
 .contacto {
   background: #fff;
@@ -452,24 +519,34 @@ a:hover {
   }
 }
 @media (min-width: 1200px) {
+  .toggle {
+    background: #ffcc29;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    z-index: 89;
+    line-height: 12px;
+    text-align: center;
+    padding: 37px 17px;
+    margin-top: -65px;
+  }
+  .icon-menu {
+    font-size: 30px;
+  }
+  .toggle-name {
+    font-size: 15px;
+    color: #222;
+  }
   .menu {
     width: 550px !important;
+    padding: 80px 60px 0 100px;
+  }
+  .menu .cerrar {
+    left: 5%;
+    top: 50%;
   }
   .menu-hidden {
     margin-left: -550px;
-  }
-  .scrollUp {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    padding: 4px;
-  }
-  .scrollUp span {
-    font-size: 40px;
-    color: #00a651;
   }
   .carousel-indicators {
     left: 45% !important;

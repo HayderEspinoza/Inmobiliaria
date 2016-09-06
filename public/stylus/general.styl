@@ -11,29 +11,28 @@
 	background #ffcc29
 	position fixed
 	left 0
-	top 50%
+	top 0
 	z-index 89
 	line-height 12px
 	text-align center
-	padding 37px 17px
-	margin-top -65px
+	padding 20px 7px
 	.icon-menu
-		font-size 30px
+		font-size 28px
 	.toggle-name
-		font-size 15px
+		font-size 14px
 		color #222
 .menu
 	height 100%
 	background #030304
-	padding 80px 60px 0 100px
+	padding 70px 20px 0 20px
 	position fixed
 	transition .5s margin ease
 	left 0
 	z-index 90
 	.cerrar
 		position absolute
-		left 5%
-		top 50%
+		left 10px
+		top 30px
 		font-size 26px
 		color #59595b
 		margin-top -15px
@@ -114,6 +113,7 @@
 		border-radius 0 !important
 .carousel-caption
 	font-family lemon
+	padding-top 70px
 .destacados
 	padding 30px 0 70px 0
 	background #000
@@ -248,21 +248,17 @@
 		font-family cobert-regular
 .lista-servicios
 	text-align right
-	li
-		width 24.7%
-		margin 50px 0 80px 0
-		a
-			border 1px solid white
-			border-radius(0)
-			font-size 16px
-			font-family cobert-regular
-			&:hover
-				background #615E5D
-				color white
-		&.active
-			a
-				background #615E5D !important
-				color white
+	margin 50px 0 80px 0
+	.wrap-servicios
+		background grey
+	a
+		border 1px solid white
+		border-radius(0)
+		font-size 16px
+		font-family cobert-regular
+		&:hover, &.active
+			background #615E5D
+			color white !important
 .items-servicios
 	margin-bottom 40px
 	li
@@ -292,6 +288,44 @@
 			bottom 0
 		&:before
 			width 0
+.documentos
+	h4
+		color #FFCC29
+		font-size 24px
+	p
+		font-family cobert-regular
+	.btn
+		font-size 16px
+		border 1px solid white
+		border-radius(0)
+.requisitos
+	background grey
+	border-radius(5px)
+	font-size 14px
+	padding-top 30px
+	padding-bottom 30px
+	line-height 25px
+	li
+		font-family cobert-regular
+	li:first-child
+		list-style none
+		font-weight bold
+.link-avaluos
+	background grey
+	padding 20px 0
+	color white
+	span
+		font-family lemon	
+		padding-right 40px
+	.btn
+		font-family cobert-regular	
+		background transparent
+		border-radius(0)
+		padding 5px 30px 
+		border 2px solid white !important
+		&:hover
+			background white
+			color black
 //Contacto
 .contacto
 	background white

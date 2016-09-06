@@ -31,7 +31,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="{{route('web.contacto')}}">
 					CONTÁCTANOS
 				</a>
 			</li>

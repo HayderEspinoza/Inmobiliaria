@@ -33,4 +33,8 @@ class HomeController extends Controller
     {
         return view('web.inmobiliaria');   
     }
+    public function contacto()
+    {
+        return view('web.contacto');
+    }
 }
