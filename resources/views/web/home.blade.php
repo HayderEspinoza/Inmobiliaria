@@ -1,6 +1,12 @@
 @extends('layout.template')
 @section('estilos')
     <style>
+        .fill{
+            overflow: hidden;
+        }
+        .item .fill h2{
+            z-index: 50;
+        }
     </style>
 @endsection
 @section('contenido')
@@ -19,38 +25,42 @@
         <div class="carousel-inner">
             <div class="item active">
                 <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('/img/portada/01.png')"></div>
-                <div class="carousel-caption img-1">
-                    <h2 class="text-left">
-                        NUNCA FUE TAN FÁCIL CONSEGUIR <br>
-                        PROPIEDADES CARTAGENA.
-                    </h2>
+                <div class="fill img-1" style="background-image:url('/img/portada/01.jpg')">
+                    <div class="container">
+                        <div class="col-lg-10">
+                            <h2>NUNCA FUE TAN FÁCIL CONSEGUIR PROPIEDADES CARTAGENA.</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('/img/portada/02.png');"></div>
-                <div class="carousel-caption img-2">
-                    <h2 class="text-left pull-right">SU INVERSIÓN EN LAS <br>
-                    MEJORES MANOS.</h2>
+                <div class="fill" style="background-image:url('/img/portada/02.jpg');">
+                    <div class="container">
+                        <div class="col-lg-12">
+                            <h2>SU INVERSIÓN EN LAS MEJORES MANOS.</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('/img/portada/03.png');"></div>
-                <div class="carousel-caption img-3">
-                    <h2 class="text-left pull-right">
-                        AYUDAMOS A NUESTROS <br>
-                        CLIENTES A TOMAR BUENAS <br>
-                        DECISIONES
-                    </h2>
+                <div class="fill" style="background-image:url('/img/portada/03.jpg');">
+                    <div class="container">
+                        <div class="col-lg-8">
+                            <h2>AYUDAMOS A NUESTROS CLIENTES A TOMAR BUENAS DECISIONES.</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('/img/portada/04.png');"></div>
-                <div class="carousel-caption img-4">
-                    <h2>DÉJAMOS GUIARTE A CASA</h2>
+                <div class="fill" style="background-image:url('/img/portada/04.jpg');">
+                    <div class="container">
+                        <div class="col-lg-12">
+                            <h2>DÉJAMOS GUIARTE A CASA.</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
