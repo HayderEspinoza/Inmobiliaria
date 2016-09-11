@@ -561,6 +561,7 @@ a:hover {
     padding-top: 25%;
   }
   .item .fill .container h2 {
+    text-align: left;
     font-size: 50px;
     padding-top: 50px;
     vertical-align: middle;
