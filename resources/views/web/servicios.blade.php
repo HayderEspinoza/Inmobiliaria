@@ -22,12 +22,12 @@
 	        	Contamos con un amplio portafolio y equipo de profesionales altamente capacitados que lo podrán asesorar en la compra y venta de inmuebles.
 	        </p>
         </div>
-        <div class="col-lg-10 block-center">
+        <div class="col-lg-12 block-center">
             <!-- Nav tabs -->
             <div class="row lista-servicios">
                 <div class="col-sm-12 block-center">
-                    <div class="col-sm-3 wrap-servicio active">
-                        <a href="#arriendos" class="btn btn-block" aria-controls="arriendos" role="tab" data-toggle="tab">ARRIENDOS</a>
+                    <div class="col-sm-3 wrap-servicio">
+                        <a href="#arriendos" class="btn active btn-block" aria-controls="arriendos" role="tab" data-toggle="tab">ARRIENDOS</a>
                     </div>
                     <div class="col-sm-3 wrap-servicio">
                         <a href="#ventas" class="btn btn-block" aria-controls="ventas" role="tab" data-toggle="tab">VENTAS</a>
@@ -60,7 +60,7 @@
                         <li>Equipo altamente calificado en competencias inmobiliarias</li>
                         <li>Atención personalizada y asesoría en los inmuebles de acuerdo a las necesidades del cliente</li>
                     </ul>
-                    <div class="col-lg-4 documentos">
+                    <div class="col-lg-12 documentos">
                         <h4>DESCARGAR</h4>
                         <div class="btn">
                             DESCARGAR REQUISITOS
@@ -103,7 +103,7 @@
                         <li>Hacemos estudios juridicos del inmueble, para conocer si esta libre gravámenes y/o limitaciones</li>
                         <li>Ingreso constante de nuevos inmubeles y proyectos</li>
                     </ul>
-                    <div class="col-lg-4 documentos">
+                    <div class="col-lg-12 documentos">
                         <h4>DESCARGAR</h4>
                         <div class="btn">
                             DESCARGAR REQUISITOS
