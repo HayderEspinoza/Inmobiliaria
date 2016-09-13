@@ -1,6 +1,6 @@
 <div class="contacto">
 	<div class="container">
-		<div class="col-lg-10 block-center text-center">
+		<div class="col-lg-12 block-center text-center">
 			<h4>CONTÁCTANOS</h4>
 			<h2>ESTAMOS DISPUESTOS A AYUDARTE</h2>
 			<h4>SI ESTÁ INTERESADO EN:</h4>
@@ -41,7 +41,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-4 block-center">
+				<div class="col-lg-6 block-center">
 					<input type="submit" class="btn btn-default btn-lg btn-block btn-enviar" value="Enviar">
 				</div>
 			</div>

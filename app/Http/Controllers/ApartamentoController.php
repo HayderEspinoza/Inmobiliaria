@@ -11,7 +11,4 @@ class ApartamentoController extends Controller
     public function index()
     {
     }
-    public function detalle($id='')
-    {
-    }
 }
