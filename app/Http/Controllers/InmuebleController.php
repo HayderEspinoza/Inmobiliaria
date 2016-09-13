@@ -21,4 +21,9 @@ class InmuebleController extends Controller
     						->lists('nombre', 'id');
     	return view('admin.inmueble.create', compact('tipos', 'ciudades'));
     }
+    public function store(Request $request)
+    {
+        $inputs = $request->all();
+        dd($inputs);
+    }
 }

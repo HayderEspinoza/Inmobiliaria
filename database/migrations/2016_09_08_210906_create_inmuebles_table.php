@@ -20,16 +20,16 @@ class CreateInmueblesTable extends Migration
             $table->integer('habitacion');
             $table->integer('banho');
             $table->double('area', 15, 2);
-            $table->integer('parqueadero');
-            $table->integer('piscina');
-            $table->integer('cocina');
-            $table->integer('zona_residencial');
-            $table->boolean('conjunto_cerrado');
-            $table->integer('porteria');
-            $table->integer('patio');
-            $table->integer('antiguedad');
+            $table->boolean('parqueadero')->default('0');
+            $table->boolean('piscina')->default('0');
+            $table->boolean('cocina')->default('0');
+            $table->boolean('zona_residencial')->default('0');
+            $table->boolean('conjunto_cerrado')->default('0');
+            $table->boolean('porteria')->default('0');
+            $table->boolean('patio')->default('0');
+            $table->boolean('antiguedad')->default('0');
             $table->bigInteger('precio');
-            $table->string('descripcion');
+            $table->string('descripcion')->dfault('N/A');
             $table->boolean('estado')->default(1);
 
             $table->foreign('tipo_id')->references('id')->on('tipos');

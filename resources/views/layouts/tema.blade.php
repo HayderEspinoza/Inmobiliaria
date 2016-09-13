@@ -22,6 +22,12 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     @yield('css')
+    <style>
+        .block-center{
+            float:none;
+            margin:auto;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-inverse">
@@ -33,7 +39,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Inmobiliaria Santo Domingo</a>
+                <a class="navbar-brand" href="/">Inmobiliaria Santo Domingo</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
