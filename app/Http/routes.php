@@ -18,6 +18,5 @@ Route::get('/apartamento/{id?}', ['as' => 'web.detalle', 'uses' => 'HomeControll
 Route::get('/servicios', ['as' => 'web.servicios', 'uses' => 'HomeController@servicios']);	
 Route::get('/inmobiliaria', ['as' => 'web.inmobiliaria', 'uses' => 'HomeController@inmobiliaria']);
 Route::get('/contacto', ['as' => 'web.contacto', 'uses' => 'HomeController@contacto']);
-Route::get('/home', 'HomeController@index');
-
 Route::resource('inmueble', 'InmuebleController');
+Route::get('/home', 'InmuebleController@index');

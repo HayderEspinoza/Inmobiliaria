@@ -1,15 +1,15 @@
 @extends('layouts.tema')
 @section('title')
-	Crear Inmueble
+	Editar Inmueble
 @endsection
 @section('contenido')
 	<div class="row">
         <div class="col-md-12 block-center">
             <div class="page-header">
-                <h2 id="tables">Crear Inmueble</h2>
+                <h2 id="tables">Editar Inmueble</h2>
             </div>
             <div class="well row">
-                {{ Form::open(['route' => 'inmueble.store', 'method' => 'post']) }}
+                {{ Form::model($inmueble, ['route' => ['inmueble.update', $inmueble->id], 'method' => 'put']) }}
                     <div class="form-group col-md-3">
                         <label for="tipo_id">Tipo de Propiedad</label>
                         {{ Form::select('tipo_id', $tipos, null, ['class' => 'form-control', 'required']) }}
@@ -46,6 +46,7 @@
                     <div class="col-md-3">
                         <div class="checkbox">
                             <label>
+                                {{ Form::hidden('piscina', false) }}
                                 {{Form::checkbox('piscina', null)}} Piscina
                             </label>
                         </div>
@@ -53,6 +54,7 @@
                     <div class="col-md-3">
                         <div class="checkbox">
                             <label>
+                                {{ Form::hidden('parqueadero', false) }}
                                 {{Form::checkbox('parqueadero', null)}} Parqueadero
                             </label>
                         </div>
@@ -60,6 +62,7 @@
                     <div class="col-md-3">
                         <div class="checkbox">
                             <label>
+                                {{ Form::hidden('cocina', false) }}
                                 {{Form::checkbox('cocina', null)}} Cocina Integral
                             </label>
                         </div>
@@ -67,6 +70,7 @@
                     <div class="col-md-3">
                         <div class="checkbox">
                             <label>
+                                {{ Form::hidden('zona_residencial', false) }}
                                 {{Form::checkbox('zona_residencial', null)}} Zona Residencial
                             </label>
                         </div>
@@ -74,7 +78,7 @@
                     <div class="col-md-3">
                         <div class="checkbox">
                             <label>
-
+                                {{ Form::hidden('conjunto_cerrado', false) }}
                                 {{Form::checkbox('conjunto_cerrado', null)}} Conjunto Cerrado
                             </label>
                         </div>
@@ -82,6 +86,7 @@
                     <div class="col-md-3">
                         <div class="checkbox">
                             <label>
+                                {{ Form::hidden('porteria', false) }}
                                 {{Form::checkbox('porteria', null)}} Porteria
                             </label>
                         </div>
@@ -89,6 +94,7 @@
                     <div class="col-md-3">
                         <div class="checkbox">
                             <label>
+                                {{ Form::hidden('precio', false) }}
                                 {{Form::checkbox('patio', null)}} Patio
                             </label>
                         </div>

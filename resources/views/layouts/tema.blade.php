@@ -46,7 +46,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="#">
+                        <a href="{{route('inmueble.index')}}">
                             Inmuebles
                         </a>
                     </li>
@@ -69,5 +69,6 @@
     <script src=" {{ asset('js/jquery.js') }}"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/laravel.js') }}"></script>
 </body>
 </html>

@@ -23,6 +23,7 @@
                             <th>#</th>
                             <th>Tipo Propiedad</th>
                             <th>Descripcion</th>
+                            <th>Precio</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -32,10 +33,11 @@
                                 <td>{{ $index + 1}}</td>
                                 <td>{{ $inmueble->nombre }}</td>
                                 <td>{{ $inmueble->descripcion }}</td>
+                                <td>{{ $inmueble->precio}}</td>
                                 <td>
-                                	<a href="" class="label label-primary">Detallar</a>
-                                	<a href="" class="label label-success">Editar</a>
-                                	<a href="" class="label label-danger">Eliminar</a>
+                                	<a href="{{route('inmueble.show', $inmueble->id)}}" class="label label-primary">Detallar</a>
+                                	<a href="{{route('inmueble.edit', $inmueble->id)}}" class="label label-success">Editar</a>
+                                	<a href="{{route('inmueble.destroy', $inmueble->id)}}" class="label label-danger" data-method="delete">Eliminar</a>
                                 </td>
                             </tr>
                         @endforeach
