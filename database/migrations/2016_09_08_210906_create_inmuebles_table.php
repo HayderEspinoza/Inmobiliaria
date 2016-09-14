@@ -29,7 +29,7 @@ class CreateInmueblesTable extends Migration
             $table->boolean('patio')->default('0');
             $table->boolean('antiguedad')->default('0');
             $table->bigInteger('precio');
-            $table->string('descripcion')->dfault('N/A');
+            $table->string('descripcion')->default('N/A');
             $table->boolean('estado')->default(1);
 
             $table->foreign('tipo_id')->references('id')->on('tipos');

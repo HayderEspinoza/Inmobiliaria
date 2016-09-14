@@ -5,13 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Negocio\Entities\Tipo;
 use Negocio\Entities\Ciudad;
+use Negocio\Entities\Inmueble;
 use App\Http\Requests;
 
 class InmuebleController extends Controller
 {
     public function index()
     {
-    	return view('admin.inmueble.index');
+        $inmuebles = Inmueble::select('in.id', 'in.descripcion', 'tp.nombre')
+                            ->join('tipos as tp', 'tp.id', '=', 'in.tipo_id')
+                            ->where('in.estado', '1');
+        $inmuebles = $inmuebles->paginate();
+    	return view('admin.inmueble.index', compact('inmuebles'));
     }
     public function create()
     {
@@ -24,6 +29,24 @@ class InmuebleController extends Controller
     public function store(Request $request)
     {
         $inputs = $request->all();
-        dd($inputs);
+        $rules = [
+            'tipo_id'       => 'required|numeric',
+            'ciudad_id'     => 'required|numeric',
+            'direccion'     => 'required',
+            'habitacion'    => 'required|numeric',
+            'banho'         => 'required|numeric',
+            'area'          => 'required',
+            'antiguedad'    => 'required',
+            'precio'        => 'required',
+        ];
+        $validator = \Validator::make($inputs, $rules);
+        if($validator->passes()){
+            $inmueble = new Inmueble();
+            $inmueble->fill($inputs);
+            $inmueble->save();  
+            return redirect()->route('inmueble.index');
+        }
+        return redirect()->back()->withInput()->withErrors($validator);
+
     }
 }
