@@ -13,8 +13,9 @@ class InmuebleController extends Controller
     public function index()
     {
         $inmueble = (new Inmueble())->setTable('inmuebles as in');
-        $inmuebles = $inmueble->select('in.id', 'in.descripcion', 'tp.nombre', 'in.precio')
-                            ->join('tipos as tp', 'tp.id', '=', 'in.tipo_id')
+        $inmuebles = $inmueble->select('in.id', 'in.descripcion', 'tp.nombre', 'in.precio', 'ci.nombre as ciudad')
+                            ->leftJoin('tipos as tp', 'tp.id', '=', 'in.tipo_id')
+                            ->leftJoin('ciudades as ci', 'ci.id', '=', 'in.ciudad_id')
                             ->where('in.estado', '1');
         $inmuebles = $inmuebles->paginate();
     	return view('admin.inmueble.index', compact('inmuebles'));
@@ -89,5 +90,11 @@ class InmuebleController extends Controller
             return redirect()->route('inmueble.index');
         }
         return redirect()->back()->withInput()->withErrors($validator);
+    }
+    public function destroy($id)
+    {
+        $inmueble = Inmueble::find($id);
+        $inmueble->delete();
+        return redirect()->route('inmueble.index');
     }
 }

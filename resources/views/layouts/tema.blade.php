@@ -29,6 +29,9 @@
             float:none;
             margin:auto;
         }
+        thead th, tbody td{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
