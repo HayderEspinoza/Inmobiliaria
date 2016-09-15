@@ -2,6 +2,9 @@
 @section('title')
 	Editar Inmueble
 @endsection
+@section('inmueble')
+    class='active'
+@endsection
 @section('contenido')
 	<div class="row">
         <div class="col-md-12 block-center">

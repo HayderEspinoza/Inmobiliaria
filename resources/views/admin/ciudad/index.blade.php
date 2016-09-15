@@ -2,18 +2,18 @@
 @section('title')
 	Inmuebles
 @endsection
-@section('inmueble')
+@section('ciudad')
     class='active'
 @endsection
 @section('contenido')
 	<div class="row">
         <div class="col-lg-12">
             <div class="page-header">
-                <h1 id="tables">Inmuebles</h1>
+                <h1 id="tables">Ciudades</h1>
             </div>
             <div class="well row">
                 <div class="col-lg-12">
-                    <a href="{{ route('inmueble.create') }}" class="btn btn-success btn-sm    ">
+                    <a href="{{ route('ciudad.create') }}" class="btn btn-success btn-sm    ">
                         <i class="fa fa-plus"></i>
                         Agregar
                     </a>
@@ -24,25 +24,20 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Tipo Propiedad</th>
+                            <th>Nombre</th>
                             <th>Descripcion</th>
-                            <th>Ciudad</th>
-                            <th>Precio</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($inmuebles as $index => $inmueble)
+                        @foreach($ciudades as $index => $ciudad)
                             <tr>
                                 <td>{{ $index + 1}}</td>
-                                <td>{{ $inmueble->nombre }}</td>
-                                <td>{{ $inmueble->descripcion }}</td>
-                                <td>{{ $inmueble->ciudad }}</td>
-                                <td>{{ $inmueble->precio}}</td>
+                                <td>{{ $ciudad->nombre }}</td>
+                                <td>{{ $ciudad->descripcion }}</td>
                                 <td>
-                                	<a href="{{route('inmueble.show', $inmueble->id)}}" class="label label-primary">Detallar</a>
-                                	<a href="{{route('inmueble.edit', $inmueble->id)}}" class="label label-success">Editar</a>
-                                	<a href="{{route('inmueble.destroy', $inmueble->id)}}" class="label label-danger" data-method="delete" data-token="{{csrf_token()}}" data-confirm="Esta seguro de eliminar?">Eliminar</a>
+                                	<a href="{{route('ciudad.edit', $ciudad->id)}}" class="label label-success">Editar</a>
+                                	<a href="{{route('ciudad.destroy', $ciudad->id)}}" class="label label-danger" data-method="delete" data-token="{{csrf_token()}}" data-confirm="Esta seguro de eliminar?">Eliminar</a>
 
                                 </td>
                             </tr>
@@ -51,7 +46,7 @@
                 </table> 
             </div>
             <div class="bs-component">
-                {{ $inmuebles->links() }}
+                {{ $ciudades->links() }}
             </div>
         </div>
     </div>

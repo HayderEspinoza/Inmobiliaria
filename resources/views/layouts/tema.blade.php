@@ -32,6 +32,12 @@
         thead th, tbody td{
             text-align: center;
         }
+        .flash{
+            width: 300px;
+            position:absolute; 
+            right:2%; 
+            top:2%;
+        }
     </style>
 </head>
 <body>
@@ -48,9 +54,19 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li @yield('inmueble')>
                         <a href="{{route('inmueble.index')}}">
                             Inmuebles
+                        </a>
+                    </li>
+                    <li @yield('tipo')>
+                        <a href="{{route('tipo.index')}}">
+                            Tipo de Propiedad
+                        </a>
+                    </li>
+                    <li @yield('ciudad')>
+                        <a href="{{route('ciudad.index')}}">
+                            Ciudades
                         </a>
                     </li>
                 </ul>
@@ -64,10 +80,23 @@
             </div>
         </div>
     </nav>
-
+    
     <div class="container">
         @yield('contenido')
     </div>
+    @if(Session::has('mensaje'))
+        <div class="row">
+            <div class="flash">
+                <div class="alert alert-dismissible alert-{{Session::get('color-mensaje', 'primary')}}">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Mensaje</strong>
+                    <p>
+                        {{Session::get('mensaje')}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    @endif
     <!-- jQuery -->
     <script src=" {{ asset('js/jquery.js') }}"></script>
     <!-- Bootstrap Core JavaScript -->
