@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-group col-md-3">
                         <label for="precio">Precio</label>
-                        {{ Form::number('precio', null, ['class' => 'form-control', 'placeholder' => '', 'required' ]) }}
+                        {{ Form::number('precio', null, ['class' => 'form-control'])}}
                     </div>
                     <div class="form-group col-md-3">
                         <label for="habitacion">Habitaciones</label>
@@ -97,7 +97,7 @@
                     <div class="col-md-3">
                         <div class="checkbox">
                             <label>
-                                {{ Form::hidden('precio', false) }}
+                                {{ Form::hidden('patio', false) }}
                                 {{Form::checkbox('patio', null)}} Patio
                             </label>
                         </div>

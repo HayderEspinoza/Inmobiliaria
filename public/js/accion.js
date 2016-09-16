@@ -6,6 +6,10 @@ function init(e) {
 	$('.toggle').on('click', cerrar);
 	$('.wrap-servicio a').on('click', tabServicios);
 	$(window).on('scroll', showArrow);
+	$('.flash ,.flash .close').on('click', function(e){
+		e.preventDefault();
+		$('.flash').fadeOut();
+	});
 }
 function scroll(event){
 	event.preventDefault();

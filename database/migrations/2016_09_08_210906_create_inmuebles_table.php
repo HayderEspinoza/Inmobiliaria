@@ -32,8 +32,8 @@ class CreateInmueblesTable extends Migration
             $table->string('descripcion')->default('N/A');
             $table->boolean('estado')->default(1);
 
-            $table->foreign('tipo_id')->references('id')->on('tipos');
-            $table->foreign('ciudad_id')->references('id')->on('ciudades');
+            $table->foreign('tipo_id')->references('id')->on('tipos')->onDelete('cascade');
+            $table->foreign('ciudad_id')->references('id')->on('ciudades')->onDelete('cascade');
             $table->timestamps();
         });
     }

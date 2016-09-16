@@ -11,11 +11,13 @@ use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 class Controller extends BaseController
 {
     use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
+    public $exitoso = 'Proceso exitoso';
+    public $eliminado = 'Eliminado Correctamente';
 
     public function mensaje($mensaje = '', $tipo = '1')
     {
     	$color = ['danger', 'success', 'warning'];
-    	\Session::put('mensaje', $mensaje);
-    	\Session::put('color-mensaje', $color[$tipo]);
+    	session()->flash('color-mensaje', $color[$tipo]);
+    	session()->flash('mensaje',$mensaje);
     }
 }

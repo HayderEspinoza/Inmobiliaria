@@ -88,7 +88,7 @@
         <div class="row">
             <div class="flash">
                 <div class="alert alert-dismissible alert-{{Session::get('color-mensaje', 'primary')}}">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <button type="button" class="close">&times;</button>
                     <strong>Mensaje</strong>
                     <p>
                         {{Session::get('mensaje')}}
@@ -102,5 +102,6 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/laravel.js') }}"></script>
+    <script src="{{ asset('js/accion.js') }}"></script>
 </body>
 </html>

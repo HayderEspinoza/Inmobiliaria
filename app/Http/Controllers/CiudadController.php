@@ -30,6 +30,7 @@ class CiudadController extends Controller
     		$ciudad = new Ciudad();
     		$ciudad->fill($inputs);
     		$ciudad->save();
+            $this->mensaje($this->exitoso);
     		return redirect()->route('ciudad.index');
     	}
     	return redirect()->bacK()->withInput()->withErrors($validator);
@@ -48,6 +49,7 @@ class CiudadController extends Controller
     		$ciudad = Ciudad::find($id);
     		$ciudad->fill($inputs);
     		$ciudad->save();
+            $this->mensaje($this->exitoso);
     		return redirect()->route('ciudad.index');
     	}
     	return redirect()->back()->withInput()->withErrors($validator);
@@ -56,6 +58,7 @@ class CiudadController extends Controller
     {
     	$ciudad = Ciudad::find($id);
     	$ciudad->delete();
+        $this->mensaje($this->eliminado);
     	return redirect()->route('ciudad.index');
     }
 }

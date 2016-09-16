@@ -45,7 +45,8 @@ class InmuebleController extends Controller
         if($validator->passes()){
             $inmueble = new Inmueble();
             $inmueble->fill($inputs);
-            $inmueble->save();  
+            $inmueble->save();
+            $this->mensaje($this->exitoso);
             return redirect()->route('inmueble.index');
         }
         return redirect()->back()->withInput()->withErrors($validator);
@@ -86,7 +87,8 @@ class InmuebleController extends Controller
         if($validator->passes()){
             $inmueble = Inmueble::find($id);
             $inmueble->fill($inputs);
-            $inmueble->save();  
+            $inmueble->save(); 
+            $this->mensaje($this->exitoso);
             return redirect()->route('inmueble.index');
         }
         return redirect()->back()->withInput()->withErrors($validator);
@@ -95,6 +97,7 @@ class InmuebleController extends Controller
     {
         $inmueble = Inmueble::find($id);
         $inmueble->delete();
+        $this->mensaje($this->eliminado);
         return redirect()->route('inmueble.index');
     }
 }

@@ -12,7 +12,6 @@ class TipoController extends Controller
     {
         $tipos = Tipo::where('estado', '1');
         $tipos = $tipos->paginate();
-        $this->mensaje('prueba');
     	return view('admin.tipo.index', compact('tipos'));
     }
     public function create()
@@ -31,6 +30,7 @@ class TipoController extends Controller
     		$tipo = new Tipo();
     		$tipo->fill($inputs);
     		$tipo->save();
+            $this->mensaje($this->exitoso);
     		return redirect()->route('tipo.index');
     	}
     	return redirect()->bacK()->withInput()->withErrors($validator);
@@ -49,6 +49,7 @@ class TipoController extends Controller
     		$tipo = Tipo::find($id);
     		$tipo->fill($inputs);
     		$tipo->save();
+            $this->mensaje($this->exitoso);
     		return redirect()->route('tipo.index');
     	}
     	return redirect()->back()->withInput()->withErrors($validator);
@@ -57,6 +58,7 @@ class TipoController extends Controller
     {
     	$tipo = Tipo::find($id);
     	$tipo->delete();
+        $this->mensaje($this->eliminado);
     	return redirect()->route('tipo.index');
     }
 }
