@@ -31,13 +31,23 @@
 <body>
 	@yield('contenido')
 
-	<script src="{{asset('full-slider/js/jquery.js')}}"></script>
+	<script src="{{asset('js/jquery.js')}}"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{asset('full-slider/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <!-- Script to Activate the Carousel -->
     <script src="{{asset('/js/accion.js')}}"></script>
     <!--Pace Js-->
     <script src="{{asset('/js/pace.min.js')}}"></script>
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+        d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+        _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+        $.src="//v2.zopim.com/?4Djsq2Tk2jJEaWXyD64Rb2X3xzaYu6KF";z.t=+new Date;$.
+        type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    </script>
+<!--End of Zopim Live Chat Script-->
 	@yield('js')
+    
 </body>
 </html>
