@@ -35,6 +35,11 @@
 					CONTÁCTANOS
 				</a>
 			</li>
+			<li>
+				<a href="/login">
+					LOGIN
+				</a>
+			</li>
 		</ul>
 	</div>
 	<div class="col-lg-12">

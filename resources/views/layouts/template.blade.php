@@ -46,7 +46,7 @@
         $.src="//v2.zopim.com/?4Djsq2Tk2jJEaWXyD64Rb2X3xzaYu6KF";z.t=+new Date;$.
         type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     </script>
-<!--End of Zopim Live Chat Script-->
+    <!--End of Zopim Live Chat Script-->
 	@yield('js')
     
 </body>

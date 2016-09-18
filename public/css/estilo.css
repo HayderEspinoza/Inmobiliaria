@@ -232,7 +232,7 @@ a:hover {
   padding: 5px 15px;
 }
 .descripcion {
-  padding: 7px 20px;
+  padding: 10px 20px;
   color: #fff;
   font-family: cobert-regular;
   line-height: 15px;
@@ -263,22 +263,19 @@ a:hover {
 .descripcion table td {
   padding: 4px 0;
 }
-.wrap-busqueda {
-  padding: 40px 0 0 0;
-}
-.wrap-busqueda .formulario {
+.formulario {
   background: #4b4b4d;
   color: #fff;
   padding-top: 10px;
   padding-bottom: 20px;
 }
-.wrap-busqueda .formulario .title-formulario {
+.formulario .title-formulario {
   padding-bottom: 10px;
   border-bottom: 1px solid #fff;
   font-size: 18px;
 }
-.wrap-busqueda .formulario input,
-.wrap-busqueda .formulario select {
+.formulario input,
+.formulario select {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
