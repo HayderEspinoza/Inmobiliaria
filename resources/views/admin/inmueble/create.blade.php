@@ -18,6 +18,10 @@
                         {{ Form::select('tipo_id', $tipos, null, ['class' => 'form-control', 'required']) }}
                     </div>
                     <div class="form-group col-md-3">
+                        <label for="oferta_id">Oferta</label>
+                        {{ Form::select('oferta_id', $ofertas, null, ['class' => 'form-control', 'required']) }}
+                    </div>
+                    <div class="form-group col-md-3">
                         <label for="tipo_id">Ciudad</label>
                         {{ Form::select('ciudad_id', $ciudades, null, ['class' => 'form-control', 'required']) }}
                     </div>
@@ -27,21 +31,21 @@
                     </div>
                     <div class="form-group col-md-3">
                         <label for="precio">Precio</label>
-                        {{ Form::number('precio', null, ['class' => 'form-control', 'placeholder' => '', 'required' ]) }}
+                        {{ Form::text('precio', null, ['class' => 'form-control moneda', 'placeholder' => '', 'required' ]) }}
                     </div>
                     <div class="form-group col-md-3">
                         <label for="habitacion">Habitaciones</label>
                         {{ Form::number('habitacion', null, ['class' => 'form-control', 'placeholder' => '', 'required' ]) }}
                     </div>
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-2">
                         <label for="banho">Baños</label>
                         {{ Form::number('banho', null, ['class' => 'form-control', 'placeholder' => '', 'required' ]) }}
                     </div>
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-2">
                         <label for="area">Area Cuadrada</label>
                         {{ Form::number('area', null, ['class' => 'form-control', 'placeholder' => '', 'required' ]) }}
                     </div>
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-2">
                         <label for="antiguedad">Antiguedad</label>
                         {{ Form::number('antiguedad', null, ['class' => 'form-control', 'placeholder' => '', 'required' ]) }}
                     </div>

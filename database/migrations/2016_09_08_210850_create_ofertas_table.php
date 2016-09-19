@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImagenesTable extends Migration
+class CreateOfertasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,11 @@ class CreateImagenesTable extends Migration
      */
     public function up()
     {
-        Schema::create('imagenes', function (Blueprint $table) {
+        Schema::create('ofertas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('inmueble_id')->unsigned();
             $table->string('nombre');
-            $table->boolean('perfil')->default(0);
-            $table->boolean('estado')->default(1);
-            $table->foreign('inmueble_id')->references('id')->on('inmuebles');
+            $table->string('descripcion');
+            $table->boolean('estado')->default('1');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateImagenesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('imagenes');
+        Schema::drop('ofertas');
     }
 }

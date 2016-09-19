@@ -25,6 +25,7 @@
                         <tr>
                             <th>#</th>
                             <th>Tipo Propiedad</th>
+                            <th>Tipo Oferta</th>
                             <th>Descripcion</th>
                             <th>Ciudad</th>
                             <th>Precio</th>
@@ -36,14 +37,17 @@
                             <tr>
                                 <td>{{ $index + 1}}</td>
                                 <td>{{ $inmueble->nombre }}</td>
+                                <td>{{ $inmueble->oferta }}</td>
                                 <td>{{ $inmueble->descripcion }}</td>
                                 <td>{{ $inmueble->ciudad }}</td>
-                                <td>{{ $inmueble->precio}}</td>
+                                <td>
+                                    <input type="text" class="form-control moneda text-center input-sm" disabled value="{{ $inmueble->precio}}">
+                                </td>
                                 <td>
                                 	<a href="{{route('inmueble.show', $inmueble->id)}}" class="label label-primary">Detallar</a>
                                 	<a href="{{route('inmueble.edit', $inmueble->id)}}" class="label label-success">Editar</a>
                                 	<a href="{{route('inmueble.destroy', $inmueble->id)}}" class="label label-danger" data-method="delete" data-token="{{csrf_token()}}" data-confirm="Esta seguro de eliminar?">Eliminar</a>
-
+                                    <a href="{{route('inmueble.imagen.index', $inmueble->id)}}" class="label label-info">Imagenes</a>
                                 </td>
                             </tr>
                         @endforeach

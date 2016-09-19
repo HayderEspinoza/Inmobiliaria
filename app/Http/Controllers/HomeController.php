@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-
+use Negocio\Entities\Tipo;
+use Negocio\Entities\Oferta;
 class HomeController extends Controller
 {
     public function index()
@@ -13,7 +14,11 @@ class HomeController extends Controller
     }
     public function apartamentos()
     {
-        return view('web.apartamentos');
+        $tipos = Tipo::where('estado', '1')
+                    ->lists('nombre', 'id');
+        $ofertas = Oferta::where('estado', '1')
+                    ->lists('nombre', 'id');
+        return view('web.apartamentos', compact('tipos', 'ofertas'));
     }
     public function servicios()
     {
@@ -22,6 +27,10 @@ class HomeController extends Controller
     public function inmobiliaria()
     {
         return view('web.inmobiliaria');   
+    }
+    public function proyectos()
+    {
+        return view('web.proyectos');
     }
     public function contacto()
     {

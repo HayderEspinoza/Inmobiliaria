@@ -17,6 +17,7 @@
     <link href="{{ asset('fonts/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <!-- Croppy -->
     <link href="{{ asset('/css/croppic.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/css/magnific-popup.css') }}" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -37,6 +38,10 @@
             position:absolute; 
             right:2%; 
             top:2%;
+        }
+        textarea{
+            border:1px solid #ddd !important;
+            border-radius:5px;
         }
     </style>
 </head>
@@ -103,5 +108,7 @@
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/laravel.js') }}"></script>
     <script src="{{ asset('js/accion.js') }}"></script>
+    <script src="{{ asset('js/jquery.number.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
 </body>
 </html>

@@ -10,6 +10,8 @@ function init(e) {
 		e.preventDefault();
 		$('.flash').fadeOut();
 	});
+	$('.moneda').number( true, 0);
+	$('.image-link').magnificPopup({type:'image'});
 }
 function scroll(event){
 	event.preventDefault();

@@ -29,37 +29,12 @@
 			</div>
 			<br>
 			<div class="form-group">
-				<label for="Nombre">TIPO DE OFERTA</label>
-				<input type="text" class="form-control">
+				<label for="tipo_id">TIPO DE PROPIEDAD</label>
+				{{ Form::select('tipo_id', $tipos, null, ['class' => 'form-control']) }}
 			</div>
-			<div class="form-group">
-				<label for="">TIPO DE PROPIEDAD</label>
-				<select name="" id="" class="form-control">
-					<option value="">Uno</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="">TIPO DE PROPIEDAD</label>
-				<select name="" id="" class="form-control">
-					<option value="">Uno</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="">TIPO DE PROPIEDAD</label>
-				<select name="" id="" class="form-control">
-					<option value="">Uno</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="">TIPO DE PROPIEDAD</label>
-				<select name="" id="" class="form-control">
-					<option value="">Uno</option>
-				</select>
-			</div>
-			<div class="form-group">
-                <a href="" class="btn-danger text-center btn-lg btn-block buscar">
-                    BUSCAR
-                </a>
+            <div class="form-group">
+                <label for="oferta_id">TIPO DE OFERTA</label>
+                {{ Form::select('oferta_id', $ofertas, null, ['class' => 'form-control']) }}
             </div>
 		</div>
 		<div class="col-lg-9">	

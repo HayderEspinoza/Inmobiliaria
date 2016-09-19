@@ -14,6 +14,7 @@
     <link href="{{ asset('full-slider/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="{{ asset('/css/magnific-popup.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('full-slider/css/full-slider.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/pace.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/iconos.css') }}" rel="stylesheet">
@@ -38,6 +39,8 @@
     <script src="{{asset('/js/accion.js')}}"></script>
     <!--Pace Js-->
     <script src="{{asset('/js/pace.min.js')}}"></script>
+    <script src="{{ asset('js/jquery.number.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
     <!--Start of Zopim Live Chat Script-->
     <script type="text/javascript">
         window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=

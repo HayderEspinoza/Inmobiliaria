@@ -26,7 +26,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="{{ route('web.proyectos') }}">
 					PROYECTOS
 				</a>
 			</li>
