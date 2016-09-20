@@ -6,6 +6,8 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Negocio\Entities\Tipo;
 use Negocio\Entities\Oferta;
+use Negocio\Entities\Ciudad;
+use Negocio\Entities\Inmueble;
 class HomeController extends Controller
 {
     public function index()
@@ -18,7 +20,16 @@ class HomeController extends Controller
                     ->lists('nombre', 'id');
         $ofertas = Oferta::where('estado', '1')
                     ->lists('nombre', 'id');
-        return view('web.apartamentos', compact('tipos', 'ofertas'));
+        $ciudades = Ciudad::where('estado', '1')
+                    ->lists('nombre', 'id');
+        $inmueble = (new Inmueble())->setTable('inmuebles as in');
+        $inmuebles = $inmueble->select('of.nombre as oferta', 'tp.nombre as tipo', 'in.precio', 'in.area', 'in.habitacion', 'in.banho', 'in.antiguedad')
+                            ->leftJoin('tipos as tp', 'tp.id', '=', 'in.tipo_id')
+                            ->leftJoin('ofertas as of', 'of.id', '=', 'in.oferta_id')
+                            ->leftJoin('ciudades as ci', 'ci.id', '=', 'in.ciudad_id')
+                            ->where('in.estado', '1');
+        $inmuebles = $inmuebles->paginate();
+        return view('web.apartamentos', compact('tipos', 'ofertas', 'ciudades', 'inmuebles'));
     }
     public function servicios()
     {

@@ -5,7 +5,7 @@
 			background: #191a1c;
 		}
         .logo-apartamentos{
-            padding: 50px 0 100px 0;
+            padding: 30px 0 40px 0;
         }
 	</style>
 @endsection
@@ -18,7 +18,7 @@
             <span class="two">SANTO DOMINGO CARTAGENA</span>
         </div>
 		<div class="col-lg-12 text-pagination">
-			MOSTRANDO 1 DE 12 INMUEBLES
+			MOSTRANDO {{ $inmuebles->count() }} DE {{ $inmuebles->total() }} INMUEBLES
 		</div>
         <!--Formulario-->
 		<div class="col-lg-3 formulario">
@@ -36,151 +36,129 @@
                 <label for="oferta_id">TIPO DE OFERTA</label>
                 {{ Form::select('oferta_id', $ofertas, null, ['class' => 'form-control']) }}
             </div>
+            <div class="form-group">
+                <label for="ciudad_id">Direccion</label>
+                {{ Form::select('ciudad_id', $ciudades, null, ['class' => 'form-control']) }}
+            </div>
+            <div class="form-group">
+            {{ Form::text('direccion', null, ['class' => 'form-control', 'placeholder' => 'Barrio']) }}
+            </div>
+            <div class="row">
+            	<div class="form-group col-md-6">
+            		<label for="precio">Precio</label>
+            		{{ Form::text('precio_min', null, ['class' => 'form-control moneda', 'placeholder' => "Min"]) }}
+            	</div>
+            	<div class="form-group col-md-6">
+            		<label for="precio">&nbsp;</label>
+            		{{ Form::text('precio_max', null, ['class' => 'form-control moneda', 'placeholder' => 'Max']) }}
+            	</div>
+            </div>
+            <div class="row">
+            	<div class="form-group col-md-6">
+            		<label for="habitacion">Habitaciones</label>
+            		{{ Form::text('habitacion', null, ['class' => 'form-control']) }}
+            	</div>
+            	<div class="form-group col-md-6">
+            		<label for="banho">Baños</label>
+            		{{ Form::text('banho', null, ['class' => 'form-control']) }}
+            	</div>
+            	<div class="form-group col-md-6">
+            		<label for="area">Area</label>
+            		{{ Form::text('area', null, ['class' => 'form-control']) }}
+            	</div>
+            	<div class="form-group col-md-6">
+            		<label for="antiguedad">Antiguedad</label>
+            		{{ Form::text('antiguedad', null, ['class' => 'form-control']) }}
+            	</div>
+            </div>
+            <div class="row">
+				<div class="col-lg-12 text-center title-formulario">
+					CARACTERISTICAS EXTRAS
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+  					<label><input type="checkbox" value="" name="piscina">Piscina</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+  					<label><input type="checkbox" value="" name="parqueadero">Parqueadero</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+  					<label><input type="checkbox" value="" name="cocina">Cocina Integral</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+  					<label><input type="checkbox" value="" name="zona_residencial">Zona Residencial</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+  					<label><input type="checkbox" value="" name="conjunto_cerrado">Conjunto Cerrado</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+  					<label><input type="checkbox" value="" name="porteria">Porteria</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="checkbox">
+  					<label><input type="checkbox" value="" name="patio">Patio</label>
+				</div>
+			</div>
+			<div class="form-group">
+                <a href="{{route('web.apartamentos')}}" class="btn-danger text-center btn-lg btn-block buscar">
+                    BUSCAR
+                </a>
+            </div>
 		</div>
 		<div class="col-lg-9">	
             <!--Item-->
-            <div class="col-lg-4">
-                <div class="apartamento">
-                    <div class="img-apartamento img-responsive">
-                        <img class="img-responsive" src="{{asset('img/apartamento.jpg')}}" alt="">
-                    </div>
-                    <div class="tipo-apartamento text-right">
-                        ARRIENDO
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="text-center">APARTAMENTO</h3>
-                        <p class="precio text-center">
-                            <span>
-                                $ 1.300.000
-                            </span>
-                        </p>
-                        <table width="100%">
-                            <tr>
-                                <td>Area</td>
-                                <td>Habs</td>
-                                <td>Baños</td>
-                                <td>Parq</td>
-                            </tr>
-                            <tr>
-                                <td>115M2</td>
-                                <td>0</td>
-                                <td>1</td>
-                                <td>1</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <!--Item-->
-            <div class="col-lg-4">
-                <div class="apartamento">
-                    <div class="img-apartamento img-responsive">
-                        <img class="img-responsive" src="{{asset('img/apartamento.jpg')}}" alt="">
-                    </div>
-                    <div class="tipo-apartamento text-right">
-                        ARRIENDO
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="text-center">APARTAMENTO</h3>
-                        <p class="precio text-center">
-                            <span>
-                                $ 1.300.000
-                            </span>
-                        </p>
-                        <table width="100%">
-                            <tr>
-                                <td>Area</td>
-                                <td>Habs</td>
-                                <td>Baños</td>
-                                <td>Parq</td>
-                            </tr>
-                            <tr>
-                                <td>115M2</td>
-                                <td>0</td>
-                                <td>1</td>
-                                <td>1</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <!--Item-->
-            <div class="col-lg-4">
-                <div class="apartamento">
-                    <div class="img-apartamento img-responsive">
-                        <img class="img-responsive" src="{{asset('img/apartamento.jpg')}}" alt="">
-                    </div>
-                    <div class="tipo-apartamento text-right">
-                        ARRIENDO
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="text-center">APARTAMENTO</h3>
-                        <p class="precio text-center">
-                            <span>
-                                $ 1.300.000
-                            </span>
-                        </p>
-                        <table width="100%">
-                            <tr>
-                                <td>Area</td>
-                                <td>Habs</td>
-                                <td>Baños</td>
-                                <td>Parq</td>
-                            </tr>
-                            <tr>
-                                <td>115M2</td>
-                                <td>0</td>
-                                <td>1</td>
-                                <td>1</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <!--Item-->
-            <div class="col-lg-4">
-                <div class="apartamento">
-                    <div class="img-apartamento img-responsive">
-                        <img class="img-responsive" src="{{asset('img/apartamento.jpg')}}" alt="">
-                    </div>
-                    <div class="tipo-apartamento text-right">
-                        ARRIENDO
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="text-center">APARTAMENTO</h3>
-                        <p class="precio text-center">
-                            <span>
-                                $ 1.300.000
-                            </span>
-                        </p>
-                        <table width="100%">
-                            <tr>
-                                <td>Area</td>
-                                <td>Habs</td>
-                                <td>Baños</td>
-                                <td>Parq</td>
-                            </tr>
-                            <tr>
-                                <td>115M2</td>
-                                <td>0</td>
-                                <td>1</td>
-                                <td>1</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
+            @foreach($inmuebles as $inmueble)
+            	<div class="col-lg-4">
+	                <div class="apartamento">
+	                    <div class="img-apartamento img-responsive">
+	                        <img class="img-responsive" src="{{asset('img/apartamento.jpg')}}" alt="">
+	                    </div>
+	                    <div class="tipo-apartamento text-right">
+	                        {{ $inmueble->oferta }}
+	                    </div>
+	                    <div class="descripcion">
+	                        <h3 class="text-center">
+	                        	{{ $inmueble->tipo }}
+	                        </h3>
+	                        <p class="precio text-center">
+	                            <span class="">
+	                                $ {{ $inmueble->precio }}
+	                            </span>
+	                        </p>
+	                        <table width="100%">
+	                            <tr>
+	                                <td>Area</td>
+	                                <td>Habs</td>
+	                                <td>Baños</td>
+	                                <td>Antig</td>
+	                            </tr>
+	                            <tr>
+	                                <td> {{ $inmueble->area }} M2</td>
+	                                <td> {{ $inmueble->habitacion }}</td>
+	                                <td> {{ $inmueble->banho }}</td>
+	                                <td> {{ $inmueble->antiguedad }}</td>
+	                            </tr>
+	                        </table>
+	                    </div>
+	                </div>
+	            </div>
+            @endforeach
+            
             <!--Paginacion-->
             <div class="col-lg-12">
-            	<ul class="pagination pagination-md">
-            		<li class=""><a href="#">«</a></li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">»</a></li>
-				</ul>
+            	{{ $inmuebles->links() }}
             </div>
 		</div>
 	</div>

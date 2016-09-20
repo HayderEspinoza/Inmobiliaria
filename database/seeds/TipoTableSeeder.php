@@ -12,7 +12,7 @@ class TipoTableSeeder extends Seeder
      */
     public function run()
     {
-        $tipos = ['Apartamento', 'Aparta Estudio', 'Casa', 'Proyectos', 'Local', 'Oficinas', 'Bodegas', 'Lote', 'Finca'];
+        $tipos = ['APARTAMENTO', 'APARTA ESTUDIO', 'CASA', 'PROYECTOS', 'LOCAL', 'OFICINAS', 'BODEGAS', 'LOTE', 'FINCA'];
 
         foreach ($tipos as $key => $item) {
         	$tipo = new Tipo();
