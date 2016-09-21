@@ -7,6 +7,9 @@
         .item .fill h2{
             z-index: 50;
         }
+        .formulario-portada label{
+            color :white;
+        }
     </style>
 @endsection
 @section('contenido')
@@ -71,38 +74,59 @@
         </div>
         <!--Formulario de busqueda-->
         <div class="formulario-portada">
-            <form action="">
+            {{ Form::open(['route' => 'web.inmuebles', 'method' => 'get']) }}
                 <div class="form-group">
-                    <select name="" id="" class="form-control">
-                        <option value="1">Calle Nueva</option>
-                    </select>
+                    {{ Form::select('tipo_id', $tipos, @$inputs['tipo_id'], ['class' => 'form-control']) }}
                 </div>
                 <div class="form-group">
-                    <select name="" id="" class="form-control">
-                        <option value="1">Calle Nueva</option>
-                    </select>
+                    <div class="row">
+                        @foreach ($ofertas as $oferta)
+                            <div class="col-md-6 text-center">
+                                <label class="radio-inline">
+                                    <input type="radio" name="oferta_id">{{ $oferta->nombre }}
+                                </label>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="form-group hidden">
+                    {{ Form::text('ciudad_id', 1) }}
                 </div>
                 <div class="form-group">
-                    <select name="" id="" class="form-control">
-                        <option value="1">Calle Nueva</option>
-                    </select>
+                    {{ Form::text('direccion', @$inputs['direccion'], ['class' => 'form-control', 'placeholder' => 'Barrio']) }}
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="precio">Precio</label>
+                        {{ Form::text('precio_min', @$inputs['precio_min'], ['class' => 'form-control moneda', 'placeholder' => "Min"]) }}
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="precio">&nbsp;</label>
+                        {{ Form::text('precio_max', @$inputs['precio_max'], ['class' => 'form-control moneda', 'placeholder' => 'Max']) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="habitacion">Habitaciones</label>
+                        {{ Form::text('habitacion', @$inputs['habitacion'], ['class' => 'form-control']) }}
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="banho">Baños</label>
+                        {{ Form::text('banho', @$inputs['banho'], ['class' => 'form-control']) }}
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="area">Area</label>
+                        {{ Form::text('area', @$inputs['area'], ['class' => 'form-control']) }}
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="antiguedad">Antiguedad</label>
+                        {{ Form::text('antiguedad', @$inputs['antiguedad'], ['class' => 'form-control']) }}
+                    </div>
                 </div>
                 <div class="form-group">
-                    <select name="" id="" class="form-control">
-                        <option value="1">Calle Nueva</option>
-                    </select>
+                    <input type="submit" class="btn-danger text-center btn-lg btn-block buscar" value="BUSCAR" name="buscar">
                 </div>
-                <div class="form-group">
-                    <select name="" id="" class="form-control">
-                        <option value="1">Calle Nueva</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <a href="{{route('web.inmuebles')}}" class="btn-danger text-center btn-lg btn-block buscar">
-                        BUSCAR
-                    </a>
-                </div>
-            </form>
+            {{ Form::close() }}
         </div>
         {{-- scroll down --}}
         <div class="scroll-down text-center">

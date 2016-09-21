@@ -12,7 +12,11 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('web.home');
+        $tipos = ['TIPO DE INMUEBLE']+Tipo::where('estado', '1')
+                    ->lists('nombre', 'id')
+                    ->toArray();
+        $ofertas = Oferta::where('estado', '1')->get();
+        return view('web.home', compact('tipos', 'ofertas'));
     }
     public function inmuebles(Request $data)
     {
@@ -39,27 +43,27 @@ class HomeController extends Controller
 
         if(isset($inputs['buscar'])){
             // dd($inputs);
-            if($inputs['tipo_id'] > 0)
+            if(isset($inputs['tipo_id']) > 0)
                 $inmuebles->where('in.tipo_id', $inputs['tipo_id']);
-            if($inputs['oferta_id'] > 0)
+            if(isset($inputs['oferta_id']) > 0)
                 $inmuebles->where('in.oferta_id', $inputs['oferta_id']);
-            if($inputs['ciudad_id'] > 0)
+            if(isset($inputs['ciudad_id']) > 0)
                 $inmuebles->where('in.ciudad_id', $inputs['ciudad_id']);
-            if($inputs['precio_min'] != '' && $inputs['precio_max'] != ''){
+            if(isset($inputs['precio_min']) != '' && $inputs['precio_max'] != ''){
                 $inmuebles->where(function($q) use ($inputs){
                     $q->where('in.precio', '>=', str_replace(',', '', $inputs['precio_min']));
                     $q->where('in.precio', '<=', str_replace(',', '', $inputs['precio_max']));
                 });
             }
-            if($inputs['habitacion'] != '')
+            if(isset($inputs['habitacion']) != '')
                 $inmuebles->where('habitacion', $inputs['habitacion']);
-            if($inputs['banho'] != '')
+            if(isset($inputs['banho']) != '')
                 $inmuebles->where('banho', $inputs['banho']);
-            if($inputs['area'] != '')
+            if(isset($inputs['area']) != '')
                 $inmuebles->where('area', $inputs['area']);
-            if($inputs['antiguedad'] != '')
+            if(isset($inputs['antiguedad']) != '')
                 $inmuebles->where('antiguedad', $inputs['antiguedad']);
-            if($inputs['antiguedad'] != '')
+            if(isset($inputs['antiguedad']) != '')
                 $inmuebles->where('banho', $inputs['banho']);
             if(isset($inputs['piscina']))
                 $inmuebles->where('piscina', $inputs['piscina']);
@@ -75,7 +79,8 @@ class HomeController extends Controller
                 $inmuebles->where('porteria', $inputs['porteria']);
             if(isset($inputs['patio']))
                 $inmuebles->where('patio', $inputs['patio']);
-            $inmuebles->where('direccion', 'like', '%'.$inputs['direccion'].'%');
+            if(isset($inputs['direccion']))
+                $inmuebles->where('direccion', 'like', '%'.$inputs['direccion'].'%');
         }
         $inmuebles = $inmuebles->paginate();
         return view('web.inmuebles', compact('tipos', 'ofertas', 'ciudades', 'inmuebles', 'inputs'))->withInput($inputs);
