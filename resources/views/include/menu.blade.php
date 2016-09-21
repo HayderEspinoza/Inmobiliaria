@@ -21,7 +21,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="{{route('web.apartamentos')}}">
+				<a href="{{route('web.inmuebles')}}">
 					INMUEBLES
 				</a>
 			</li>

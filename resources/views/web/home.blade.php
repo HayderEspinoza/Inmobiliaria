@@ -98,7 +98,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <a href="{{route('web.apartamentos')}}" class="btn-danger text-center btn-lg btn-block buscar">
+                    <a href="{{route('web.inmuebles')}}" class="btn-danger text-center btn-lg btn-block buscar">
                         BUSCAR
                     </a>
                 </div>

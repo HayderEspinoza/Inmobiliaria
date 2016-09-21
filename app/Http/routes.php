@@ -15,7 +15,7 @@ debug(Route::auth());
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 Route::get('/inmobiliaria', ['as' => 'web.inmobiliaria', 'uses' => 'HomeController@inmobiliaria']);
 Route::get('/servicios', ['as' => 'web.servicios', 'uses' => 'HomeController@servicios']);
-Route::get('/inmuebles', ['as' => 'web.apartamentos', 'uses' => 'HomeController@apartamentos']);
+Route::get('/inmuebles', ['as' => 'web.inmuebles', 'uses' => 'HomeController@inmuebles']);
 Route::get('/proyectos', ['as' => 'web.proyectos', 'uses' => 'HomeController@proyectos']);
 Route::get('/contacto', ['as' => 'web.contacto', 'uses' => 'HomeController@contacto']);
 Route::get('/home', 'InmuebleController@index');
