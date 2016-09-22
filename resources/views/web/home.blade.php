@@ -31,7 +31,7 @@
                 <div class="fill img-1" style="background-image:url('/img/portada/01.jpg')">
                     <div class="container">
                         <div class="col-lg-10">
-                            <h2>NUNCA FUE TAN FÁCIL CONSEGUIR PROPIEDADES CARTAGENA.</h2>
+                            <h2>NUNCA FUE TAN FÁCIL CONSEGUIR PROPIEDAD CARTAGENA.</h2>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                 <div class="fill" style="background-image:url('/img/portada/04.jpg');">
                     <div class="container">
                         <div class="col-lg-8 block-center">
-                            <h2>DÉJAMOS GUIARTE A CASA.</h2>
+                            <h2>DÉJANOS GUIARTE A CASA.</h2>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                         @foreach ($ofertas as $oferta)
                             <div class="col-md-6 text-center">
                                 <label class="radio-inline">
-                                    <input type="radio" name="oferta_id">{{ $oferta->nombre }}
+                                    {{ Form::radio('oferta_id', 1) }}{{ $oferta->nombre }}
                                 </label>
                             </div>
                         @endforeach
@@ -150,7 +150,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/apartamento.jpg')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO
@@ -186,7 +186,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/apartamento.jpg')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO
@@ -222,7 +222,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/apartamento.jpg')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO

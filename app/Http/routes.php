@@ -18,6 +18,7 @@ Route::get('/servicios', ['as' => 'web.servicios', 'uses' => 'HomeController@ser
 Route::get('/inmuebles', ['as' => 'web.inmuebles', 'uses' => 'HomeController@inmuebles']);
 Route::get('/proyectos', ['as' => 'web.proyectos', 'uses' => 'HomeController@proyectos']);
 Route::get('/contacto', ['as' => 'web.contacto', 'uses' => 'HomeController@contacto']);
+Route::post('/enviar', ['as' => 'web.enviar', 'uses' => 'HomeController@enviar']);
 Route::get('/home', 'InmuebleController@index');
 Route::resource('inmueble', 'InmuebleController');
 Route::resource('inmueble.imagen', 'ImagenController');

@@ -101,4 +101,16 @@ class HomeController extends Controller
     {
         return view('web.contacto');
     }
+    public function enviar(Request $data)
+    {
+        $datos = $data->all();
+        foreach ($datos as $key => $value) {
+            debug($value);
+        }
+        // Mail::send('email.contacto', compact('datos'), function($msj){
+        //     $msj->subject('Correo de Contacto');
+        //     $msj->to('contacto@inmobiliariasantodomingocartagena.com');
+        // });
+        
+    }
 }

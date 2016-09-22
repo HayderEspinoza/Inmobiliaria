@@ -6,45 +6,47 @@
 			<h4>SI ESTÁ INTERESADO EN:</h4>
 			<p>
 				<label class="checkbox-inline">
-					<input type="checkbox" value="">ARRENDAR
+					<input type="checkbox" value="arrendar" name="arrendar">ARRENDAR
 				</label>
 				<label class="checkbox-inline">
-					<input type="checkbox" value="">VENDER
+					<input type="checkbox" value="vender" name="vender">VENDER
 				</label>
 				<label class="checkbox-inline">
-					<input type="checkbox" value="">AVALÚO
+					<input type="checkbox" value="evalue" name="evaluo">AVALÚO
 				</label>
 				<label class="checkbox-inline">
-					<input type="checkbox" value="">GERENCIA DE PROYECTOS
+					<input type="checkbox" value="gerencia_proyecto" name="gerencia_proyecto"> GERENCIA DE PROYECTOS
 				</label>
 				<label class="checkbox-inline">
-					<input type="checkbox" value="">RECLAMOS
+					<input type="checkbox" value="reclamos" name="reclamos">RECLAMOS
 				</label>
 			</p>
 			<h4>
 				DÉJENOS SU EMAIL Y LO CONTÁCTAREMOS.
 			</h4>
-			<div class="row">
-				<div class="col-lg-11 block-center">
-					<div class="col-lg-4 form-group">
-						<input type="text" class="form-control" placeholder="*Nombre">
-					</div>
-					<div class="col-lg-4 form-group">
-						<input type="text" class="form-control" placeholder="*Email">
-					</div>
-					<div class="col-lg-4 form-group">
-						<input type="text" class="form-control" placeholder="*Teléfono">
-					</div>
-					<div class="col-lg-12 form-group">
-						<textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Escriba su mensaje aqui"></textarea>
+			{{ Form::open(['route' => 'web.enviar', 'method' => 'post']) }}
+				<div class="row">
+					<div class="col-lg-11 block-center">
+						<div class="col-lg-4 form-group">
+							{{ Form::text('nombre', null, ['class' => 'form-control', 'placeholder' => '*Nombre', 'required']) }}
+						</div>
+						<div class="col-lg-4 form-group">
+							{{ Form::email('email', null, ['class' => 'form-control', 'placeholder' => '*Email', 'required']) }}
+						</div>
+						<div class="col-lg-4 form-group">
+							{{ Form::number('telefono', null, ['class' => 'form-control', 'placeholder' => '*Telefono', 'required']) }}
+						</div>
+						<div class="col-lg-12 form-group">
+							{{ Form::textarea('mensaje', null, ['class' => 'form-control', 'placeholder' => 'Escriba su mensaje aqui', 'size' => '30x10', 'required']) }}
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6 block-center">
-					<input type="submit" class="btn btn-default btn-lg btn-block btn-enviar" value="Enviar">
+				<div class="row">
+					<div class="col-lg-6 block-center">
+						<input type="submit" class="btn btn-default btn-lg btn-block btn-enviar" value="Enviar">
+					</div>
 				</div>
-			</div>
+			{{ Form::close() }}
 		</div>
 	</div>
 </div>
