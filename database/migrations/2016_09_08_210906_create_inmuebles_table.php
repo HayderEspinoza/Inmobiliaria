@@ -31,6 +31,7 @@ class CreateInmueblesTable extends Migration
             $table->boolean('antiguedad')->default('0');
             $table->integer('precio');
             $table->string('descripcion')->default('N/A');
+            $table->integer('destacado')->default(0);
             $table->boolean('estado')->default(1);
 
             $table->foreign('tipo_id')->references('id')->on('tipos')->onDelete('cascade');

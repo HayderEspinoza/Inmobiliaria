@@ -4,6 +4,7 @@
 			<h4>CONTÁCTANOS</h4>
 			<h2>ESTAMOS DISPUESTOS A AYUDARTE</h2>
 			<h4>SI ESTÁ INTERESADO EN:</h4>
+			{{ Form::open(['route' => 'web.enviar', 'method' => 'post']) }}
 			<p>
 				<label class="checkbox-inline">
 					<input type="checkbox" value="arrendar" name="arrendar">ARRENDAR
@@ -24,7 +25,6 @@
 			<h4>
 				DÉJENOS SU EMAIL Y LO CONTÁCTAREMOS.
 			</h4>
-			{{ Form::open(['route' => 'web.enviar', 'method' => 'post']) }}
 				<div class="row">
 					<div class="col-lg-11 block-center">
 						<div class="col-lg-4 form-group">

@@ -147,13 +147,37 @@ a:hover {
 .carousel-indicators li {
   margin-right: 10px !important;
 }
-.item .fill .container div {
+.item .fill .container .wrap-title {
   padding-top: 100px;
+}
+.item .fill .container .wrap-proyectos {
+  padding-top: 50%;
+}
+.item .fill .container .link-proyectos {
+  background: rgba(0,0,0,0.3);
+}
+.item .fill .container .caption-proyectos {
+  color: #fff;
+  font-family: lemon;
+  font-size: 10px !important;
+  border-bottom: 1px solid #fff;
+  padding-top: 15px;
+}
+.item .fill .container .btn {
+  border: 1px solid #fff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  font-size: 18px;
+  font-family: cobert-regular;
+  margin: 20px 0;
+}
+.item .fill .container .btn:hover {
+  color: #fff !important;
 }
 .item .fill h2 {
   color: #fff !important;
   font-family: lemon;
-  text-align: center;
 }
 .scroll-down {
   width: 100%;
@@ -466,6 +490,9 @@ a:hover {
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.documentos .btn:hover {
+  color: #fff !important;
+}
 .requisitos {
   background: #808080;
   -webkit-border-radius: 5px;
@@ -576,13 +603,16 @@ a:hover {
   .item .fill .container {
     height: 100%;
   }
-  .item .fill .container div {
+  .item .fill .container .wrap-title {
     height: 100%;
     position: relative;
     padding-top: 25%;
   }
+  .item .fill .container .link-proyectos {
+    height: 350px;
+    margin-top: -350px;
+  }
   .item .fill .container h2 {
-    text-align: left;
     font-size: 50px;
     padding-top: 50px;
     vertical-align: middle;
@@ -635,8 +665,11 @@ a:hover {
   .container {
     width: 1170px !important;
   }
-  .item .fill .container div {
+  .item .fill .container .wrap-title {
     padding-top: 37%;
+  }
+  .item .fill .container .wrap-proyectos {
+    padding-top: 60%;
   }
   .item .fill h2 {
     font-size: 53.333333333333336px !important;

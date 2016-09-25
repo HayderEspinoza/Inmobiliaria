@@ -30,8 +30,8 @@
                 <!-- Set the first background image using inline CSS below. -->
                 <div class="fill img-1" style="background-image:url('/img/portada/01.jpg')">
                     <div class="container">
-                        <div class="col-lg-10">
-                            <h2>NUNCA FUE TAN FÁCIL CONSEGUIR PROPIEDAD CARTAGENA.</h2>
+                        <div class="col-lg-10 wrap-title">
+                            <h2 class="text-left">NUNCA FUE TAN FÁCIL CONSEGUIR PROPIEDAD EN CARTAGENA.</h2>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                 <!-- Set the second background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('/img/portada/02.jpg');">
                     <div class="container">
-                        <div class="col-lg-7 pull-right">
+                        <div class="col-lg-7 wrap-title pull-right">
                             <h2>SU INVERSIÓN EN LAS MEJORES MANOS.</h2>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                 <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('/img/portada/03.jpg');">
                     <div class="container">
-                        <div class="col-lg-8 pull-right">
+                        <div class="col-lg-8 wrap-title pull-right">
                             <h2>AYUDAMOS A NUESTROS CLIENTES A TOMAR BUENAS DECISIONES.</h2>
                         </div>
                     </div>
@@ -60,8 +60,16 @@
                 <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('/img/portada/04.jpg');">
                     <div class="container">
-                        <div class="col-lg-8 block-center">
-                            <h2>DÉJANOS GUIARTE A CASA.</h2>
+                        <div class="row wrap-proyectos">
+                            <div class="col-md-4 link-proyectos block-center">
+                                <div class="caption-proyectos">
+                                    <h4 class="text-center">CONOCE NUESTROS PROYECTOS</h4>
+                                </div>
+                                <h2 class="text-center">VILLA ESCALLON</h2>
+                                <div class="col-sm-12 text-center">
+                                    <a href="{{ route('web.proyectos') }}" class="btn">VER PROYECTOS</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

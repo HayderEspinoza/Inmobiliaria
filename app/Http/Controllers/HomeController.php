@@ -104,9 +104,8 @@ class HomeController extends Controller
     public function enviar(Request $data)
     {
         $datos = $data->all();
-        foreach ($datos as $key => $value) {
-            debug($value);
-        }
+        dd($datos);
+
         // Mail::send('email.contacto', compact('datos'), function($msj){
         //     $msj->subject('Correo de Contacto');
         //     $msj->to('contacto@inmobiliariasantodomingocartagena.com');
