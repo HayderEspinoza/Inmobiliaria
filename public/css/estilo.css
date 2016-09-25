@@ -43,6 +43,18 @@ a:hover {
   font-size: 40px;
   color: #00a651;
 }
+.none {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.padre {
+  display: table;
+  height: 200px;
+}
+.hijo {
+  display: table-cell;
+  vertical-align: middle;
+}
 .logo {
   font-size: 20px;
   line-height: 15px;
@@ -155,22 +167,24 @@ a:hover {
 }
 .item .fill .container .link-proyectos {
   background: rgba(0,0,0,0.3);
+  padding: 30px 10px;
+}
+.item .fill .container .link-proyectos h2 {
+  padding: 27px 0;
 }
 .item .fill .container .caption-proyectos {
   color: #fff;
-  font-family: lemon;
+  font-family: cobert-regular;
   font-size: 10px !important;
   border-bottom: 1px solid #fff;
-  padding-top: 15px;
 }
 .item .fill .container .btn {
   border: 1px solid #fff;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-family: cobert-regular;
-  margin: 20px 0;
 }
 .item .fill .container .btn:hover {
   color: #fff !important;
@@ -561,6 +575,80 @@ a:hover {
   padding-top: 20px;
   padding-bottom: 20px;
   border: 0;
+}
+.descripcion-proyecto {
+  color: #fff;
+  padding: 120px 0;
+}
+.descripcion-proyecto h3 {
+  font-size: 39px;
+  padding-bottom: 60px;
+}
+.descripcion-proyecto p {
+  font-size: 20px;
+}
+.descripcion-proyecto p,
+.descripcion-proyecto h3 {
+  font-family: cobert-regular;
+}
+.show-proyecto {
+  color: #fff;
+}
+.show-proyecto h2,
+.show-proyecto li {
+  font-family: cobert-regular;
+}
+.show-proyecto h2 {
+  padding: 25px 0;
+}
+.show-proyecto li {
+  list-style: none;
+  font-size: 22px;
+}
+.plantas {
+  padding: 100px 0;
+}
+.plantas .titulo-plantas {
+  color: #ffcc29;
+  padding-bottom: 50px;
+}
+.plantas .foto {
+  padding: 0 9px;
+  margin: 10px 0;
+  position: relative;
+  cursor: pointer;
+}
+.plantas .foto:hover .show-plano {
+  width: 100%;
+}
+.plantas .foto:hover .show-plano .btn {
+  visibility: visible;
+}
+.plantas .show-plano {
+  background: rgba(0,0,0,0.3);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.1s all ease;
+}
+.plantas .show-plano .btn {
+  visibility: hidden;
+  width: 200px;
+  height: 50px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 3px solid #fff;
+  font-family: cobert-regular;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding-top: 10px;
+  margin-top: -25px;
+  margin-left: -95px;
 }
 @media (min-width: 1200px) {
   .toggle {

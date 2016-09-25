@@ -90,18 +90,19 @@
 				padding-top 50%
 			.link-proyectos
 				background rgba(0,0,0,0.3)
+				padding 30px 10px
+				h2
+					padding 27px 0
 			.caption-proyectos
 				color white
-				font-family lemon
+				font-family cobert-regular
 				font-size 10px !important
 				border-bottom 1px solid white
-				padding-top 15px
 			.btn 
 				border 1px solid white
 				border-radius(0)
-				font-size 18px
+				font-size 16px
 				font-family cobert-regular
-				margin 20px 0
 				&:hover
 					color white !important
 		h2
@@ -388,3 +389,59 @@
 		padding-top 20px 
 		padding-bottom 20px 
 		border 0
+.descripcion-proyecto
+	color white
+	padding 120px 0
+	h3
+		font-size 39px
+		padding-bottom 60px
+	p
+		font-size 20px
+	p, h3
+		font-family cobert-regular
+.show-proyecto
+	color white
+	h2, li
+		font-family cobert-regular
+	h2
+		padding 25px 0
+	li
+		list-style none
+		font-size 22px
+.plantas
+	padding 100px 0
+	.titulo-plantas
+		color #ffcc29
+		padding-bottom 50px
+	.foto
+		padding 0 9px
+		margin 10px 0
+		position relative
+		cursor pointer
+		&:hover
+			.show-plano
+				width 100%
+				.btn
+					visibility visible				
+	.show-plano
+		background rgba(0,0,0,0.3)
+		width 0
+		height 100%
+		position absolute
+		top 0
+		left 0
+		transition .1s all ease
+		.btn
+			visibility hidden
+			width 200px
+			height 50px
+			border-radius 0
+			border 3px solid white
+			font-family cobert-regular
+			font-size 18px
+			position absolute
+			top 50%
+			left 50%
+			padding-top 10px
+			margin-top -25px
+			margin-left -95px 
