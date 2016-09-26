@@ -16,7 +16,7 @@
     @include('include.menu')
     @include('include.toggle')
 	<div class="img-inmobiliaria" id="top">
-		<img src="{{asset('img/inmobiliaria/01.png')}}" alt="" class="img-responsive">
+		<img src="{{asset('img/inmobiliaria/01.jpg')}}" alt="" class="img-responsive">
 	</div>
 	<div class="container inmobiliaria">
         <div class="col-lg-12 title text-center title">
@@ -61,7 +61,7 @@
         </div>
 	</div>
 	<div class="img-inmobiliaria" id="top">
-		<img src="{{asset('img/inmobiliaria/02.png')}}" alt="" class="img-responsive">
+		<img src="{{asset('img/inmobiliaria/02.jpg')}}" alt="" class="img-responsive">
 	</div>
 	<div class="container beneficios">
 		<h2 class="text-center">

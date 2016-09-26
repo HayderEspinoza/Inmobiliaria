@@ -1,10 +1,11 @@
 <div class="footer">
     <div class="container">
         <div class="col-lg-5">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, consequuntur doloremque eveniet eius eaque dicta repudiandae illo ullam. Minima itaque sint magnam dolorum asperiores repudiandae dignissimos expedita, voluptatum vitae velit.
+            Inmobliaria <br>
+            Santo Domingo Cartagena
         </div>
         <div class="col-lg-7">
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <ul>
                     <li>SERVICIOS</li>
                     <li>Arriendos</li>
@@ -23,7 +24,7 @@
                     <li>Youtube</li>
                 </ul>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-4">
                 <ul>
                     <li>OFICINA</li>
                     <li>Cra 53 No. 30C - 21</li>

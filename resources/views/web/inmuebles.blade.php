@@ -139,9 +139,13 @@
 	                <div class="apartamento">
 	                    <div class="img-apartamento img-responsive">
 	                    	@if($inmueble->imagen == null)
-	                        	<img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
+	                        	<a href="{{ route('web.inmueble', $inmueble->id) }}">
+	                        		<img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
+	                        	</a>
 	                        @else
-	                        	<img class="img-responsive" src="{{asset('img/inmuebles/'.$inmueble->imagen)}}" alt="">
+	                        	<a href="{{ route('web.inmueble', $inmueble->id) }}">
+	                        		<img class="img-responsive" src="{{asset('img/inmuebles/'.$inmueble->imagen)}}" alt="">
+	                        	</a>
 	                        @endif
 	                    </div>
 	                    <div class="tipo-apartamento text-right">

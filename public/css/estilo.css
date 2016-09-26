@@ -183,7 +183,7 @@ a:hover {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  font-size: 16px;
+  font-size: 15px;
   font-family: cobert-regular;
 }
 .item .fill .container .btn:hover {
@@ -366,11 +366,12 @@ a:hover {
 .footer {
   background: #4b4b4d;
   color: #fff;
-  padding: 30px;
+  padding: 30px 0 10px 0;
 }
 .footer ul li {
   font-family: cobert-regular;
   list-style: none;
+  line-height: 27px;
 }
 .footer ul li:first-child {
   position: relative;
@@ -389,7 +390,7 @@ a:hover {
 }
 .footer .copyright {
   font-family: cobert-regular;
-  padding: 20px 0;
+  padding: 50px 0 0 0;
 }
 .inmobiliaria,
 .beneficios {
@@ -424,6 +425,10 @@ a:hover {
   padding: 0;
   line-height: 0;
   padding-bottom: 15px;
+}
+.item-beneficios p {
+  padding-right: 20px;
+  padding-left: 20px;
 }
 .servicios {
   color: #fff;
@@ -547,7 +552,7 @@ a:hover {
   color: #000;
 }
 .contacto {
-  background: #fff;
+  background: #191a1c;
   padding: 60px 0;
 }
 .contacto * {
@@ -571,10 +576,24 @@ a:hover {
   text-align: center;
 }
 .contacto .btn-enviar {
-  background: #e6e7e8;
   padding-top: 20px;
   padding-bottom: 20px;
-  border: 0;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #ccc !important;
+  transition: 0.5s all ease;
+}
+.contacto .btn-enviar:hover {
+  background: #fff !important;
+  color: #292b2e;
+}
+.contacto label.checkbox-inline {
+  margin-right: 30px;
+}
+.contacto input,
+.contacto textarea,
+.contacto checkbox-inline {
+  background: #191a1c !important;
 }
 .descripcion-proyecto {
   color: #fff;

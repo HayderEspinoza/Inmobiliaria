@@ -2,20 +2,7 @@
 @section('estilos')
 	<style>
 		.contacto{
-			background: #191A1C;
 			padding-top: 0 !important;
-		}
-		input, textarea, checkbox-inline{
-			background: #191A1C !important;
-		}
-		.btn{
-			background: transparent;
-			color: white;
-			border:1px solid #ccc !important;
-		}
-		.btn:hover{
-			background: #292B2E !important;
-			color:white;
 		}
 	</style>
 @endsection

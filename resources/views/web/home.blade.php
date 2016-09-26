@@ -67,7 +67,7 @@
                                 </div>
                                 <h2 class="text-center">VILLA ESCALLON</h2>
                                 <div class="col-sm-12 text-center">
-                                    <a href="{{ route('web.proyectos') }}" class="btn">VER PROYECTOS</a>
+                                    <a href="{{ route('web.proyectos') }}" class="btn">MÁS CERCA DE TODO</a>
                                 </div>
                             </div>
                         </div>
@@ -273,9 +273,9 @@
 @section('js')
     <script>
         $(window).on('load', function(){
-            /*$('.carousel').carousel({
+            $('.carousel').carousel({
                 interval: 9000
-            });*/
+            });
             $('.busqueda-portada').on('click', function(){
                 $('.formulario-portada').slideToggle();
             });

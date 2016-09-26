@@ -7,19 +7,19 @@
 			{{ Form::open(['route' => 'web.enviar', 'method' => 'post']) }}
 			<p>
 				<label class="checkbox-inline">
-					<input type="checkbox" value="arrendar" name="arrendar">ARRENDAR
+					<input type="checkbox" value="arrendar" name="tipo[]">ARRENDAR
 				</label>
 				<label class="checkbox-inline">
-					<input type="checkbox" value="vender" name="vender">VENDER
+					<input type="checkbox" value="vender" name="tipo[]">VENDER
 				</label>
 				<label class="checkbox-inline">
-					<input type="checkbox" value="evalue" name="evaluo">AVALÚO
+					<input type="checkbox" value="evalue" name="tipo[]">AVALÚO
 				</label>
 				<label class="checkbox-inline">
-					<input type="checkbox" value="gerencia_proyecto" name="gerencia_proyecto"> GERENCIA DE PROYECTOS
+					<input type="checkbox" value="gerencia_proyecto" name="tipo[]"> GERENCIA DE PROYECTOS
 				</label>
 				<label class="checkbox-inline">
-					<input type="checkbox" value="reclamos" name="reclamos">RECLAMOS
+					<input type="checkbox" value="reclamos" name="tipo[]">RECLAMOS
 				</label>
 			</p>
 			<h4>

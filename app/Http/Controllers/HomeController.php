@@ -8,6 +8,7 @@ use Negocio\Entities\Tipo;
 use Negocio\Entities\Oferta;
 use Negocio\Entities\Ciudad;
 use Negocio\Entities\Inmueble;
+use Mail;
 class HomeController extends Controller
 {
     public function index()
@@ -31,7 +32,7 @@ class HomeController extends Controller
                                 ->lists('nombre', 'id')
                                 ->toArray();
         $inmueble = (new Inmueble())->setTable('inmuebles as in');
-        $inmuebles = $inmueble->select('of.nombre as oferta', 'tp.nombre as tipo', 'in.precio', 'in.area', 'in.habitacion', 'in.banho', 'in.antiguedad', 'img.nombre as imagen')
+        $inmuebles = $inmueble->select('in.id', 'of.nombre as oferta', 'tp.nombre as tipo', 'in.precio', 'in.area', 'in.habitacion', 'in.banho', 'in.antiguedad', 'img.nombre as imagen')
                             ->leftJoin('tipos as tp', 'tp.id', '=', 'in.tipo_id')
                             ->leftJoin('ofertas as of', 'of.id', '=', 'in.oferta_id')
                             ->leftJoin('ciudades as ci', 'ci.id', '=', 'in.ciudad_id')
@@ -85,6 +86,13 @@ class HomeController extends Controller
         $inmuebles = $inmuebles->paginate();
         return view('web.inmuebles', compact('tipos', 'ofertas', 'ciudades', 'inmuebles', 'inputs'))->withInput($inputs);
     }
+    public function inmueble($id)
+    {
+        $inmueble = Inmueble::find($id);
+        $inmueble->destacado+=1;
+        $inmueble->save();
+        return redirect()->back();
+    }
     public function servicios()
     {
         return view('web.servicios');   
@@ -104,12 +112,10 @@ class HomeController extends Controller
     public function enviar(Request $data)
     {
         $datos = $data->all();
-        dd($datos);
-
-        // Mail::send('email.contacto', compact('datos'), function($msj){
-        //     $msj->subject('Correo de Contacto');
-        //     $msj->to('contacto@inmobiliariasantodomingocartagena.com');
-        // });
-        
+        /*Mail::send('email.contacto', compact('datos'), function($msj){
+            $msj->subject('Correo de Contacto');
+            $msj->to('contacto@inmobiliariasantodomingocartagena.com');
+        });*/
+        return view('email.contacto', compact('datos'));
     }
 }

@@ -10,11 +10,18 @@
     @include('include.menu')
     @include('include.toggle')
     <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
         <!-- Wrapper for Slides -->
-        <div class="carousel-inner" id="top">
+        <div class="carousel-inner">
             <div class="item active">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('/img/proyecto/01.jpg');">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill img-1" style="background-image:url('/img/proyecto/01.jpg')">
                     <div class="container">
                         <div class="row wrap-proyectos">
                             <div class="col-md-4 link-proyectos block-center">
@@ -23,7 +30,61 @@
                                 </div>
                                 <h2 class="text-center">VILLA ESCALLON</h2>
                                 <div class="col-sm-12 text-center">
-                                    <a href="{{ route('web.proyectos') }}" class="btn">VER PROYECTOS</a>
+                                    <a href="{{ route('web.proyectos') }}" class="btn">MÁS CERCA DE TODO</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('/img/proyecto/02.jpg');">
+                    <div class="container">
+                        <div class="row wrap-proyectos">
+                            <div class="col-md-4 link-proyectos block-center">
+                                <div class="caption-proyectos">
+                                    <h4 class="text-center">CONOCE NUESTROS PROYECTOS</h4>
+                                </div>
+                                <h2 class="text-center">VILLA ESCALLON</h2>
+                                <div class="col-sm-12 text-center">
+                                    <a href="{{ route('web.proyectos') }}" class="btn">MÁS CERCA DE TODO</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('/img/proyecto/03.jpg');">
+                    <div class="container">
+                        <div class="row wrap-proyectos">
+                            <div class="col-md-4 link-proyectos block-center">
+                                <div class="caption-proyectos">
+                                    <h4 class="text-center">CONOCE NUESTROS PROYECTOS</h4>
+                                </div>
+                                <h2 class="text-center">VILLA ESCALLON</h2>
+                                <div class="col-sm-12 text-center">
+                                    <a href="{{ route('web.proyectos') }}" class="btn">MÁS CERCA DE TODO</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('/img/proyecto/04.jpg');">
+                    <div class="container">
+                        <div class="row wrap-proyectos">
+                            <div class="col-md-4 link-proyectos block-center">
+                                <div class="caption-proyectos">
+                                    <h4 class="text-center">CONOCE NUESTROS PROYECTOS</h4>
+                                </div>
+                                <h2 class="text-center">VILLA ESCALLON</h2>
+                                <div class="col-sm-12 text-center">
+                                    <a href="{{ route('web.proyectos') }}" class="btn">MÁS CERCA DE TODO</a>
                                 </div>
                             </div>
                         </div>
@@ -33,7 +94,7 @@
         </div>
         {{-- scroll down --}}
         <div class="scroll-down text-center">
-            <a href="#descripcion-proyecto" class="btn-scroll scroll">
+            <a href="#destacados" class="btn-scroll scroll">
                 <span class="icon-arrow-down arrow-scroll"></span>
                 
                 <p class="scroll-text">
