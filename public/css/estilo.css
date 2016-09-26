@@ -440,6 +440,9 @@ a:hover {
 .servicios > * {
   font-family: cobert-regular;
 }
+.servicios .info {
+  font-family: cobert-regular;
+}
 .lista-servicios {
   text-align: right;
   margin: 50px 0 80px 0;
@@ -482,6 +485,8 @@ a:hover {
   list-style: none !important;
   color: #ffcc29;
   margin-bottom: 15px;
+  font-family: telegrafico;
+  font-size: 20px;
 }
 .items-servicios li:first-child:after {
   content: ' ';
@@ -494,6 +499,9 @@ a:hover {
 }
 .items-servicios li:first-child:before {
   width: 0;
+}
+.documentos {
+  margin-top: 40px;
 }
 .documentos h4 {
   color: #ffcc29;
@@ -511,6 +519,9 @@ a:hover {
 }
 .documentos .btn:hover {
   color: #fff !important;
+}
+.no-margen {
+  margin-top: 0 !important;
 }
 .requisitos {
   background: #808080;
@@ -537,8 +548,10 @@ a:hover {
 .link-avaluos span {
   font-family: lemon;
   padding-right: 40px;
+  font-size: 20px;
 }
 .link-avaluos .btn {
+  vertical-align: top;
   font-family: cobert-regular;
   background: transparent;
   -webkit-border-radius: 0;
@@ -561,7 +574,7 @@ a:hover {
 }
 .contacto h4 {
   font-weight: bold;
-  line-height: 70px;
+  line-height: 100px;
   font-size: 16px;
 }
 .contacto input,

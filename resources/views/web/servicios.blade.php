@@ -18,7 +18,7 @@
 	<div class="container servicios">
         <h1 class="text-center">NUESTROS SERVICIOS</h1>
         <div class="col-lg-8 block-center">
-        	<p class="text-center">
+        	<p class="text-center info">
 	        	Contamos con un amplio portafolio y equipo de profesionales altamente capacitados que lo podrán asesorar en la compra y venta de inmuebles.
 	        </p>
         </div>
@@ -60,7 +60,7 @@
                         <li>Equipo altamente calificado en competencias inmobiliarias</li>
                         <li>Atención personalizada y asesoría en los inmuebles de acuerdo a las necesidades del cliente</li>
                     </ul>
-                    <div class="col-lg-12 documentos">
+                    <div class="col-lg-12 documentos no-margen">
                         <h4>DESCARGAR</h4>
                         <div class="btn">
                             DESCARGAR REQUISITOS
@@ -103,7 +103,7 @@
                         <li>Hacemos estudios juridicos del inmueble, para conocer si esta libre gravámenes y/o limitaciones</li>
                         <li>Ingreso constante de nuevos inmubeles y proyectos</li>
                     </ul>
-                    <div class="col-lg-12 documentos">
+                    <div class="col-lg-12 documentos no-margen">
                         <h4>DESCARGAR</h4>
                         <div class="btn">
                             DESCARGAR REQUISITOS
@@ -112,7 +112,7 @@
                     <div class="col-lg-4 documentos">
                         <h4>PARA EMPRESAS</h4>
                         <p>
-                            Si estas interesado en arrendar, por favor desrgue la solicitud de arrinedo.
+                            Si estas interesado en arrendar, por favor desrgue la solicitud de arriendo.
                         </p>
                         <div class="btn">
                             DESCARGAR FORMULARIO
@@ -137,7 +137,7 @@
                         <li>Promoción permanente en nuestra base de datos</li>
                         <li>Acompañamiento a los compradores en los tramites y documentación ante la fiducia</li>
                     </ul>
-                    <div class="col-lg-4 documentos">
+                    <div class="col-lg-4 documentos no-margen">
                         <h4>PROYECTOS</h4>
                         <div class="btn">VER PROYECTOS</div>
                     </div>
