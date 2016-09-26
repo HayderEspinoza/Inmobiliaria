@@ -1,8 +1,10 @@
 <div class="footer">
     <div class="container">
         <div class="col-lg-5">
-            Inmobliaria <br>
-            Santo Domingo Cartagena
+            <div class="col-lg-12 logo logo-apartamentos">
+                <span class="one">INMOBILIARIA</span><br>
+                <span class="two">SANTO DOMINGO CARTAGENA</span>
+            </div>
         </div>
         <div class="col-lg-7">
             <div class="col-lg-4">
