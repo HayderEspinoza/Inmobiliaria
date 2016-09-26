@@ -12,6 +12,9 @@ function init(e) {
 	});
 	$('.moneda').number( true, 0);
 	$('.image-link').magnificPopup({type:'image'});
+	$('.carousel').carousel({
+        interval: 3000
+    });
 }
 function scroll(event){
 	event.preventDefault();

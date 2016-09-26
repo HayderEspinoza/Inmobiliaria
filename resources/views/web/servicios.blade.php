@@ -69,7 +69,7 @@
                     <div class="col-lg-4 documentos">
                         <h4>PARA EMPRESAS</h4>
                         <p>
-                            Si estas interesado en arrendar, por favor desrgue la solicitud de arrinedo.
+                            Si está interesado en arrendar, por favor descargue la solicitud de arriendo.
                         </p>
                         <div class="btn">
                             DESCARGAR FORMULARIO
@@ -139,7 +139,7 @@
                     </ul>
                     <div class="col-lg-4 documentos no-margen">
                         <h4>PROYECTOS</h4>
-                        <div class="btn">VER PROYECTOS</div>
+                        <a href="{{ route('web.proyectos') }}" class="btn">VER PROYECTOS</a>
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="evaluos">

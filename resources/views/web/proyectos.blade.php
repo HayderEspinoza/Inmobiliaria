@@ -26,7 +26,7 @@
                         <div class="row wrap-proyectos">
                             <div class="col-md-4 link-proyectos block-center">
                                 <div class="caption-proyectos">
-                                    <h4 class="text-center">CONOCE NUESTROS PROYECTOS</h4>
+                                    <h4 class="text-center">CONOCE NUESTRO PROYECTO</h4>
                                 </div>
                                 <h2 class="text-center">VILLA ESCALLON</h2>
                                 <div class="col-sm-12 text-center">
@@ -94,7 +94,7 @@
         </div>
         {{-- scroll down --}}
         <div class="scroll-down text-center">
-            <a href="#destacados" class="btn-scroll scroll">
+            <a href="#descripcion-proyecto" class="btn-scroll scroll">
                 <span class="icon-arrow-down arrow-scroll"></span>
                 
                 <p class="scroll-text">
@@ -107,7 +107,7 @@
     	<div class="container">
     		<div class="title-descripcion">
     			<h3 class="text-center">
-    				DESCRIPCION DEL PROYECTO
+    				DESCRIPCIÓN DEL PROYECTO
     			</h3>
     		</div>
     		<div class="col-md-10 block-center">
