@@ -17,11 +17,13 @@ Route::get('/inmobiliaria', ['as' => 'web.inmobiliaria', 'uses' => 'HomeControll
 Route::get('/servicios', ['as' => 'web.servicios', 'uses' => 'HomeController@servicios']);
 Route::get('/inmuebles', ['as' => 'web.inmuebles', 'uses' => 'HomeController@inmuebles']);
 Route::get('/inmuebles/{id}', ['as' => 'web.inmueble', 'uses' => 'HomeController@inmueble']);
+Route::get('/inmuebles/interesa/{id}', ['as' => 'web.interesaInmueble', 'uses' => 'HomeController@interesaInmueble']);
 Route::get('/proyectos', ['as' => 'web.proyectos', 'uses' => 'HomeController@proyectos']);
 Route::get('/contacto', ['as' => 'web.contacto', 'uses' => 'HomeController@contacto']);
 Route::post('/enviar', ['as' => 'web.enviar', 'uses' => 'HomeController@enviar']);
 Route::get('/home', 'InmuebleController@index');
 Route::resource('inmueble', 'InmuebleController');
-Route::resource('inmueble.imagen', 'ImagenController');
 Route::resource('tipo', 'TipoController');
 Route::resource('ciudad', 'CiudadController');
+Route::put('perfil/{id}', ['as' => 'imagen.perfil', 'uses' => 'ImagenController@perfil']);
+Route::resource('inmueble.imagen', 'ImagenController');

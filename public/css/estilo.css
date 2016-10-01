@@ -682,6 +682,70 @@ a:hover {
   margin-top: -25px;
   margin-left: -95px;
 }
+.imagen-detalle {
+  padding: 5px !important;
+  cursor: pointer;
+}
+.oferta-imagen,
+.direccion-imagen {
+  color: #fff;
+  line-height: 10px;
+  font-size: 18px;
+}
+.direccion-imagen {
+  font-family: cobert-regular;
+  font-size: 16px;
+}
+.descripcion-inmueble {
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #ee1c24;
+  position: relative;
+}
+.descripcion-inmueble:before {
+  content: '';
+  width: 150px;
+  height: 8px;
+  background: #ee1c24;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+.detalles,
+.descripcion-articulo {
+  margin-top: 60px;
+  color: #fff;
+}
+.detalles {
+  border-right: 1px solid #fff;
+}
+.texto-moneda {
+  background: transparent;
+  border: 0;
+}
+.lemon {
+  font-family: lemon !important;
+}
+.precio-detalle {
+  font-size: 20px;
+}
+.descripcion-articulo p {
+  font-family: cobert-regular;
+}
+.tabla-descripcion {
+  width: 90%;
+}
+.tabla-descripcion th,
+.tabla-descripcion td {
+  font-family: cobert-regular;
+}
+.tabla-descripcion th {
+  padding-left: 15px;
+}
+.tabla-descripcion tr {
+  padding-top: 20px;
+}
 @media (min-width: 1200px) {
   .toggle {
     background: #ffcc29;

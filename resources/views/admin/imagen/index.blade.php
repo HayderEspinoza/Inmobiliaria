@@ -36,6 +36,8 @@
                                 <td>
                                     <a href="/img/inmuebles/{{ $imagen->nombre }}" target="_blank" class="image-link label label-primary">Ver</a>
                                     <a href="{{route('inmueble.imagen.destroy', [$inmueble->id, $imagen->id])}}" class="label label-danger" data-method="delete" data-token="{{csrf_token()}}" data-confirm="Esta seguro de eliminar?">Eliminar</a>
+                                    <a href="{{route('imagen.perfil', $imagen->id)}}" class="label label-{{ $imagen->class }}" data-method="put" data-token="{{csrf_token()}}" data-confirm="Esta sera su siguiente imagen de portada?">Portada</a>
+
                                 </td>
                             </tr>
                         @endforeach

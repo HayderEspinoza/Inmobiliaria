@@ -13,7 +13,7 @@
     @include('include.menu')
     @include('include.toggle')
 	<div class="img-inmobiliaria" id="top">
-		<img src="{{asset('img/servicios/01.png')}}" alt="" class="img-responsive">
+		<img src="{{asset('img/servicios/01.jpg')}}" alt="" class="img-responsive">
 	</div>
 	<div class="container servicios">
         <h1 class="text-center">NUESTROS SERVICIOS</h1>

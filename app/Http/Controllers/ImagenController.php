@@ -8,12 +8,14 @@ use Negocio\Entities\Inmueble;
 use Negocio\Entities\Imagen;
 use App\Http\Requests;
 use \Validator;
+use \DB;
 class ImagenController extends Controller
 {
     public function index($inmueble)
     {
         $inmueble = Inmueble::find($inmueble);
-        $imagenes = Imagen::where('inmueble_id', $inmueble->id)
+        $imagenes = Imagen::select('id', 'nombre', 'inmueble_id', DB::raw("CASE perfil WHEN 0 THEN 'default' WHEN 1 THEN 'success' END AS class"))
+                        ->where('inmueble_id', $inmueble->id)
                         ->where('estado', '1')
                         ->get();
         return view('admin.imagen.index', compact('inmueble', 'imagenes'));
@@ -53,5 +55,18 @@ class ImagenController extends Controller
         $imagen->delete();
         $this->mensaje($this->eliminado);
         return redirect()->back();
+    }
+    public function perfil($id='')
+    {
+            $imagen = Imagen::find($id);
+            $imagenes = Imagen::where('inmueble_id', $imagen->inmueble_id)
+                                ->get();
+            foreach ($imagenes as $key => $img) {
+                $img->perfil = 0;
+                $img->save();
+            }
+            $imagen->perfil = 1;
+            $imagen->save();
+            return redirect()->back();
     }
 }

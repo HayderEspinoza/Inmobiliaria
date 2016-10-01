@@ -8,6 +8,7 @@ use Negocio\Entities\Tipo;
 use Negocio\Entities\Oferta;
 use Negocio\Entities\Ciudad;
 use Negocio\Entities\Inmueble;
+use Negocio\Entities\Imagen;
 use Mail;
 class HomeController extends Controller
 {
@@ -88,10 +89,25 @@ class HomeController extends Controller
     }
     public function inmueble($id)
     {
-        $inmueble = Inmueble::find($id);
+        $inmueble = (new Inmueble())->setTable('inmuebles as in');
+        $inmueble = $inmueble->leftJoin('tipos as tp', 'tp.id', '=', 'in.tipo_id')
+                            ->leftJoin('ofertas as of', 'of.id', '=', 'in.oferta_id')
+                            ->where('in.id', $id)
+                            ->select('in.id', 'tp.nombre as tipo', 'of.nombre as oferta', 'in.direccion', 'in.precio', 'in.descripcion', 'in.area', 'in.habitacion', 'in.banho', 'in.direccion', 'in.piscina', 'in.parqueadero', 'in.cocina', 'in.zona_residencial', 'in.conjunto_cerrado', 'in.porteria', 'in.patio')
+                            ->first();
         $inmueble->destacado+=1;
         $inmueble->save();
-        return redirect()->back();
+        $imagenes = Imagen::where('inmueble_id', $id)
+                            ->orderBy('perfil', 'desc')
+                            ->get();
+        $portada = Imagen::where('inmueble_id', $id)
+                            ->orderBy('perfil', 'desc')
+                            ->first();
+        return view('web.detalle', compact('inmueble', 'imagenes', 'portada'));
+    }
+    public function interesaInmueble($id)
+    {
+        dd($id);
     }
     public function servicios()
     {

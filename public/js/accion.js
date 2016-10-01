@@ -5,6 +5,7 @@ function init(e) {
 	$('.cerrar').on('click', cerrar);
 	$('.toggle').on('click', cerrar);
 	$('.wrap-servicio a').on('click', tabServicios);
+	$('.imagen-detalle img').on('click', showImagen)
 	$(window).on('scroll', showArrow);
 	$('.flash ,.flash .close').on('click', function(e){
 		e.preventDefault();
@@ -15,6 +16,7 @@ function init(e) {
 	$('.carousel').carousel({
         interval: 3000
     });
+
 }
 function scroll(event){
 	event.preventDefault();
@@ -37,4 +39,7 @@ function tabServicios(e) {
 	e.preventDefault();
 	$('.wrap-servicio a').removeClass('active');
 	$(this).addClass('active');
+}
+function showImagen() {
+	$('#portada').attr('src', this.src);
 }
