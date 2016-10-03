@@ -392,13 +392,14 @@ a:hover {
   font-family: cobert-regular;
   padding: 50px 0 0 0;
 }
-.beneficios {
-  background: #ffcc29;
-  color: #000;
-}
 .inmobiliaria,
 .beneficios {
   padding: 90px 0;
+  color: #fff;
+}
+.inmobiliaria h3,
+.beneficios h3 {
+  color: #fff;
 }
 .inmobiliaria h2,
 .beneficios h2,
@@ -407,6 +408,7 @@ a:hover {
 .inmobiliaria p,
 .beneficios p {
   font-family: cobert-regular;
+  color: #fff;
 }
 .inmobiliaria p,
 .beneficios p {
@@ -520,9 +522,11 @@ a:hover {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+  transition: 0.5s background ease;
 }
 .documentos .btn:hover {
-  color: #fff !important;
+  background: #fff;
+  color: #000 !important;
 }
 .no-margen {
   margin-top: 0 !important;

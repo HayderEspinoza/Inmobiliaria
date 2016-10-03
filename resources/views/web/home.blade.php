@@ -31,7 +31,7 @@
                 <div class="fill img-1" style="background-image:url('/img/portada/01.jpg')">
                     <div class="container">
                         <div class="col-lg-10 wrap-title">
-                            <h2 class="text-left">NUNCA FUE TAN FÁCIL CONSEGUIR PROPIEDAD EN CARTAGENA.</h2>
+                            <h2 class="text-left">NUNCA ANTES FUE TAN FÁCIL CONSEGUIR PROPIEDAD EN CARTAGENA.</h2>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
         {{-- busqueda --}}
         <div class="busqueda-portada">
             <span class="icon-search icono-search"></span>
-            BUSCAR APARTAMENTO
+            BUSCAR INMUEBLE
         </div>
         <!--Formulario de busqueda-->
         <div class="formulario-portada">
@@ -153,7 +153,7 @@
             <div class="title-destacados text-center">
                 <span>INMUEBLES DETACADOS</span>
             </div>
-            <div class="col-lg-9 block-center">
+            <div class="col-lg-9 block-center intro-inmuebles">
                 <!--Item-->
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
@@ -266,7 +266,7 @@
             <div class="title-destacados text-center">
                 <span>INMUEBLES RECIENTES</span>
             </div>
-            <div class="col-lg-9 block-center">
+            <div class="col-lg-9 block-center intro-inmuebles">
                 <!--Item-->
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">

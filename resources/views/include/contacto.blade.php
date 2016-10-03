@@ -23,7 +23,7 @@
 				</label>
 			</p>
 			<h4>
-				DEJANOS TU EMAIL Y TE CONTACTAREMOS.
+				DÉJANOS TU EMAIL Y TE CONTÁCTAREMOS.
 			</h4>
 				<div class="row">
 					<div class="col-lg-11 block-center">

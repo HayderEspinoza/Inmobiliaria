@@ -101,7 +101,7 @@
                         <li>Cuidadoso estudio de los títulos de propiedad</li>
                         <li>Asesoría durante el proceso de venta y post-venta</li>
                         <li>Hacemos estudios juridicos del inmueble, para conocer si esta libre gravámenes y/o limitaciones</li>
-                        <li>Ingreso constante de nuevos inmubeles y proyectos</li>
+                        <li>Ingreso constante de nuevos inmuebles y proyectos</li>
                     </ul>
                     <div class="col-lg-12 documentos no-margen">
                         <h4>DESCARGAR</h4>
@@ -179,7 +179,7 @@
         <span>
             SI ESTÁ INTESADO EN NUESTRO SERVICIO DE AVALÚO HACER CLICK AQUI
         </span>
-        <a href="#" class="btn btn-default">
+        <a href="{{ route('web.contacto') }}" class="btn btn-default">
             AVALÚOS
         </a>
     </div>

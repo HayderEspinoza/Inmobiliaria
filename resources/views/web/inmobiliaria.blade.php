@@ -27,7 +27,7 @@
         	<div class="row">
         		<div class="col-lg-6">
         			<p>
-                        Una joven y activa compañía cartagenera de carácter privado legalmente constituida, nutrida de ideas y conceptos innovadores, conformada por profesionales con más de 20 años de experiencia y amplio conocimiento del mercado inmobiliario, orientada a satisfacer con calidad y transparencia las necesidades y expectativas de un público exigente a través de la  prestación de servicios inmobiliarios y administración de bienes: venta, arriendo, avalúos, hipotecas y proyectos inmobiliarios,  que busca ofrecerle el mejor servicios empresarial y las mejores opciones de inversión en bienes raíces para el mejoramiento de su calidad de vida.        
+                        Una joven y activa compañía cartagenera de carácter privado legalmente constituida, nutrida de ideas y conceptos innovadores, conformada por profesionales con más de 20 años de experiencia y amplio conocimiento del mercado inmobiliario, orientada a satisfacer con calidad y transparencia las necesidades y expectativas de un público exigente a través de la  prestación de servicios inmobiliarios y administración de bienes: venta, arriendo, avalúos, hipotecas y proyectos inmobiliarios, y las mejores opciones de inversión en bienes raíces para el mejoramiento de su calidad de vida.        
                     </p>
         		</div>
         		<div class="col-lg-6">

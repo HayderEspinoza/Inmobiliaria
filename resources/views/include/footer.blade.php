@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="col-lg-8">
-            <div class="col-lg-3 col-lg-offset-1">
+            <div class="col-lg-4">
                 <ul>
                     <li>SERVICIOS</li>
                     <li>Arriendos</li>
@@ -33,8 +33,9 @@
                     <li>Bocagrande Carrera 3 No. 6A-100 Of. 709</li>
                     <li>Edificio Torre Empresarial Protección</li>
                     <li>Teléfono: (5)644 7321</li>
+                    <li>Cel. 350 4632408 - </li>
+                    <li>301 7467882</li>
                     <li>Cartagena de Indias</li>
-                    <li>Colombia</li>
                 </ul>
             </div>
             <div class="col-lg-12">
