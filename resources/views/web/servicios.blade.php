@@ -53,7 +53,7 @@
                         <li>Idóneo servicio de mantenimiento a su inmueble.</li>
                     </ul>
                     <ul class="items-servicios">
-                        <li>SERVICIOS AL ARRENDADOR</li>
+                        <li>SERVICIOS AL ARRENDATARIO</li>
                         <li>Amplia oferta de inmuebles</li>
                         <li>Tenemos respuesta rápida a su estudio de arriendo.</li>
                         <li>Búsqueda ágil a través de nuestra pagina web.</li>
@@ -112,7 +112,7 @@
                     <div class="col-lg-4 documentos">
                         <h4>PARA EMPRESAS</h4>
                         <p>
-                            Si estas interesado en arrendar, por favor desrgue la solicitud de arriendo.
+                            Si estas interesado en arrendar, por favor descargue la solicitud de arriendo.
                         </p>
                         <div class="btn">
                             DESCARGAR FORMULARIO
@@ -146,7 +146,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <ul class="items-servicios">
-                                <li>PARA QUE SIRVE UN EVALUO</li>
+                                <li>PARA QUE SIRVE UN AVALUO</li>
                                 <li>Realizar un crédito hipotecario</li>
                                 <li>Garantías hipotecarias</li>
                                 <li>Adquirir un seguro</li>

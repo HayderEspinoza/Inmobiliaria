@@ -116,7 +116,7 @@ a:hover {
   margin-left: -500px;
 }
 .menu-lista {
-  padding: 50px 0 50px 0;
+  padding: 50px 0 40px 0;
   text-align: center;
   font-size: 24px;
 }
@@ -392,10 +392,13 @@ a:hover {
   font-family: cobert-regular;
   padding: 50px 0 0 0;
 }
+.beneficios {
+  background: #ffcc29;
+  color: #000;
+}
 .inmobiliaria,
 .beneficios {
   padding: 90px 0;
-  color: #fff;
 }
 .inmobiliaria h2,
 .beneficios h2,
@@ -420,6 +423,7 @@ a:hover {
 }
 .item-beneficios {
   padding-top: 50px;
+  color: #000;
 }
 .item-beneficios h3 {
   padding: 0;

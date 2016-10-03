@@ -1,14 +1,14 @@
 <div class="footer">
     <div class="container">
-        <div class="col-lg-5">
+        <div class="col-lg-4">
             <br>
             <div class="col-lg-12 logo">
                 <span class="one">INMOBILIARIA</span><br>
                 <span class="two">SANTO DOMINGO CARTAGENA</span>
             </div>
         </div>
-        <div class="col-lg-7">
-            <div class="col-lg-4">
+        <div class="col-lg-8">
+            <div class="col-lg-3 col-lg-offset-1">
                 <ul>
                     <li>SERVICIOS</li>
                     <li>Arriendos</li>
@@ -30,10 +30,9 @@
             <div class="col-lg-4">
                 <ul>
                     <li>OFICINA</li>
-                    <li>Cra 53 No. 30C - 21</li>
-                    <li>Apto 305</li>
-                    <li>Edificio Villa Escallón</li>
-                    <li>Teléfono: 664 7321</li>
+                    <li>Bocagrande Carrera 3 No. 6A-100 Of. 709</li>
+                    <li>Edificio Torre Empresarial Protección</li>
+                    <li>Teléfono: (5)644 7321</li>
                     <li>Cartagena de Indias</li>
                     <li>Colombia</li>
                 </ul>

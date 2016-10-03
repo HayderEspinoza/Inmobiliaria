@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="col-lg-12 block-center text-center">
 			<h4>CONTÁCTANOS</h4>
-			<h2>ESTAMOS DISPUESTOS A AYUDARTE</h2>
+			<h2>PARA TENER EL GUSTO DE ATENDERTE</h2>
 			<h4>SI ESTÁ INTERESADO EN:</h4>
 			{{ Form::open(['route' => 'web.enviar', 'method' => 'post']) }}
 			<p>
@@ -23,7 +23,7 @@
 				</label>
 			</p>
 			<h4>
-				DÉJENOS SU EMAIL Y LO CONTÁCTAREMOS.
+				DEJANOS TU EMAIL Y TE CONTACTAREMOS.
 			</h4>
 				<div class="row">
 					<div class="col-lg-11 block-center">
