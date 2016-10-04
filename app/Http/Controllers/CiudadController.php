@@ -8,6 +8,10 @@ use App\Http\Requests;
 use \Validator;
 class CiudadController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $ciudades = Ciudad::where('estado', '1');

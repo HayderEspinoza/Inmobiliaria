@@ -8,6 +8,10 @@ use App\Http\Requests;
 use \Validator;
 class TipoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $tipos = Tipo::where('estado', '1');

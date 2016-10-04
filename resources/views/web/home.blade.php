@@ -67,7 +67,7 @@
                                 </div>
                                 <h2 class="text-center">VILLA ESCALLON</h2>
                                 <div class="col-sm-12 text-center">
-                                    <a href="{{ route('web.proyectos') }}" class="btn">MÁS CERCA DE TODO</a>
+                                    <a href="{{ route('web.proyectos') }}" class="btn">VER PROYECTOS</a>
                                 </div>
                             </div>
                         </div>

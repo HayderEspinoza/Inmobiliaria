@@ -27,12 +27,12 @@
         	<div class="row">
         		<div class="col-lg-6">
         			<p>
-                        Una joven y activa compañía cartagenera de carácter privado legalmente constituida, nutrida de ideas y conceptos innovadores, conformada por profesionales con más de 20 años de experiencia y amplio conocimiento del mercado inmobiliario, orientada a satisfacer con calidad y transparencia las necesidades y expectativas de un público exigente a través de la  prestación de servicios inmobiliarios y administración de bienes: venta, arriendo, avalúos, hipotecas y proyectos inmobiliarios, y las mejores opciones de inversión en bienes raíces para el mejoramiento de su calidad de vida.        
+                        Una joven y activa compañía cartagenera de carácter privado legalmente constituida, nutrida de ideas y conceptos innovadores, conformada por profesionales con más de 20 años de experiencia y amplio conocimiento del mercado inmobiliario, orientada a satisfacer con calidad y transparencia las necesidades y expectativas de un público exigente a través de la  prestación de servicios inmobiliarios y administración de bienes: venta, arriendo, avalúos, hipotecas, proyectos inmobiliarios, y las mejores opciones de inversión en bienes raíces.        
                     </p>
         		</div>
         		<div class="col-lg-6">
         			<p>
-                        Trabajamos con un equipo de humano con gran talento, capacidad y profesionalismo  con una amplia experiencia que se destaca por su excelencia y calidad de servicio en la solución de las necesidades inmobiliarias de todos nuestros clientes, ofreciéndoles seguridad, bienestar y confianza a la hora de invertir en Finca Raíz, actuales y a futuro.        
+                        Trabajamos con un equipo humano con gran talento, capacidad y profesionalismo  con una amplia experiencia que se destaca por su excelencia y calidad de servicio en la solución de las necesidades inmobiliarias de todos nuestros clientes, ofreciéndoles seguridad, bienestar y confianza a la hora de invertir en Finca Raíz, actuales y a futuro.        
                     </p>
                     <p>
                         Nos caracterizamos por prestar un servicio integral de alta calidad basado en la eficiencia, responsabilidad, honestidad y transparencia, nuestros pilares valores corporativos, cumpliendo con todos los requisitos establecidos por la ley.
@@ -51,7 +51,7 @@
         		<div class="col-lg-6">
         			<h2 class="text-center">VISIÓN</h2>
         			<p>
-        				Para el 2020, posicionarnos como líder de excelencia y competitividad en asesoría en todos los aspectos que se relacionan con la adecuada concreción de las operaciones comerciales y legales entre las compañías que presten servicios en el sector inmobiliario; ser la mejor opción inmobiliaria de nuestros clientes, ofreciendo un servicio de asesoría inmobiliaria integral y profesional, dando total satisfacción a todas sus necesidades, superando sus expectativas, siendo reconocidos por nuestro profesionalismo, confianza y cumplimiento.
+        				Para el 2020, posicionarnos como líder de excelencia y competitividad en asesoría y en todos los aspectos que se relacionan con la adecuada concreción de las operaciones comerciales y legales entre las compañías que presten servicios en el sector inmobiliario; ser la mejor opción inmobiliaria de nuestros clientes, ofreciendo un servicio de asesoría inmobiliaria integral y profesional, dando total satisfacción a todas sus necesidades, superando sus expectativas, siendo reconocidos por nuestro profesionalismo, confianza y cumplimiento.
         			</p>
         		</div>
         	</div>
@@ -76,7 +76,7 @@
 
                         <div class="col-lg-12">
                             <p>
-                                Creamos estrategias y pautamos en medios digitales, para que su propiedad sea visible y tenga mayores resultados.
+                                Creamos estrategias bien elaboradas y pautamos en medios digitales, para que su propiedad sea visible y tenga mayores resultados.
                             </p>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
 
                         <div class="col-lg-12">
                             <p>
-                                Vendemos y arrendamos inmuebles confiables y seguros procurado siempre el mejor precio.
+                                Vendemos y arrendamos inmuebles confiables y seguros procurando siempre el mejor precio.
                             </p>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
 
                         <div class="col-lg-12">
                             <p>
-                                Disponemos de web site y herramientas tecnológicas para el uso eficiente de la información.
+                                Disponemos de un sitio web y herramientas tecnológicas para un máximo provecho al uso de la información.
                             </p>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
 
                         <div class="col-lg-12">
                             <p>
-                                Garantizamos al propietario la seguridad de la renta y la conservacion del inmueble, puesto que trabajamos con Aseguradoras y Afianzadoras ampliamente reconocidas en el sectos inmobiliario.
+                                Garantizamos al propietario la seguridad de la renta y la conservacion del inmueble, puesto que trabajamos con Aseguradoras y Afianzadoras ampliamente reconocidas en el sector inmobiliario.
                             </p>
                         </div>
                     </div>

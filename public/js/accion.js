@@ -1,6 +1,9 @@
 $(window).on('load', init);
 
 function init(e) {
+	$('.carousel').carousel({
+        interval: 2500
+    });
 	$(".scroll").on("click", scroll);
 	$('.cerrar').on('click', cerrar);
 	$('.toggle').on('click', cerrar);
@@ -13,10 +16,6 @@ function init(e) {
 	});
 	$('.moneda').number( true, 0);
 	$('.image-link').magnificPopup({type:'image'});
-	$('.carousel').carousel({
-        interval: 3000
-    });
-
 }
 function scroll(event){
 	event.preventDefault();

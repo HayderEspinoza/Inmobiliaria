@@ -13,7 +13,7 @@ class UsersTableSeeder extends Seeder
     {
         $admin = new User();
         $admin->name = 'admin';
-        $admin->email = 'admin@gmail.com';
+        $admin->email = 'soporte@inmobiliariasantodomingocartagena.com';
         $admin->password = bcrypt('admin');
         $admin->save();
     }

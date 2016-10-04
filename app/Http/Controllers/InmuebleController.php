@@ -11,6 +11,10 @@ use App\Http\Requests;
 
 class InmuebleController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $inmueble = (new Inmueble())->setTable('inmuebles as in');

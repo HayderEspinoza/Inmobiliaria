@@ -319,9 +319,14 @@ a:hover {
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.formulario label {
+  font-weight: normal;
+}
 .text-pagination {
   color: #fff;
   font-family: cobert-regular;
+  font-size: 16px;
+  padding: 0 0 10px 0;
 }
 .pagination li a {
   margin-right: 5px;
@@ -492,7 +497,7 @@ a:hover {
   color: #ffcc29;
   margin-bottom: 15px;
   font-family: telegrafico;
-  font-size: 20px;
+  font-size: 24px;
 }
 .items-servicios li:first-child:after {
   content: ' ';

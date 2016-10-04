@@ -31,7 +31,11 @@
 		<div class="col-md-8">
 			<div class="row">
 				<div class="col-md-12">
-					<img src="{{ asset('/img/inmuebles/'.$portada->nombre) }}" alt="" class="img-responsive" id="portada">
+					@if ($portada != null)
+						<img src="{{ asset('/img/inmuebles/'.$portada->nombre) }}" alt="" class="img-responsive" id="portada">
+					@else
+						<img src="{{ asset('/img/inmuebles/default.jpg') }}" alt="" class="img-responsive" id="portada">
+					@endif
 				</div>
 			</div>
 			<br>

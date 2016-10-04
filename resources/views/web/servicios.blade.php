@@ -36,7 +36,7 @@
                         <a href="#proyectos" class="btn btn-block" aria-controls="proyectos" role="tab" data-toggle="tab">PROYECTOS</a>
                     </div>
                     <div class="col-sm-3 wrap-servicio">
-                        <a href="#evaluos" class="btn btn-block" aria-controls="evaluos" role="tab" data-toggle="tab">EVALÚOS</a>
+                        <a href="#evaluos" class="btn btn-block" aria-controls="evaluos" role="tab" data-toggle="tab">AVALÚOS</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 documentos">
-                        <h4>PARA EMPRESAS</h4>
+                        <h4>PERSONA JURIDICA</h4>
                         <p>
                             Si está interesado en arrendar, por favor descargue la solicitud de arriendo.
                         </p>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 documentos">
-                        <h4>PERSONAS NATURALES</h4>
+                        <h4>PERSONA NATURAL</h4>
                         <p>
                             Si está interesado en arrendar, por favor descargue la solicitud de arriendo.
                         </p>
@@ -110,7 +110,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 documentos">
-                        <h4>PARA EMPRESAS</h4>
+                        <h4>PERSONA JURIDICA</h4>
                         <p>
                             Si estas interesado en arrendar, por favor descargue la solicitud de arriendo.
                         </p>
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 documentos">
-                        <h4>PERSONAS NATURALES</h4>
+                        <h4>PERSONA NATURAL</h4>
                         <p>
                             Si está interesado en arrendar, por favor descargue la solicitud de arriendo.
                         </p>

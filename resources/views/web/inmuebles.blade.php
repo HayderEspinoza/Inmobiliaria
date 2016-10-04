@@ -18,7 +18,7 @@
             <span class="two">SANTO DOMINGO CARTAGENA</span>
         </div>
 		<div class="col-lg-12 text-pagination">
-			MOSTRANDO {{ $inmuebles->count() }} DE {{ $inmuebles->total() }} INMUEBLES
+			MOSTRANDO {{ $inmuebles->count() }} DE {{ $inmuebles->total() }} INMUEBLES ENCONTRADOS
 		</div>
         <!--Formulario-->
 		<div class="col-lg-3 formulario">
