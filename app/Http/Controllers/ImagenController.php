@@ -13,7 +13,7 @@ class ImagenController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth', ['except' => ['store']]);
     }
     public function index($inmueble)
     {
@@ -31,6 +31,7 @@ class ImagenController extends Controller
     }
     public function store(Request $request, $inmueble)
     {
+        dd('prueba');
         $inputs = $request->all();
         $rules = [
             'nombre' => 'required|mimes:jpeg,jpg,png'
