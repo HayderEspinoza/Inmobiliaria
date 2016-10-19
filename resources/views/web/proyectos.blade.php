@@ -7,8 +7,6 @@
 	</style>
 @endsection
 @section('contenido')
-    @include('include.menu')
-    @include('include.toggle')
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
         <ol class="carousel-indicators">

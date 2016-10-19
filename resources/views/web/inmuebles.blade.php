@@ -10,13 +10,11 @@
 	</style>
 @endsection
 @section('contenido')
-    @include('include.menu')
-    @include('include.toggle')
 	<div class="container" id="top">
-        <div class="col-lg-12 logo logo-apartamentos">
+        {{-- <div class="col-lg-12 logo logo-apartamentos">
             <span class="one">INMOBILIARIA</span><br>
             <span class="two">SANTO DOMINGO CARTAGENA</span>
-        </div>
+        </div> --}}
 		<div class="col-lg-12 text-pagination">
 			MOSTRANDO {{ $inmuebles->count() }} DE {{ $inmuebles->total() }} INMUEBLES ENCONTRADOS
 		</div>
@@ -46,11 +44,11 @@
 	            </div>
 	            <div class="row">
 	            	<div class="form-group col-md-6">
-	            		<label for="precio">Precio</label>
+	            		<label for="precio_min">Precio</label>
 	            		{{ Form::text('precio_min', @$inputs['precio_min'], ['class' => 'form-control moneda', 'placeholder' => "Min"]) }}
 	            	</div>
 	            	<div class="form-group col-md-6">
-	            		<label for="precio">&nbsp;</label>
+	            		<label for="precio_max">&nbsp;</label>
 	            		{{ Form::text('precio_max', @$inputs['precio_max'], ['class' => 'form-control moneda', 'placeholder' => 'Max']) }}
 	            	</div>
 	            </div>
@@ -157,7 +155,7 @@
 	                        </h3>
 	                        <p class="precio text-center">
 	                            <span class="">
-	                                $ {{ $inmueble->precio }}
+	                                $ {{ number_format($inmueble->precio, 0) }}
 	                            </span>
 	                        </p>
 	                        <table width="100%">

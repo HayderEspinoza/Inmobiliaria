@@ -10,8 +10,6 @@
 	</style>
 @endsection
 @section('contenido')
-    @include('include.menu')
-    @include('include.toggle')
 	<div class="img-inmobiliaria" id="top">
 		<img src="{{asset('img/servicios/01.jpg')}}" alt="" class="img-responsive">
 	</div>

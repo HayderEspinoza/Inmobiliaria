@@ -7,8 +7,6 @@
 	</style>
 @endsection
 @section('contenido')
-    @include('include.toggle')
-	@include('include.menu')
 	@include('include.contacto')
     <!--Pie de pagina-->
 	@include('include.footer')

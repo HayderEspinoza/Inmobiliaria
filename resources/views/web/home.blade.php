@@ -13,8 +13,6 @@
     </style>
 @endsection
 @section('contenido')
-    @include('include.menu')
-    @include('include.toggle')
     <!-- Full Page Image Background Carousel Header -->
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -40,7 +38,7 @@
                 <!-- Set the second background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('/img/portada/02.jpg');">
                     <div class="container">
-                        <div class="col-lg-7 wrap-title pull-right">
+                        <div class="col-lg-7 block-center text-center wrap-title">
                             <h2>SU INVERSIÓN EN LAS MEJORES MANOS.</h2>
                         </div>
                     </div>
@@ -50,7 +48,7 @@
                 <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('/img/portada/03.jpg');">
                     <div class="container">
-                        <div class="col-lg-8 wrap-title pull-right">
+                        <div class="col-lg-7 wrap-title block-center text-center">
                             <h2>AYUDAMOS A NUESTROS CLIENTES A TOMAR BUENAS DECISIONES.</h2>
                         </div>
                     </div>
@@ -74,11 +72,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        {{-- busqueda --}}
-        <div class="busqueda-portada">
-            <span class="icon-search icono-search"></span>
-            BUSCAR INMUEBLE
         </div>
         <!--Formulario de busqueda-->
         <div class="formulario-portada">

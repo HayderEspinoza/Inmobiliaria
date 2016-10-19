@@ -30,6 +30,58 @@
 </head>
 
 <body>
+    {{-- @include('include.toggle')
+    @include('include.menu') --}}
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-new">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo" href="/">
+                    <span class="one">INMOBILIARIA</span><br>
+                    <span class="two">SANTO DOMINGO CARTAGENA</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right" >
+                    <li @yield('inmobiliaria')>
+                        <a href="{{route('web.inmobiliaria')}}">
+                            Inmobiliaria
+                        </a>
+                    </li>
+                    <li @yield('servicios')>
+                        <a href="{{route('web.servicios')}}">
+                            Servicios
+                        </a>
+                    </li>
+                    <li @yield('inmuebles')>
+                        <a href="{{route('web.inmuebles')}}">
+                            Inmuebles
+                        </a>
+                    </li>
+                    <li @yield('proyectos')>
+                        <a href="{{route('web.proyectos')}}">
+                            Proyectos
+                        </a>
+                    </li>
+                    <li @yield('contactanos')>
+                        <a href="{{route('web.contacto')}}">
+                            Contactanos
+                        </a>
+                    </li>
+                    <li @yield('login')>
+                        <a href="/login">
+                            Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 	@yield('contenido')
 
 	<script src="{{asset('js/jquery.js')}}"></script>
@@ -42,13 +94,13 @@
     <script src="{{ asset('js/jquery.number.min.js') }}"></script>
     <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
     <!--Start of Zopim Live Chat Script-->
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
         window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
         d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
         _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
         $.src="//v2.zopim.com/?4Djsq2Tk2jJEaWXyD64Rb2X3xzaYu6KF";z.t=+new Date;$.
         type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
-    </script> -->
+    </script>
     <!--End of Zopim Live Chat Script-->
 	@yield('js')
     

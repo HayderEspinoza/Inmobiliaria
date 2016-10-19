@@ -10,16 +10,15 @@
 	</style>
 @endsection
 @section('contenido')
-    @include('include.menu')
-    @include('include.toggle')
 	<div class="container">
-		<div class="col-lg-12 logo logo-apartamentos">
+		{{-- <div class="col-lg-12 logo logo-apartamentos">
             <div class="col-lg-12">
             	<span class="one">INMOBILIARIA</span><br>
 	            <span class="two">SANTO DOMINGO CARTAGENA</span>
             </div>
-        </div>
+        </div> --}}
         <div class="col-lg-12">
+        	<br>
         	<p class="oferta-imagen">
         		{{ $inmueble->tipo }} EN {{ $inmueble->oferta }}
         	</p>

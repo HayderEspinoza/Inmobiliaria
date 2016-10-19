@@ -58,6 +58,7 @@ a:hover {
 .logo {
   font-size: 20px;
   line-height: 15px;
+  padding-left: 30px !important;
 }
 .logo .one {
   color: #fff;
@@ -162,6 +163,9 @@ a:hover {
 .item .fill .container .wrap-title {
   padding-top: 100px;
 }
+.item .fill .container .wrap-title h2 {
+  text-shadow: 5px 5px 5px rgba(0,0,0,0.5), -5px -5px 5px rgba(0,0,0,0.1);
+}
 .item .fill .container .wrap-proyectos {
   padding-top: 50%;
 }
@@ -226,9 +230,6 @@ a:hover {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-}
-.formulario-portada {
-  display: none;
 }
 .formulario-portada input,
 .formulario-portada select {
@@ -326,7 +327,7 @@ a:hover {
   color: #fff;
   font-family: cobert-regular;
   font-size: 16px;
-  padding: 0 0 10px 0;
+  padding: 20px 0 10px 0;
 }
 .pagination li a {
   margin-right: 5px;
@@ -758,6 +759,15 @@ a:hover {
 }
 .tabla-descripcion tr {
   padding-top: 20px;
+}
+.navbar-new {
+  margin: 0;
+  background: #131315 !important;
+}
+.navbar-new .navbar-nav > li > a {
+  padding: 20px;
+  font-family: cobert-regular;
+  font-size: 16px;
 }
 @media (min-width: 1200px) {
   .toggle {
