@@ -55,10 +55,15 @@ a:hover {
   display: table-cell;
   vertical-align: middle;
 }
+.navbar-brand {
+  padding: 0;
+  height: 100%;
+}
 .logo {
   font-size: 20px;
   line-height: 15px;
   padding-left: 30px !important;
+  over-flow: hidden;
 }
 .logo .one {
   color: #fff;
@@ -762,12 +767,19 @@ a:hover {
 }
 .navbar-new {
   margin: 0;
-  background: #131315 !important;
+  background: #ffcc29 !important;
+  border-color: #ffcc29;
 }
 .navbar-new .navbar-nav > li > a {
   padding: 20px;
   font-family: cobert-regular;
-  font-size: 16px;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+}
+.navbar-new .navbar-nav > li > a:hover {
+  background: #ebb300;
 }
 @media (min-width: 1200px) {
   .toggle {

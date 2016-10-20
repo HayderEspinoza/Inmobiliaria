@@ -1,15 +1,22 @@
 /*PORTADA*/
+amarillo = #ffcc29
+verde = #0f9d58
+menu = amarillo
+.navbar-brand
+	padding 0
+	height 100%
 .logo
 	font-size 20px
 	line-height 15px
 	padding-left 30px !important
+	over-flow hidden
 	.one
 		color white
 	.two
 		color #f1cb3f
 		font-size 22px
 .toggle
-	background #ffcc29
+	background amarillo
 	position fixed
 	left 0
 	top 0
@@ -529,8 +536,14 @@
 		padding-top 20px
 .navbar-new
 	margin 0
-	background #131315 !important
+	background menu !important
+	border-color menu
 	.navbar-nav > li > a
 		padding 20px
 		font-family cobert-regular
-		font-size 16px
+		font-size 14px
+		color #333
+		transition all .5s ease
+		text-transform uppercase
+		&:hover
+			background darken(menu, 12)

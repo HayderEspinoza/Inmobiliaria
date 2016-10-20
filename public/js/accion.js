@@ -1,9 +1,9 @@
 $(window).on('load', init);
 
 function init(e) {
-	$('.carousel').carousel({
-        interval: 2500
-    });
+	// $('.carousel').carousel({
+ //        interval: 4000
+ //    });
 	$(".scroll").on("click", scroll);
 	$('.cerrar').on('click', cerrar);
 	$('.toggle').on('click', cerrar);

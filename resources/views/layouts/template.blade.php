@@ -32,7 +32,7 @@
 <body>
     {{-- @include('include.toggle')
     @include('include.menu') --}}
-    <nav class="navbar navbar-inverse navbar-fixed-top navbar-new">
+    <nav class="navbar navbar-inverse navbar-static-top navbar-new">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
@@ -41,9 +41,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand logo" href="/">
-                    <span class="one">INMOBILIARIA</span><br>
-                    <span class="two">SANTO DOMINGO CARTAGENA</span>
+                <a class="navbar-brand" href="/">
+                    <img alt="Brand" src="{{ asset('img/logo.jpg') }}" height="60px">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
