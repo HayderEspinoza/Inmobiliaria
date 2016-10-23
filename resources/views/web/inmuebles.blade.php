@@ -1,14 +1,14 @@
 @extends('layouts.template')
 @section('estilos')
 	<style>
-		body{
-			background: #191a1c;
-		}
         .logo-apartamentos{
             padding: 30px 0 40px 0;
         }
 	</style>
 @endsection
+@section('inmuebles')
+	class="active"
+@stop
 @section('contenido')
 	<div class="container" id="top">
         {{-- <div class="col-lg-12 logo logo-apartamentos">

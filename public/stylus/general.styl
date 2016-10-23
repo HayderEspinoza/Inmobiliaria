@@ -1,7 +1,11 @@
 /*PORTADA*/
 amarillo = #ffcc29
 verde = #0f9d58
+verde-bajo = #00b29f
 menu = amarillo
+texto-menu = #333
+rojo = #ea2a2a 
+rojo2 = #ef4848
 .navbar-brand
 	padding 0
 	height 100%
@@ -147,7 +151,7 @@ menu = amarillo
 		border-radius 0 !important
 .destacados
 	padding 30px 0 70px 0
-	background #191a1c
+	background white
 .wrap
 	width 80%
 	min-height 50px
@@ -161,8 +165,9 @@ menu = amarillo
 		color #4b4b4d
 		position relative				
 .apartamento
-	border 1px solid grey
 	margin-bottom 20px
+	background #f7f7f7
+	border 5px solid rgba(228, 228, 228, 0.3)
 	.img-apartamento
 		overflow hidden
 		max-height 250px
@@ -173,19 +178,20 @@ menu = amarillo
 	padding 5px 15px
 .descripcion
 	padding 10px 20px
-	color white
+	color #333
 	font-family cobert-regular
 	line-height 15px
 	span
-		color #ffcc29
+		color verde
 		font-size 19px
 		font-family cobert-regular
 		position relative
+		font-weight bold
 		&:after, &:before
 			content ''
 			width 45px
 			height 1px
-			background white
+			background verde
 			position absolute
 			top 50%
 			right -55px
@@ -197,14 +203,15 @@ menu = amarillo
 		td
 			padding 4px 0
 .formulario
-	background #4b4b4d
-	color white
+	background #f1f1f1
+	border 1px solid #d5d5d5
+	color #333
 	padding-top 10px
 	padding-bottom 10px
 	margin-bottom 5px
 	.title-formulario
 		padding-bottom 10px
-		border-bottom 1px solid white
+		border-bottom 1px solid #ddd
 		font-size 18px
 	input, select
 		border-radius 0
@@ -275,12 +282,12 @@ menu = amarillo
 //Inmobiliaria
 .inmobiliaria, .beneficios
 	padding 90px 0
-	color white
+	color #333
 	h3
-		color white
+		color verde-bajo
 	h2, h1, p
 		font-family cobert-regular
-		color white
+		color #333
 	p
 		text-align justify
 	.title
@@ -288,10 +295,21 @@ menu = amarillo
 		h1
 			font-size 60px !important
 			line-height 20px
+.beneficios
+	background #f7f7f7
 //Beneficios
+.titulo-beneficios
+	padding-bottom 60px
+	color #333;
+div > .item-beneficios
+	margin-bottom 20px
 .item-beneficios
-	padding-top 50px
+	min-height 340px
+	padding-top 30px
+	padding-bottom 20px
+	background white
 	color black
+	box-shadow 0 0 7px rgba(0, 0, 0, 0.11)
 	h3
 		padding 0
 		line-height 0
@@ -300,7 +318,7 @@ menu = amarillo
 		padding-right 20px
 		padding-left 20px
 .servicios
-	color white
+	color #333
 	padding 80px 0
 	p
 		font-size 16px
@@ -312,14 +330,17 @@ menu = amarillo
 	text-align right
 	margin 50px 0 80px 0
 	.wrap-servicios
-		background grey
+		background verde-bajo
 	a
-		border 1px solid white
+		border 1px solid verde-bajo
 		border-radius(0)
 		font-size 16px
 		font-family cobert-regular
+		color verde-bajo
+		padding-top 10px
+		padding-bottom 10px
 		&:hover, &.active
-			background #615E5D
+			background verde-bajo
 			color white !important
 .items-servicios
 	margin-bottom 40px
@@ -332,13 +353,13 @@ menu = amarillo
 			content ' '
 			width 7px
 			height 1px
-			background white
+			background verde-bajo
 			position absolute
 			left -15px
 			top 45%
 	li:first-child
 		list-style none !important
-		color #FFCC29
+		color verde-bajo
 		margin-bottom 15px
 		font-family telegrafico
 		font-size 24px
@@ -346,32 +367,38 @@ menu = amarillo
 			content ' '
 			width 300px
 			height 1px
-			background white
+			background verde-bajo
 			position absolute
 			left 0
 			bottom 0
 		&:before
 			width 0
+.tab-content
+	background #f4f4f4
+	padding-top 30px
+	padding-bottom 30px
 .documentos
 	margin-top 40px
 	h4
-		color #FFCC29
+		color verde-bajo
 		font-size 24px
 	p
 		font-family cobert-regular
 	.btn
 		font-size 16px
-		border 1px solid white
+		border 1px solid rojo
+		background transparent
 		border-radius(0)
 		transition .5s background ease
+		color rojo
 		&:hover
-			background white
-			color black !important
+			background rojo
+			color white !important
 .no-margen
 	margin-top 0 !important
 	
 .requisitos
-	background grey
+	background #dedede
 	border-radius(5px)
 	font-size 14px
 	padding-top 30px
@@ -383,7 +410,7 @@ menu = amarillo
 		list-style none
 		font-weight bold
 .link-avaluos
-	background grey
+	background verde-bajo
 	padding 20px 0
 	color white
 	span
@@ -402,7 +429,7 @@ menu = amarillo
 			color black
 //Contacto
 .contacto
-	background #191A1C
+	background white
 	padding 60px 0
 	& *
 		font-family cobert-regular
@@ -420,20 +447,25 @@ menu = amarillo
 	.btn-enviar
 		padding-top 20px 
 		padding-bottom 20px 
-		background transparent
+		background verde-bajo
 		color white
 		border 1px solid #ccc !important
 		transition .5s all ease
 		&:hover
-			background white !important
-			color #292B2E
+			background darken(verde-bajo, 5) !important
+			color white
 	label.checkbox-inline
 		margin-right 30px
-	input, textarea, checkbox-inline
-		background #191A1C !important
+	.form-control, checkbox-inline
+		background white !important
+.titulo-verde
+	color #049f4d !important
 .descripcion-proyecto
-	color white
+	color #333
 	padding 120px 0
+	background white
+	.title-descripcion
+		color #049f4d
 	h3
 		font-size 39px
 		padding-bottom 60px
@@ -442,7 +474,8 @@ menu = amarillo
 	p, h3
 		font-family cobert-regular
 .show-proyecto
-	color white
+	color #333
+	background #f7f7f7
 	h2, li
 		font-family cobert-regular
 	h2
@@ -464,7 +497,9 @@ menu = amarillo
 			.show-plano
 				width 100%
 				.btn
-					visibility visible				
+					visibility visible
+					&:hover
+						background white
 	.show-plano
 		background rgba(0,0,0,0.3)
 		width 0
@@ -486,7 +521,7 @@ menu = amarillo
 			left 50%
 			padding-top 10px
 			margin-top -25px
-			margin-left -95px 
+			margin-left -95px
 .imagen-detalle
 	padding 5px !important
 	cursor pointer
@@ -538,12 +573,19 @@ menu = amarillo
 	margin 0
 	background menu !important
 	border-color menu
-	.navbar-nav > li > a
-		padding 20px
-		font-family cobert-regular
-		font-size 14px
-		color #333
-		transition all .5s ease
-		text-transform uppercase
-		&:hover
+	.navbar-nav
+		& > li > a
+			padding 20px
+			font-family cobert-regular
+			font-size 14px
+			color texto-menu
+			transition all .5s ease
+			text-transform uppercase
+			&:hover
+				background darken(menu, 12)
+				color #000
+		.active > a
 			background darken(menu, 12)
+			color #000
+			&:hover
+				background darken(menu, 12)

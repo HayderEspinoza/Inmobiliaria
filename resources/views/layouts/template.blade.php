@@ -29,7 +29,7 @@
 	@yield('estilos')
 </head>
 
-<body>
+<body id="top">
     {{-- @include('include.toggle')
     @include('include.menu') --}}
     <nav class="navbar navbar-inverse navbar-static-top navbar-new">

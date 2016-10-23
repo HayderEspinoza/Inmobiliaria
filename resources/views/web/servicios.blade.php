@@ -1,14 +1,14 @@
 @extends('layouts.template')
 @section('estilos')
 	<style>
-		body{
-			background: #191a1c;
-		}
         .logo-apartamentos{
             padding: 50px 0 100px 0;
         }
 	</style>
 @endsection
+@section('servicios')
+    class="active"
+@stop
 @section('contenido')
 	<div class="img-inmobiliaria" id="top">
 		<img src="{{asset('img/servicios/01.jpg')}}" alt="" class="img-responsive">
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <!-- Tab panes -->
-            <div class="tab-content">
+            <div class="tab-content row">
                 <div role="tabpanel" class="tab-pane active" id="arriendos">
                     <ul class="items-servicios">
                         <li>SERVICIOS AL PROPIETARIO</li>

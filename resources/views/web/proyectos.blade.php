@@ -6,6 +6,9 @@
 		}
 	</style>
 @endsection
+@section('proyectos')
+    class="active"
+@stop
 @section('contenido')
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -16,7 +19,7 @@
             <li data-target="#myCarousel" data-slide-to="3"></li>
         </ol>
         <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
+        <div class="carousel-inner" id="top">
             <div class="item active">
                 <!-- Set the first background image using inline CSS below. -->
                 <div class="fill img-1" style="background-image:url('/img/proyecto/01.jpg')">
@@ -122,7 +125,7 @@
 	    	</div>
 	    	<div class="col-md-5 pull-right items-proyecto">
 	    		<br><br><br>
-	    		<h2>AMENITIES</h2>
+	    		<h2 class="titulo-verde">AMENITIES</h2>
 				<ul class="none">
 					<li>7 Niveles</li>
 					<li>1 Semisotano - Parqueadero</li>
@@ -138,7 +141,7 @@
 					<li>Shut de basura</li>
 					<li>Parqueaderos cubiertos</li>
 				</ul>
-				<h2>MÁS CERCA DE TODO</h2>
+				<h2 class="titulo-verde">MÁS CERCA DE TODO</h2>
 				<ul class="none">
 					<li>Centros Comerciales</li>
 					<li>Zonas Bancarias</li>

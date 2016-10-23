@@ -244,7 +244,7 @@ a:hover {
 }
 .destacados {
   padding: 30px 0 70px 0;
-  background: #191a1c;
+  background: #fff;
 }
 .wrap {
   width: 80%;
@@ -262,8 +262,9 @@ a:hover {
   position: relative;
 }
 .apartamento {
-  border: 1px solid #808080;
   margin-bottom: 20px;
+  background: #f7f7f7;
+  border: 5px solid rgba(228,228,228,0.3);
 }
 .apartamento .img-apartamento {
   overflow: hidden;
@@ -277,22 +278,23 @@ a:hover {
 }
 .descripcion {
   padding: 10px 20px;
-  color: #fff;
+  color: #333;
   font-family: cobert-regular;
   line-height: 15px;
 }
 .descripcion span {
-  color: #ffcc29;
+  color: #0f9d58;
   font-size: 19px;
   font-family: cobert-regular;
   position: relative;
+  font-weight: bold;
 }
 .descripcion span:after,
 .descripcion span:before {
   content: '';
   width: 45px;
   height: 1px;
-  background: #fff;
+  background: #0f9d58;
   position: absolute;
   top: 50%;
   right: -55px;
@@ -308,15 +310,16 @@ a:hover {
   padding: 4px 0;
 }
 .formulario {
-  background: #4b4b4d;
-  color: #fff;
+  background: #f1f1f1;
+  border: 1px solid #d5d5d5;
+  color: #333;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 5px;
 }
 .formulario .title-formulario {
   padding-bottom: 10px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ddd;
   font-size: 18px;
 }
 .formulario input,
@@ -406,11 +409,11 @@ a:hover {
 .inmobiliaria,
 .beneficios {
   padding: 90px 0;
-  color: #fff;
+  color: #333;
 }
 .inmobiliaria h3,
 .beneficios h3 {
-  color: #fff;
+  color: #00b29f;
 }
 .inmobiliaria h2,
 .beneficios h2,
@@ -419,7 +422,7 @@ a:hover {
 .inmobiliaria p,
 .beneficios p {
   font-family: cobert-regular;
-  color: #fff;
+  color: #333;
 }
 .inmobiliaria p,
 .beneficios p {
@@ -434,9 +437,25 @@ a:hover {
   font-size: 60px !important;
   line-height: 20px;
 }
+.beneficios {
+  background: #f7f7f7;
+}
+.titulo-beneficios {
+  padding-bottom: 60px;
+  color: #333;
+}
+div > .item-beneficios {
+  margin-bottom: 20px;
+}
 .item-beneficios {
-  padding-top: 50px;
+  min-height: 340px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background: #fff;
   color: #000;
+  -webkit-box-shadow: 0 0 7px rgba(0,0,0,0.11);
+  -moz-box-shadow: 0 0 7px rgba(0,0,0,0.11);
+  box-shadow: 0 0 7px rgba(0,0,0,0.11);
 }
 .item-beneficios h3 {
   padding: 0;
@@ -448,7 +467,7 @@ a:hover {
   padding-left: 20px;
 }
 .servicios {
-  color: #fff;
+  color: #333;
   padding: 80px 0;
 }
 .servicios p {
@@ -465,19 +484,22 @@ a:hover {
   margin: 50px 0 80px 0;
 }
 .lista-servicios .wrap-servicios {
-  background: #808080;
+  background: #00b29f;
 }
 .lista-servicios a {
-  border: 1px solid #fff;
+  border: 1px solid #00b29f;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
   font-size: 16px;
   font-family: cobert-regular;
+  color: #00b29f;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .lista-servicios a:hover,
 .lista-servicios a.active {
-  background: #615e5d;
+  background: #00b29f;
   color: #fff !important;
 }
 .items-servicios {
@@ -493,14 +515,14 @@ a:hover {
   content: ' ';
   width: 7px;
   height: 1px;
-  background: #fff;
+  background: #00b29f;
   position: absolute;
   left: -15px;
   top: 45%;
 }
 .items-servicios li:first-child {
   list-style: none !important;
-  color: #ffcc29;
+  color: #00b29f;
   margin-bottom: 15px;
   font-family: telegrafico;
   font-size: 24px;
@@ -509,7 +531,7 @@ a:hover {
   content: ' ';
   width: 300px;
   height: 1px;
-  background: #fff;
+  background: #00b29f;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -517,11 +539,16 @@ a:hover {
 .items-servicios li:first-child:before {
   width: 0;
 }
+.tab-content {
+  background: #f4f4f4;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .documentos {
   margin-top: 40px;
 }
 .documentos h4 {
-  color: #ffcc29;
+  color: #00b29f;
   font-size: 24px;
 }
 .documentos p {
@@ -529,21 +556,23 @@ a:hover {
 }
 .documentos .btn {
   font-size: 16px;
-  border: 1px solid #fff;
+  border: 1px solid #ea2a2a;
+  background: transparent;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
   transition: 0.5s background ease;
+  color: #ea2a2a;
 }
 .documentos .btn:hover {
-  background: #fff;
-  color: #000 !important;
+  background: #ea2a2a;
+  color: #fff !important;
 }
 .no-margen {
   margin-top: 0 !important;
 }
 .requisitos {
-  background: #808080;
+  background: #dedede;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -560,7 +589,7 @@ a:hover {
   font-weight: bold;
 }
 .link-avaluos {
-  background: #808080;
+  background: #00b29f;
   padding: 20px 0;
   color: #fff;
 }
@@ -584,7 +613,7 @@ a:hover {
   color: #000;
 }
 .contacto {
-  background: #191a1c;
+  background: #fff;
   padding: 60px 0;
 }
 .contacto * {
@@ -610,26 +639,32 @@ a:hover {
 .contacto .btn-enviar {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: transparent;
+  background: #00b29f;
   color: #fff;
   border: 1px solid #ccc !important;
   transition: 0.5s all ease;
 }
 .contacto .btn-enviar:hover {
-  background: #fff !important;
-  color: #292b2e;
+  background: #098 !important;
+  color: #fff;
 }
 .contacto label.checkbox-inline {
   margin-right: 30px;
 }
-.contacto input,
-.contacto textarea,
+.contacto .form-control,
 .contacto checkbox-inline {
-  background: #191a1c !important;
+  background: #fff !important;
+}
+.titulo-verde {
+  color: #049f4d !important;
 }
 .descripcion-proyecto {
-  color: #fff;
+  color: #333;
   padding: 120px 0;
+  background: #fff;
+}
+.descripcion-proyecto .title-descripcion {
+  color: #049f4d;
 }
 .descripcion-proyecto h3 {
   font-size: 39px;
@@ -643,7 +678,8 @@ a:hover {
   font-family: cobert-regular;
 }
 .show-proyecto {
-  color: #fff;
+  color: #333;
+  background: #f7f7f7;
 }
 .show-proyecto h2,
 .show-proyecto li {
@@ -674,6 +710,9 @@ a:hover {
 }
 .plantas .foto:hover .show-plano .btn {
   visibility: visible;
+}
+.plantas .foto:hover .show-plano .btn:hover {
+  background: #fff;
 }
 .plantas .show-plano {
   background: rgba(0,0,0,0.3);
@@ -779,6 +818,14 @@ a:hover {
   text-transform: uppercase;
 }
 .navbar-new .navbar-nav > li > a:hover {
+  background: #ebb300;
+  color: #000;
+}
+.navbar-new .navbar-nav .active > a {
+  background: #ebb300;
+  color: #000;
+}
+.navbar-new .navbar-nav .active > a:hover {
   background: #ebb300;
 }
 @media (min-width: 1200px) {
