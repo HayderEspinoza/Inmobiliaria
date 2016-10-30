@@ -12,8 +12,20 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $admin = new User();
-        $admin->name = 'admin';
+        $admin->name = 'Soporte';
         $admin->email = 'soporte@inmobiliariasantodomingocartagena.com';
+        $admin->password = bcrypt('adminsoporte123456');
+        $admin->save();
+
+        $admin = new User();
+        $admin->name = 'Gerente';
+        $admin->email = 'gerenciacomercial@inmobiliariasantodomingocartagena.com';
+        $admin->password = bcrypt('admingerencia123456');
+        $admin->save();
+
+        $admin = new User();
+        $admin->name = 'developer';
+        $admin->email = 'developer@inmobiliariasantodomingocartagena.com';
         $admin->password = bcrypt('admin');
         $admin->save();
     }

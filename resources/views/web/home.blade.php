@@ -151,7 +151,7 @@ f        .item .fill h2{
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default.png')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO
@@ -187,7 +187,7 @@ f        .item .fill h2{
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default.png')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO
@@ -223,7 +223,7 @@ f        .item .fill h2{
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default.png')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO
@@ -264,7 +264,7 @@ f        .item .fill h2{
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default.png')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO
@@ -300,7 +300,7 @@ f        .item .fill h2{
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default.png')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO
@@ -336,7 +336,7 @@ f        .item .fill h2{
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default.png')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO
