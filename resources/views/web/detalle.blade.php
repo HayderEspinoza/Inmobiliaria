@@ -2,15 +2,15 @@
 @section('estilos')
 	<style>
 		body{
-			background: #191a1c;
+			background: #f8f8f8;
 		}
-        .logo-apartamentos{
-            padding: 30px 0 40px 0;
-        }
+		.wrap-detalles{
+			padding-bottom: 40px;
+		}
 	</style>
 @endsection
 @section('contenido')
-	<div class="container">
+	<div class="container wrap-detalles">
 		{{-- <div class="col-lg-12 logo logo-apartamentos">
             <div class="col-lg-12">
             	<span class="one">INMOBILIARIA</span><br>
@@ -31,9 +31,9 @@
 			<div class="row">
 				<div class="col-md-12">
 					@if ($portada != null)
-						<img src="{{ asset('/img/inmuebles/'.$portada->nombre) }}" alt="" class="img-responsive" id="portada">
+						<img src="{{ asset('/img/inmuebles/'.$portada->nombre) }}" alt="" class="img-responsive show-image" id="portada">
 					@else
-						<img src="{{ asset('/img/inmuebles/default.jpg') }}" alt="" class="img-responsive" id="portada">
+						<img src="{{ asset('/img/inmuebles/default.png') }}" alt="" class="img-responsive show-image" id="portada">
 					@endif
 				</div>
 			</div>
@@ -42,7 +42,7 @@
 				<div class="col-md-12">
 					@foreach ($imagenes as $imagen)
 						<div class="col-md-2 imagen-detalle">
-							<img src="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" alt="" class="img-responsive" title="Ver Imagen">
+							<img src="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" alt="" class="img-responsive show-image" title="Ver Imagen">
 						</div>
 					@endforeach
 				</div>
@@ -160,7 +160,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default.png')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO
@@ -196,7 +196,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default.png')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO
@@ -232,7 +232,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default.png')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO

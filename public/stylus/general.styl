@@ -6,6 +6,8 @@ menu = amarillo
 texto-menu = #333
 rojo = #ea2a2a 
 rojo2 = #ef4848
+h1, h2
+	color vino-tinto
 .navbar-brand
 	padding 0
 	height 100%
@@ -14,10 +16,8 @@ rojo2 = #ef4848
 	line-height 15px
 	padding-left 30px !important
 	over-flow hidden
-	.one
-		color white
+	color white
 	.two
-		color #f1cb3f
 		font-size 22px
 .toggle
 	background amarillo
@@ -147,6 +147,7 @@ rojo2 = #ef4848
 	background #ee1c24
 	border-radius 0
 .formulario-portada
+	visibility hidden
 	input, select
 		border-radius 0 !important
 .destacados
@@ -162,7 +163,7 @@ rojo2 = #ef4848
 	span
 		font-size 30px
 		font-family cobert-regular
-		color #4b4b4d
+		color vino-tinto
 		position relative				
 .apartamento
 	margin-bottom 20px
@@ -218,7 +219,7 @@ rojo2 = #ef4848
 	label
 		font-weight normal
 .text-pagination
-	color white
+	color black
 	font-family cobert-regular
 	font-size 16px
 	padding 20px 0 10px 0
@@ -287,7 +288,8 @@ rojo2 = #ef4848
 		color verde-bajo
 	h2, h1, p
 		font-family cobert-regular
-		color #333
+	h1, h2
+		color vino-tinto
 	p
 		text-align justify
 	.title
@@ -460,12 +462,14 @@ div > .item-beneficios
 		background white !important
 .titulo-verde
 	color #049f4d !important
+.titulo-tinto
+	color vino-tinto !important
 .descripcion-proyecto
 	color #333
 	padding 120px 0
 	background white
 	.title-descripcion
-		color #049f4d
+		color vino-tinto
 	h3
 		font-size 39px
 		padding-bottom 60px
@@ -525,15 +529,15 @@ div > .item-beneficios
 .imagen-detalle
 	padding 5px !important
 	cursor pointer
+.show-image
+	box-shadow 0 0 10px rgba(156, 154, 154, 0.5)
 .oferta-imagen, .direccion-imagen
-	color white
 	line-height 10px
 	font-size 18px
 .direccion-imagen
 	font-family cobert-regular
 	font-size 16px
 .descripcion-inmueble
-	color white
 	font-size 20px
 	padding-bottom 7px
 	border-bottom 1px solid #ee1c24
@@ -548,9 +552,8 @@ div > .item-beneficios
 		bottom -8px
 .detalles, .descripcion-articulo
 	margin-top 60px
-	color white
 .detalles
-	border-right 1px solid white
+	border-right 1px solid rojo
 .texto-moneda
 	background transparent
 	border 0
@@ -589,3 +592,6 @@ div > .item-beneficios
 			color #000
 			&:hover
 				background darken(menu, 12)
+.navbar-toggle
+	border none
+	padding-top 15px

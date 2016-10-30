@@ -18,7 +18,7 @@
 	</div>
     <div class="inmobiliaria">
     	<div class="container">
-            <div class="col-lg-12 title text-center title">
+            <div class="col-lg-12 title text-center">
             	<h1>SOMOS</h1>
                 <h2>INMOBILIARIA SANTO DOMINGO CARTAGENA S.A.S</h2>
             </div>

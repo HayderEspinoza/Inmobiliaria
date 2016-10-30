@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use \File;
 use \Storage;
 use Carbon\Carbon;
+use Intervention\Image\ImageManager as Image;
 class Imagen extends Intermediate
 {
     protected $table = 'imagenes';
@@ -13,9 +14,16 @@ class Imagen extends Intermediate
 
     public function setNombreAttribute($img = '')
     {
-    	$fecha = Carbon::now()->format('dmY');
+    	$fecha = Carbon::now()->format('dmYhis');
     	$nombre = $img->getClientOriginalName();
     	$this->attributes['nombre'] = $fecha.$nombre;
     	Storage::disk('public')->put($fecha.$nombre, File::get($img));
+        $manager = new Image();
+        $img = $manager->make('img/inmuebles/'.$fecha.$nombre);
+        $img->resize(600, 600, function ($constraint) {
+            $constraint->aspectRatio();
+        });
+        $img->resizeCanvas(600, 600, 'center', false, 'ffffff');    	
+        $img->save('img/inmuebles/'.$fecha.$nombre);
     }
 }

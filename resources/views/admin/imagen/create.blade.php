@@ -21,19 +21,19 @@
                 <h2 id="tables">Agregar Imagen</h2>
             </div>
             <div class="well row">
-                {{-- {{ Form::open(['route' => ['inmueble.imagen.store', $inmueble->id], 'method' => 'post', 'files' => true]) }}
+                {{ Form::open(['route' => ['inmueble.imagen.store', $inmueble->id], 'method' => 'post', 'files' => true]) }}
                     <div class="form-group col-md-12">
                         <input name="nombre" type="file" class="form-control" accept="image/*" required>
                     </div>
                     <div class="col-lg-12">
                         <input type="submit" class="btn btn-primary btn-lg">
                     </div>                    
-                {{ Form::close() }} --}}
-                <div class="row margin-bottom-40">
+                {{ Form::close() }}
+                {{-- <div class="row margin-bottom-40">
                     <div class=" col-md-3">
                         <div id="cropContainerEyecandy" data-padre="{{ $inmueble->id }}"></div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

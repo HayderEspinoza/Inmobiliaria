@@ -31,7 +31,6 @@ class ImagenController extends Controller
     }
     public function store(Request $request, $inmueble)
     {
-        dd('prueba');
         $inputs = $request->all();
         $rules = [
             'nombre' => 'required|mimes:jpeg,jpg,png'

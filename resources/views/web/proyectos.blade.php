@@ -125,7 +125,7 @@
 	    	</div>
 	    	<div class="col-md-5 pull-right items-proyecto">
 	    		<br><br><br>
-	    		<h2 class="titulo-verde">AMENITIES</h2>
+	    		<h2 class="titulo-tinto">AMENITIES</h2>
 				<ul class="none">
 					<li>7 Niveles</li>
 					<li>1 Semisotano - Parqueadero</li>
@@ -141,7 +141,7 @@
 					<li>Shut de basura</li>
 					<li>Parqueaderos cubiertos</li>
 				</ul>
-				<h2 class="titulo-verde">MÁS CERCA DE TODO</h2>
+				<h2 class="titulo-tinto">MÁS CERCA DE TODO</h2>
 				<ul class="none">
 					<li>Centros Comerciales</li>
 					<li>Zonas Bancarias</li>

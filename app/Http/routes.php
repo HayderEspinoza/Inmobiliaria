@@ -27,3 +27,14 @@ Route::resource('tipo', 'TipoController');
 Route::resource('ciudad', 'CiudadController');
 Route::put('perfil/{id}', ['as' => 'imagen.perfil', 'uses' => 'ImagenController@perfil']);
 Route::resource('inmueble.imagen', 'ImagenController');
+
+Route::get('prueba', function(){
+
+	$img = Image::make('img\inmuebles\ejemplo.jpg');
+	$img->resize(600, 600, function ($constraint) {
+	    $constraint->aspectRatio();
+	});
+	$img->resizeCanvas(600, 600, 'center', false, 'ffffff');
+	
+    return $img->response('jpg');
+});

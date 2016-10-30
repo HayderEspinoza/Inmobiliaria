@@ -4,7 +4,7 @@
         .fill{
             overflow: hidden;
         }
-        .item .fill h2{
+f        .item .fill h2{
             z-index: 50;
         }
         .formulario-portada label{
@@ -74,7 +74,7 @@
             </div>
         </div>
         <!--Formulario de busqueda-->
-        <div class="formulario-portada">
+        <div class="formulario-portada hidden-xs-down">
             {{ Form::open(['route' => 'web.inmuebles', 'method' => 'get']) }}
                 <div class="form-group">
                     {{ Form::select('tipo_id', $tipos, @$inputs['tipo_id'], ['class' => 'form-control']) }}

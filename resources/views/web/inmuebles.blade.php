@@ -138,7 +138,7 @@
 	                    <div class="img-apartamento img-responsive">
 	                    	@if($inmueble->imagen == null)
 	                        	<a href="{{ route('web.inmueble', $inmueble->id) }}">
-	                        		<img class="img-responsive" src="{{asset('img/inmuebles/default.jpg')}}" alt="">
+	                        		<img class="img-responsive" src="{{asset('img/inmuebles/default.png')}}" alt="">
 	                        	</a>
 	                        @else
 	                        	<a href="{{ route('web.inmueble', $inmueble->id) }}">
