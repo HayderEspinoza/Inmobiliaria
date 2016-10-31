@@ -75,7 +75,10 @@
 							{{ Form::textarea('asunto', null, ['class' => 'form-control', 'size' => '5x7', 'required']) }}
 						</div>
 						<div class="form-group">
-			                <input type="submit" class="btn-danger text-center btn-lg btn-block buscar" value="BUSCAR" name="buscar">
+							{{ Form::text('inmueble', $inmueble->id, ['class' => 'form-control']) }}
+						</div>
+						<div class="form-group">
+			                <input type="submit" class="btn-danger text-center btn-lg btn-block buscar" value="ENVIAR" name="buscar">
 			            </div>
 					{{ Form::close() }}
 				</div>

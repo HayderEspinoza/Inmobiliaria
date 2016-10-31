@@ -129,10 +129,10 @@ class HomeController extends Controller
     {
         $datos = $data->all();
         Mail::send('email.contacto', compact('datos'), function($msj){
-            $msj->subject('Correo de Contacto');
-            $msj->to('hayderepit@gmail.com');
+            $msj->subject('Contacto Pagina Web');
+            $msj->to('contacto@inmobiliariasantodomingocartagena.com');
         });
-        $this->mensaje('Mensaje enviado correctamente');
-        return view('email.contacto', compact('datos'));
+        $this->mensaje($this->exitoso);
+        return redirect()->back();
     }
 }
