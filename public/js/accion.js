@@ -2,7 +2,8 @@ $(window).on('load', init);
 
 function init(e) {
 	// $('.carousel').carousel({
- //        interval: 4000
+ //        interval: 4000,
+ //        pause: false
  //    });
 	$(".scroll").on("click", scroll);
 	$('.cerrar').on('click', cerrar);

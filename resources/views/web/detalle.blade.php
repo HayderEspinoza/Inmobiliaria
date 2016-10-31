@@ -33,7 +33,7 @@
 					@if ($portada != null)
 						<img src="{{ asset('/img/inmuebles/'.$portada->nombre) }}" alt="" class="img-responsive show-image" id="portada">
 					@else
-						<img src="{{ asset('/img/inmuebles/default.png') }}" alt="" class="img-responsive show-image" id="portada">
+						<img src="{{ asset('/img/inmuebles/default2.png') }}" alt="" class="img-responsive show-image" id="portada">
 					@endif
 				</div>
 			</div>
@@ -160,7 +160,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default.png')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default2.png')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO
@@ -196,7 +196,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default.png')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default2.png')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO
@@ -232,7 +232,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="apartamento">
                         <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default.png')}}" alt="">
+                            <img class="img-responsive" src="{{asset('img/inmuebles/default2.png')}}" alt="">
                         </div>
                         <div class="tipo-apartamento text-right">
                             ARRIENDO

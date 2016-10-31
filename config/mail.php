@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.inmobiliariasantodomingocartagena.com'),
+    'host' => env('MAIL_HOST', 'smtpout.secureserver.net'),
 
     /*
     |--------------------------------------------------------------------------
@@ -107,6 +107,6 @@ return [
     |
     */
 
-    'sendmail' => '/usr/sbin/sendmail -bs',
+    'sendmail' => '/usr/lib/sendmail -t',
 
 ];

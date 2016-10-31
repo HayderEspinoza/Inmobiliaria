@@ -128,10 +128,11 @@ class HomeController extends Controller
     public function enviar(Request $data)
     {
         $datos = $data->all();
-        /*Mail::send('email.contacto', compact('datos'), function($msj){
+        Mail::send('email.contacto', compact('datos'), function($msj){
             $msj->subject('Correo de Contacto');
-            $msj->to('contacto@inmobiliariasantodomingocartagena.com');
-        });*/
+            $msj->to('hayderepit@gmail.com');
+        });
+        $this->mensaje('Mensaje enviado correctamente');
         return view('email.contacto', compact('datos'));
     }
 }
