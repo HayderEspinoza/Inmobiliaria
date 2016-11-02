@@ -26,6 +26,15 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        .flash{
+            width: 300px;
+            position:absolute; 
+            right:2%; 
+            top:2%;
+            z-index:1000;
+        }
+    </style>
 	@yield('estilos')
 </head>
 

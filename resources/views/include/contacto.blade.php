@@ -13,7 +13,7 @@
 					<input type="checkbox" value="vender" name="tipo[]">VENDER
 				</label>
 				<label class="checkbox-inline">
-					<input type="checkbox" value="evalue" name="tipo[]">AVALÚO
+					<input type="checkbox" value="evaluo" name="tipo[]">AVALÚO
 				</label>
 				<label class="checkbox-inline">
 					<input type="checkbox" value="gerencia_proyecto" name="tipo[]"> GERENCIA DE PROYECTOS

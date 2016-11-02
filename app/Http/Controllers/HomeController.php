@@ -110,8 +110,8 @@ class HomeController extends Controller
         $datos = $request->all();
         Mail::send('email.inmueble', compact('datos'), function($msj){
             $msj->subject('Me interesa este Inmueble');
-            // $msj->to('contacto@inmobiliariasantodomingocartagena.com');
-            $msj->to('hayderespit@gmail.com');
+            $msj->to('contacto@inmobiliariasantodomingocartagena.com');
+            // $msj->to('hayderespit@gmail.com');
         });
         $this->mensaje($this->exitoso);
         return redirect()->back();
@@ -137,8 +137,8 @@ class HomeController extends Controller
         $datos = $data->all();
         Mail::send('email.contacto', compact('datos'), function($msj){
             $msj->subject('Contacto Pagina Web');
-            // $msj->to('contacto@inmobiliariasantodomingocartagena.com');
-            $msj->to('hayderespit@gmail.com');
+            $msj->to('contacto@inmobiliariasantodomingocartagena.com');
+            // $msj->to('hayderespit@gmail.com');
         });
         $this->mensaje($this->exitoso);
         return redirect()->back();

@@ -16,7 +16,7 @@
     <!-- Custom Fonts -->
     <link href="{{ asset('fonts/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <!-- Croppy -->
-    <link href="{{ asset('/css/croppic.css') }}" rel="stylesheet" type="text/css">
+    {{-- <link href="{{ asset('/css/croppic.css') }}" rel="stylesheet" type="text/css"> --}}
     <link href="{{ asset('/css/magnific-popup.css') }}" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
