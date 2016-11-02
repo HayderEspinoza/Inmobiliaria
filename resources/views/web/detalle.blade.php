@@ -74,7 +74,7 @@
 							<label for="asunto">ASUNTO</label>
 							{{ Form::textarea('asunto', null, ['class' => 'form-control', 'size' => '5x7', 'required']) }}
 						</div>
-						<div class="form-group">
+						<div class="form-group hidden">
 							{{ Form::text('inmueble', $inmueble->id, ['class' => 'form-control']) }}
 						</div>
 						<div class="form-group">

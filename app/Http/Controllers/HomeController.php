@@ -105,9 +105,15 @@ class HomeController extends Controller
                             ->first();
         return view('web.detalle', compact('inmueble', 'imagenes', 'portada'));
     }
-    public function interesaInmueble($id)
+    public function interesaInmueble(Request $request, $id)
     {
-        dd($id);
+        $datos = $request->all();
+        Mail::send('email.inmueble', compact('datos'), function($msj){
+            $msj->subject('Me interesa este Inmueble');
+            $msj->to('contacto@inmobiliariasantodomingocartagena.com');
+        });
+        $this->mensaje($this->exitoso);
+        return redirect()->back();
     }
     public function servicios()
     {
