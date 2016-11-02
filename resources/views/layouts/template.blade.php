@@ -82,7 +82,19 @@
         </div>
     </nav>
 	@yield('contenido')
-
+    @if(Session::has('mensaje'))
+        <div class="row">
+            <div class="flash">
+                <div class="alert alert-dismissible alert-{{Session::get('color-mensaje', 'primary')}}">
+                    <button type="button" class="close">&times;</button>
+                    <strong>Mensaje</strong>
+                    <p>
+                        {{Session::get('mensaje')}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    @endif
 	<script src="{{asset('js/jquery.js')}}"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
