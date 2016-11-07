@@ -9,6 +9,9 @@
 		}
 	</style>
 @endsection
+@section('inmuebles')
+	class="active"
+@stop
 @section('contenido')
 	<div class="container wrap-detalles">
 		{{-- <div class="col-lg-12 logo logo-apartamentos">

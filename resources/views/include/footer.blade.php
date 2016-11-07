@@ -6,6 +6,35 @@
                 <span class="one">INMOBILIARIA</span><br>
                 <span class="two">SANTO DOMINGO CARTAGENA</span>
             </div>
+            <div class="col-lg-12">
+                <ul class="redes-sociales">
+                    <li class="text-center">
+                        <a href="#">
+                            <span class="icon-mail"></span>
+                        </a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#">
+                            <span class="icon-facebook"></span>
+                        </a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#">
+                            <span class="icon-instagram"></span>
+                        </a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#">
+                            <span class="icon-twitter"></span>
+                        </a>
+                    </li>
+                    <li class="text-center">
+                        <a href="#">
+                            <span class="icon-youtube"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="col-lg-8">
             <div class="col-lg-4">

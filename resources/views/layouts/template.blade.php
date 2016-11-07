@@ -51,11 +51,16 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img alt="Brand" src="{{ asset('img/logo.jpg') }}" height="60px">
+                    <img alt="Inmobiliaria Santo Domingo" src="{{ asset('img/logo.jpg') }}" height="60px">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav navbar-right" >
+                    <li @yield('inicio')>
+                        <a href="{{route('web.index')}}">
+                            Inicio
+                        </a>
+                    </li>
                     <li @yield('inmobiliaria')>
                         <a href="{{route('web.inmobiliaria')}}">
                             Inmobiliaria

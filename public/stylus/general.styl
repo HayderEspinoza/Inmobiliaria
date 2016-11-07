@@ -170,9 +170,12 @@ h1, h2
 	margin-bottom 20px
 	background #f7f7f7
 	border 5px solid rgba(228, 228, 228, 0.3)
+	transition border-color .5s ease
 	.img-apartamento
 		overflow hidden
-		max-height 250px
+		position relative
+	&:hover
+		border-color rojo
 .tipo-apartamento
 	background #ed1b23
 	color white
@@ -196,9 +199,9 @@ h1, h2
 			background verde
 			position absolute
 			top 50%
-			right -55px
+			right -50px
 		&:before
-			left -55px
+			left -50px
 	table
 		width 100%
 		text-align center

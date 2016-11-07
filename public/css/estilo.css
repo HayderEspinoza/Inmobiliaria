@@ -272,10 +272,14 @@ h2 {
   margin-bottom: 20px;
   background: #f7f7f7;
   border: 5px solid rgba(228,228,228,0.3);
+  transition: border-color 0.5s ease;
 }
 .apartamento .img-apartamento {
   overflow: hidden;
-  max-height: 250px;
+  position: relative;
+}
+.apartamento:hover {
+  border-color: #ea2a2a;
 }
 .tipo-apartamento {
   background: #ed1b23;
@@ -304,10 +308,10 @@ h2 {
   background: #0f9d58;
   position: absolute;
   top: 50%;
-  right: -55px;
+  right: -50px;
 }
 .descripcion span:before {
-  left: -55px;
+  left: -50px;
 }
 .descripcion table {
   width: 100%;
