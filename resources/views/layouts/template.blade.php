@@ -76,6 +76,13 @@
                             Inmuebles
                         </a>
                     </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="cobert-regular" href="http://www.siminmueble.com/base/clavespropietarios90pdf.php?inm=731" target="_blank">PROPIETARIO</a></li>
+                            <li><a class="cobert-regular" href="http://www.siminmueble.com/base/clavesfactura90pdf.php?inm=731" target="_blank">ARRENDATARIO</a></li>
+                        </ul>
+                    </li>
                     <li @yield('proyectos')>
                         <a href="{{route('web.proyectos')}}">
                             Proyectos

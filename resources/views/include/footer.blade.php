@@ -38,7 +38,7 @@
         </div>
         <div class="col-lg-8">
             <div class="col-lg-4">
-                <ul>
+                <ul class="informacion-footer">
                     <li>SERVICIOS</li>
                     <li>Arriendos</li>
                     <li>Ventas</li>
@@ -48,7 +48,7 @@
                 </ul>
             </div>
             <div class="col-lg-4">
-                <ul>
+                <ul class="informacion-footer">
                     <li>REDES SOCIALES</li>
                     <li>Facebook</li>
                     <li>Twitter</li>
@@ -57,7 +57,7 @@
                 </ul>
             </div>
             <div class="col-lg-4">
-                <ul>
+                <ul class="informacion-footer">
                     <li>OFICINA</li>
                     <li>Bocagrande Carrera 3 No. 6A-100 Of. 709</li>
                     <li>Edificio Torre Empresarial Protección</li>

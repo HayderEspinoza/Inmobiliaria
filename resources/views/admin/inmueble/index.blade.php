@@ -13,10 +13,14 @@
             </div>
             <div class="well row">
                 <div class="col-lg-12">
-                    <a href="{{ route('inmueble.create') }}" class="btn btn-success btn-sm    ">
-                        <i class="fa fa-plus"></i>
-                        Agregar
-                    </a>
+                    {{ Form::open(['route' => 'inmueble.index', 'method' => 'GET', 'class' => 'form-inline']) }}
+                        <input type="submit" class="btn btn-success btn-sm pull-right" name="buscar" value="Buscar">
+                        {{ Form::text('descripcion', @$inputs['descripcion'], ['class' => 'form-control pull-right', 'placeholder' => 'descripcion']) }}
+                        <a href="{{ route('inmueble.create') }}" class="btn btn-success btn-sm">
+                            <i class="fa fa-plus"></i>
+                            Agregar
+                        </a>
+                    {{ Form::close() }}
                 </div>
             </div>
             <div class="bs-component">

@@ -2,7 +2,7 @@
 amarillo = #ffcc29
 verde = #0f9d58
 verde-bajo = #00b29f
-menu = amarillo
+menu = white
 texto-menu = #333
 rojo = #ea2a2a 
 rojo2 = #ef4848
@@ -79,13 +79,15 @@ h1, h2
 .redes-sociales
 	list-style none
 	padding 0
+	margin-top 40px
 	li
 		display inline-block
 		width 19%
 		a
 			font-size 35px
-			color #59595b
+			color #afafaf
 			transition .7s color ease 
+			text-decoration none
 			&:hover
 				color white
 .scrollUp
@@ -263,7 +265,7 @@ h1, h2
 	background #4b4b4d
 	color white
 	padding 30px 0 10px 0
-	ul
+	ul.informacion-footer
 		li
 			font-family cobert-regular
 			list-style none
@@ -579,7 +581,7 @@ div > .item-beneficios
 .navbar-new
 	margin 0
 	background menu !important
-	border-color menu
+	border-color darken(menu, 10)
 	.navbar-nav
 		& > li > a
 			padding 20px
@@ -599,3 +601,8 @@ div > .item-beneficios
 .navbar-toggle
 	border none
 	padding-top 15px
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover
+	background darken(white, 10)
+	color black
+.cobert-regular
+	font-family cobert-regular !important

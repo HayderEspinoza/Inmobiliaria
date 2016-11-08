@@ -15,16 +15,20 @@ class InmuebleController extends Controller
     {
         $this->middleware('auth');
     }
-    public function index()
+    public function index(Request $data)
     {
+        $inputs = $data->all();
         $inmueble = (new Inmueble())->setTable('inmuebles as in');
         $inmuebles = $inmueble->select('in.id', 'in.descripcion', 'tp.nombre', 'in.precio', 'ci.nombre as ciudad', 'of.nombre as oferta')
                             ->leftJoin('tipos as tp', 'tp.id', '=', 'in.tipo_id')
                             ->leftJoin('ciudades as ci', 'ci.id', '=', 'in.ciudad_id')
                             ->leftJoin('ofertas as of', 'of.id', '=', 'in.oferta_id' )
                             ->where('in.estado', '1');
+        if(isset($inputs['buscar'])){
+            $inmuebles->where('in.descripcion', 'like', '%'.$inputs['descripcion'].'%');
+        }
         $inmuebles = $inmuebles->paginate();
-    	return view('admin.inmueble.index', compact('inmuebles'));
+    	return view('admin.inmueble.index', compact('inmuebles', 'inputs'));
     }
     public function create()
     {
