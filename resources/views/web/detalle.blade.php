@@ -21,6 +21,8 @@
             </div>
         </div> --}}
         <div class="col-lg-12">
+        	<br><br>
+        	<br>
         	<br>
         	<p class="oferta-imagen">
         		{{ $inmueble->tipo }} EN {{ $inmueble->oferta }}

@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'soporte@inmobiliariasantodomingocartagena.com', 'name' => 'Contacto'],
+    'from' => ['address' => 'noreplay.inmobiliaria@gmail.com', 'name' => 'Contacto'],
 
     /*
     |--------------------------------------------------------------------------
@@ -107,6 +107,6 @@ return [
     |
     */
 
-    'sendmail' => '/usr/lib/sendmail -t',
+    'sendmail' => '/usr/sbin/sendmail -bs',
 
 ];
