@@ -721,9 +721,10 @@ div > .item-beneficios {
 }
 .plantas {
   padding: 100px 0;
+  background: #7d7d7d;
 }
 .plantas .titulo-plantas {
-  color: #ffcc29;
+  color: #fff;
   padding-bottom: 50px;
 }
 .plantas .foto {
