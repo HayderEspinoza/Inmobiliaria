@@ -17,6 +17,7 @@ h1, h2
 	padding-left 30px !important
 	over-flow hidden
 	color white
+	margin-top 10px
 	.two
 		font-size 22px
 .toggle
@@ -78,18 +79,17 @@ h1, h2
 				color #f1cb3f
 .redes-sociales
 	list-style none
-	padding 0
-	margin-top 40px
-	li
+	li.icono
 		display inline-block
-		width 19%
+		width 32%
+		margin-top 5px
 		a
 			font-size 35px
-			color #afafaf
+			color white
 			transition .7s color ease 
 			text-decoration none
 			&:hover
-				color white
+				opacity .5
 .scrollUp
 	display none
 .carousel-indicators
@@ -209,6 +209,7 @@ h1, h2
 		text-align center
 		td
 			padding 4px 0
+			font-family cobert-regular !important
 .formulario
 	background #f1f1f1
 	border 1px solid #d5d5d5
@@ -262,7 +263,7 @@ h1, h2
 			padding-bottom 9px
 			margin-right 5px
 .footer
-	background #4b4b4d
+	background #7d7d7d
 	color white
 	padding 30px 0 10px 0
 	ul.informacion-footer
@@ -387,9 +388,9 @@ div > .item-beneficios
 	padding-bottom 30px
 .documentos
 	margin-top 40px
-	h4
+	padding-left 40px
+	h4, h3, h2, h1
 		color verde-bajo
-		font-size 24px
 	p
 		font-family cobert-regular
 	.btn
@@ -421,6 +422,7 @@ div > .item-beneficios
 	background verde-bajo
 	padding 20px 0
 	color white
+	font-weight normal !important
 	span
 		font-family lemon	
 		padding-right 40px
@@ -436,12 +438,13 @@ div > .item-beneficios
 			background white
 			color black
 //Contacto
+contacto = #777
 .contacto
 	background white
 	padding 60px 0
 	& *
 		font-family cobert-regular
-		color #848688
+		color contacto
 	h4
 		font-weight bold
 		line-height 100px
@@ -449,6 +452,7 @@ div > .item-beneficios
 	input, textarea
 		border-radius(0)
 		font-size 16px
+		border-color contacto
 	input
 		padding 25px
 		text-align center
@@ -457,7 +461,7 @@ div > .item-beneficios
 		padding-bottom 20px 
 		background verde-bajo
 		color white
-		border 1px solid #ccc !important
+		border 1px solid contacto !important
 		transition .5s all ease
 		&:hover
 			background darken(verde-bajo, 5) !important
@@ -465,7 +469,7 @@ div > .item-beneficios
 	label.checkbox-inline
 		margin-right 30px
 	.form-control, checkbox-inline
-		background white !important
+		background white
 .titulo-verde
 	color #049f4d !important
 .titulo-tinto
@@ -584,10 +588,10 @@ div > .item-beneficios
 	border-color darken(menu, 10)
 	.navbar-nav
 		& > li > a
-			padding 20px
+			padding 30px 20px
 			font-family cobert-regular
 			font-size 14px
-			color texto-menu
+			color #000
 			transition all .5s ease
 			text-transform uppercase
 			&:hover
@@ -598,11 +602,18 @@ div > .item-beneficios
 			color #000
 			&:hover
 				background darken(menu, 12)
+				color #000
 .navbar-toggle
 	border none
 	padding-top 15px
+	.icon-bar
+		background #333 !important
+	&:hover
+		background transparent !important
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover
 	background darken(white, 10)
 	color black
 .cobert-regular
 	font-family cobert-regular !important
+.verde
+	color verde-bajo

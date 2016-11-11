@@ -51,7 +51,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img alt="Inmobiliaria Santo Domingo" src="{{ asset('img/logo.jpg') }}" height="60px">
+                    <img alt="Inmobiliaria Santo Domingo" src="{{ asset('img/logo.jpg') }}" height="80px">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">

@@ -18,7 +18,10 @@ class CreateImagenesTable extends Migration
             $table->string('nombre');
             $table->boolean('perfil')->default(0);
             $table->boolean('estado')->default(1);
-            $table->foreign('inmueble_id')->references('id')->on('inmuebles');
+            $table->foreign('inmueble_id')
+                ->references('id')
+                ->on('inmuebles')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

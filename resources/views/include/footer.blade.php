@@ -3,37 +3,12 @@
         <div class="col-lg-4">
             <br>
             <div class="col-lg-12 logo">
+                <img alt="Inmobiliaria Santo Domingo" src="{{ asset('img/logo.jpg') }}" height="80px">
+            </div>
+            
+            <div class="col-lg-12 logo">
                 <span class="one">INMOBILIARIA</span><br>
                 <span class="two">SANTO DOMINGO CARTAGENA</span>
-            </div>
-            <div class="col-lg-12">
-                <ul class="redes-sociales">
-                    <li class="text-center">
-                        <a href="#">
-                            <span class="icon-mail"></span>
-                        </a>
-                    </li>
-                    <li class="text-center">
-                        <a href="#">
-                            <span class="icon-facebook"></span>
-                        </a>
-                    </li>
-                    <li class="text-center">
-                        <a href="#">
-                            <span class="icon-instagram"></span>
-                        </a>
-                    </li>
-                    <li class="text-center">
-                        <a href="#">
-                            <span class="icon-twitter"></span>
-                        </a>
-                    </li>
-                    <li class="text-center">
-                        <a href="#">
-                            <span class="icon-youtube"></span>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
         <div class="col-lg-8">
@@ -48,12 +23,23 @@
                 </ul>
             </div>
             <div class="col-lg-4">
-                <ul class="informacion-footer">
+                <ul class="informacion-footer redes-sociales">
                     <li>REDES SOCIALES</li>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                    <li>Youtube</li>
+                    <li class="icono">
+                        <a href="#">
+                            <span class="icon-facebook"></span>
+                        </a>
+                    </li>
+                    <li class="icono">
+                        <a href="#">
+                            <span class="icon-instagram"></span>
+                        </a>
+                    </li>
+                    <li class="icono">
+                        <a href="#">
+                            <span class="icon-youtube"></span>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-4">

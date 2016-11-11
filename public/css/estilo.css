@@ -69,6 +69,7 @@ h2 {
   padding-left: 30px !important;
   over-flow: hidden;
   color: #fff;
+  margin-top: 10px;
 }
 .logo .two {
   font-size: 22px;
@@ -146,21 +147,20 @@ h2 {
 }
 .redes-sociales {
   list-style: none;
-  padding: 0;
-  margin-top: 40px;
 }
-.redes-sociales li {
+.redes-sociales li.icono {
   display: inline-block;
-  width: 19%;
+  width: 32%;
+  margin-top: 5px;
 }
-.redes-sociales li a {
+.redes-sociales li.icono a {
   font-size: 35px;
-  color: #afafaf;
+  color: #fff;
   transition: 0.7s color ease;
   text-decoration: none;
 }
-.redes-sociales li a:hover {
-  color: #fff;
+.redes-sociales li.icono a:hover {
+  opacity: 0.5;
 }
 .scrollUp {
   display: none;
@@ -321,6 +321,7 @@ h2 {
 }
 .descripcion table td {
   padding: 4px 0;
+  font-family: cobert-regular !important;
 }
 .formulario {
   background: #f1f1f1;
@@ -391,7 +392,7 @@ h2 {
   margin-right: 5px;
 }
 .footer {
-  background: #4b4b4d;
+  background: #7d7d7d;
   color: #fff;
   padding: 30px 0 10px 0;
 }
@@ -564,10 +565,13 @@ div > .item-beneficios {
 }
 .documentos {
   margin-top: 40px;
+  padding-left: 40px;
 }
-.documentos h4 {
+.documentos h4,
+.documentos h3,
+.documentos h2,
+.documentos h1 {
   color: #00b29f;
-  font-size: 24px;
 }
 .documentos p {
   font-family: cobert-regular;
@@ -610,6 +614,7 @@ div > .item-beneficios {
   background: #00b29f;
   padding: 20px 0;
   color: #fff;
+  font-weight: normal !important;
 }
 .link-avaluos span {
   font-family: lemon;
@@ -636,7 +641,7 @@ div > .item-beneficios {
 }
 .contacto * {
   font-family: cobert-regular;
-  color: #848688;
+  color: #777;
 }
 .contacto h4 {
   font-weight: bold;
@@ -649,6 +654,7 @@ div > .item-beneficios {
   -moz-border-radius: 0;
   border-radius: 0;
   font-size: 16px;
+  border-color: #777;
 }
 .contacto input {
   padding: 25px;
@@ -659,7 +665,7 @@ div > .item-beneficios {
   padding-bottom: 20px;
   background: #00b29f;
   color: #fff;
-  border: 1px solid #ccc !important;
+  border: 1px solid #777 !important;
   transition: 0.5s all ease;
 }
 .contacto .btn-enviar:hover {
@@ -671,7 +677,7 @@ div > .item-beneficios {
 }
 .contacto .form-control,
 .contacto checkbox-inline {
-  background: #fff !important;
+  background: #fff;
 }
 .titulo-verde {
   color: #049f4d !important;
@@ -833,10 +839,10 @@ div > .item-beneficios {
   border-color: #e6e6e6;
 }
 .navbar-new .navbar-nav > li > a {
-  padding: 20px;
+  padding: 30px 20px;
   font-family: cobert-regular;
   font-size: 14px;
-  color: #333;
+  color: #000;
   transition: all 0.5s ease;
   text-transform: uppercase;
 }
@@ -850,10 +856,17 @@ div > .item-beneficios {
 }
 .navbar-new .navbar-nav .active > a:hover {
   background: #e0e0e0;
+  color: #000;
 }
 .navbar-toggle {
   border: none;
   padding-top: 15px;
+}
+.navbar-toggle .icon-bar {
+  background: #333 !important;
+}
+.navbar-toggle:hover {
+  background: transparent !important;
 }
 .navbar-inverse .navbar-nav>.open>a,
 .navbar-inverse .navbar-nav>.open>a:focus,
@@ -863,6 +876,9 @@ div > .item-beneficios {
 }
 .cobert-regular {
   font-family: cobert-regular !important;
+}
+.verde {
+  color: #00b29f;
 }
 @media (min-width: 1200px) {
   .toggle {

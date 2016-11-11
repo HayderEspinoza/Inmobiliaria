@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Conatcto</title>
+	<title>Contacto</title>
 </head>
 <body>
 	<p>

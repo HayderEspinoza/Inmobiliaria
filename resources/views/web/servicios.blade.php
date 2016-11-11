@@ -59,28 +59,25 @@
                         <li>Atención personalizada y asesoría en los inmuebles de acuerdo a las necesidades del cliente</li>
                     </ul>
                     <div class="col-lg-12 documentos no-margen">
-                        <h4>DESCARGAR</h4>
-                        <div class="btn">
-                            DESCARGAR REQUISITOS
-                        </div>
+                        <h3>DESCARGAR FORMULARIO</h3>
                     </div>
-                    <div class="col-lg-4 documentos">
+                    <div class="col-lg-4 documentos no-margen">
                         <h4>PERSONA JURIDICA</h4>
                         <p>
                             Si está interesado en arrendar, por favor descargue la solicitud de arriendo.
                         </p>
-                        <div class="btn">
+                        <a href="{{ asset('pdf/persona_juridica.pdf') }}" class="btn">
                             DESCARGAR FORMULARIO
-                        </div>
+                        </a>
                     </div>
-                    <div class="col-lg-4 documentos">
+                    <div class="col-lg-4 documentos no-margen">
                         <h4>PERSONA NATURAL</h4>
                         <p>
                             Si está interesado en arrendar, por favor descargue la solicitud de arriendo.
                         </p>
-                        <div class="btn">
+                        <a href="{{ asset('pdf/persona_natural.pdf') }}" class="btn">
                             DESCARGAR FORMULARIO
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="ventas">
@@ -102,28 +99,25 @@
                         <li>Ingreso constante de nuevos inmuebles y proyectos</li>
                     </ul>
                     <div class="col-lg-12 documentos no-margen">
-                        <h4>DESCARGAR</h4>
-                        <div class="btn">
-                            DESCARGAR REQUISITOS
-                        </div>
+                        <h3>DESCARGAR FORMULARIO</h3>
                     </div>
-                    <div class="col-lg-4 documentos">
+                    <div class="col-lg-4 documentos no-margen">
                         <h4>PERSONA JURIDICA</h4>
                         <p>
-                            Si estas interesado en arrendar, por favor descargue la solicitud de arriendo.
+                            Si está interesado en arrendar, por favor descargue la solicitud de arriendo.
                         </p>
-                        <div class="btn">
+                        <a href="{{ asset('pdf/persona_juridica.pdf') }}" class="btn">
                             DESCARGAR FORMULARIO
-                        </div>
+                        </a>
                     </div>
-                    <div class="col-lg-4 documentos">
+                    <div class="col-lg-4 documentos no-margen">
                         <h4>PERSONA NATURAL</h4>
                         <p>
                             Si está interesado en arrendar, por favor descargue la solicitud de arriendo.
                         </p>
-                        <div class="btn">
+                        <a href="{{ asset('pdf/persona_natural.pdf') }}" class="btn">
                             DESCARGAR FORMULARIO
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="proyectos">

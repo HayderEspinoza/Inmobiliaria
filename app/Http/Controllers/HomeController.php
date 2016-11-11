@@ -112,6 +112,21 @@ class HomeController extends Controller
                             ->where('in.id', $id)
                             ->select('in.id', 'tp.nombre as tipo', 'of.nombre as oferta', 'in.direccion', 'in.precio', 'in.descripcion', 'in.area', 'in.habitacion', 'in.banho', 'in.direccion', 'in.piscina', 'in.parqueadero', 'in.cocina', 'in.zona_residencial', 'in.conjunto_cerrado', 'in.porteria', 'in.patio', 'in.destacado')
                             ->first();
+
+        $tmp = (new Inmueble())->setTable('inmuebles as in');
+        $query = $tmp->select('in.id', 'of.nombre as oferta', 'in.descripcion','tp.nombre as tipo', 'in.precio', 'in.area', 'in.habitacion', 'in.banho', 'in.antiguedad', 'img.nombre as imagen')
+                            ->leftJoin('tipos as tp', 'tp.id', '=', 'in.tipo_id')
+                            ->leftJoin('ofertas as of', 'of.id', '=', 'in.oferta_id')
+                            ->leftJoin('ciudades as ci', 'ci.id', '=', 'in.ciudad_id')
+                            ->leftJoin('imagenes as img', function($q){
+                                $q->on('img.inmueble_id', '=', 'in.id');
+                                $q->where('img.perfil', '=', '1');
+                            })
+                            ->where('in.estado', '1');
+        
+        $destacados =   $query->orderBy('in.destacado', 'desc')
+                            ->take(3)
+                            ->get();
         $inmueble->destacado += 1;
         $inmueble->save();
         $imagenes = Imagen::where('inmueble_id', $id)
@@ -120,7 +135,7 @@ class HomeController extends Controller
         $portada = Imagen::where('inmueble_id', $id)
                             ->orderBy('perfil', 'desc')
                             ->first();
-        return view('web.detalle', compact('inmueble', 'imagenes', 'portada'));
+        return view('web.detalle', compact('inmueble', 'imagenes', 'portada', 'destacados'));
     }
     public function interesaInmueble(Request $request, $id)
     {

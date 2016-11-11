@@ -161,117 +161,56 @@
 	<div class="destacados" id="destacados">
         <div class="container">
             <div class="title-destacados text-center">
-                <span>OFERTAS SIMILARES</span>
+                <span>INMUEBLES DESTACADOS</span>
             </div>
-            <div class="col-lg-9 block-center">
-                <!--Item-->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="apartamento">
-                        <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default2.png')}}" alt="">
-                        </div>
-                        <div class="tipo-apartamento text-right">
-                            ARRIENDO
-                        </div>
-                        <div class="descripcion">
-                            <h3 class="text-center">APARTAMENTO</h3>
-                            <p class="text-justify">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium officia ex esse, numquam ea, nesciunt nihil sunt ratione.
-                            </p>
-                            <p class="precio text-center">
-                                <span>
-                                    $ 1.300.000
-                                </span>
-                            </p>
-                            <table width="100%">
-                                <tr>
-                                    <td>Area</td>
-                                    <td>Habs</td>
-                                    <td>Baños</td>
-                                    <td>Parq</td>
-                                </tr>
-                                <tr>
-                                    <td>115M2</td>
-                                    <td>0</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <!--Item-->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="apartamento">
-                        <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default2.png')}}" alt="">
-                        </div>
-                        <div class="tipo-apartamento text-right">
-                            ARRIENDO
-                        </div>
-                        <div class="descripcion">
-                            <h3 class="text-center">APARTAMENTO</h3>
-                            <p class="text-justify">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium officia ex esse, numquam ea, nesciunt nihil sunt ratione.
-                            </p>
-                            <p class="precio text-center">
-                                <span>
-                                    $ 1.300.000
-                                </span>
-                            </p>
-                            <table width="100%">
-                                <tr>
-                                    <td>Area</td>
-                                    <td>Habs</td>
-                                    <td>Baños</td>
-                                    <td>Parq</td>
-                                </tr>
-                                <tr>
-                                    <td>115M2</td>
-                                    <td>0</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                </tr>
-                            </table>
+           <div class="col-lg-9 block-center intro-inmuebles">
+                @foreach($destacados as $inmueble)
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="apartamento">
+                            <div class="img-apartamento img-responsive">
+                                @if($inmueble->imagen == null)
+                                    <a href="{{ route('web.inmueble', $inmueble->id) }}">
+                                        <img class="img-responsive" src="{{asset('img/inmuebles/default2.png')}}" alt="">
+                                    </a>
+                                @else
+                                    <a href="{{ route('web.inmueble', $inmueble->id) }}">
+                                        <img class="img-responsive" src="{{asset('img/inmuebles/'.$inmueble->imagen)}}" alt="">
+                                    </a>
+                                @endif
+                            </div>
+                            <div class="tipo-apartamento text-right">
+                                {{ $inmueble->oferta }}
+                            </div>
+                            <div class="descripcion">
+                                <h3 class="text-center">
+                                    {{ $inmueble->tipo }}
+                                </h3>
+                                {{-- <p class="text-justify">
+                                    {{ $inmueble->descripcion }}
+                                </p> --}}
+                                <p class="precio text-center">
+                                    <span class="">
+                                        $ {{ number_format($inmueble->precio, 0) }}
+                                    </span>
+                                </p>
+                                <table width="100%">
+                                    <tr>
+                                        <td>Area</td>
+                                        <td>Habs</td>
+                                        <td>Baños</td>
+                                        <td>Antig</td>
+                                    </tr>
+                                    <tr>
+                                        <td> {{ $inmueble->area }} M2</td>
+                                        <td> {{ $inmueble->habitacion }}</td>
+                                        <td> {{ $inmueble->banho }}</td>
+                                        <td> {{ $inmueble->antiguedad }}</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!--Item-->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="apartamento">
-                        <div class="img-apartamento img-responsive">
-                            <img class="img-responsive" src="{{asset('img/inmuebles/default2.png')}}" alt="">
-                        </div>
-                        <div class="tipo-apartamento text-right">
-                            ARRIENDO
-                        </div>
-                        <div class="descripcion">
-                            <h3 class="text-center">APARTAMENTO</h3>
-                            <p class="text-justify">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium officia ex esse, numquam ea, nesciunt nihil sunt ratione.
-                            </p>
-                            <p class="precio text-center">
-                                <span>
-                                    $ 1.300.000
-                                </span>
-                            </p>
-                            <table width="100%">
-                                <tr>
-                                    <td>Area</td>
-                                    <td>Habs</td>
-                                    <td>Baños</td>
-                                    <td>Parq</td>
-                                </tr>
-                                <tr>
-                                    <td>115M2</td>
-                                    <td>0</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

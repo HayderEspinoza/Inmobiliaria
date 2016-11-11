@@ -14,9 +14,9 @@ class CreateInmueblesTable extends Migration
     {
         Schema::create('inmuebles', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('tipo_id')->unsigned();
-            $table->integer('oferta_id')->unsigned();
-            $table->integer('ciudad_id')->unsigned();
+            $table->integer('tipo_id')->unsigned()->nullable();
+            $table->integer('oferta_id')->unsigned()->nullable();
+            $table->integer('ciudad_id')->unsigned()->nullable();
             $table->string('direccion');
             $table->integer('habitacion');
             $table->integer('banho');
@@ -34,9 +34,9 @@ class CreateInmueblesTable extends Migration
             $table->integer('destacado')->default(0);
             $table->boolean('estado')->default(1);
 
-            $table->foreign('tipo_id')->references('id')->on('tipos')->onDelete('cascade');
-            $table->foreign('oferta_id')->references('id')->on('ofertas')->onDelete('cascade');
-            $table->foreign('ciudad_id')->references('id')->on('ciudades')->onDelete('cascade');
+            $table->foreign('tipo_id')->references('id')->on('tipos')->onDelete('set null');
+            $table->foreign('oferta_id')->references('id')->on('ofertas')->onDelete('set null');
+            $table->foreign('ciudad_id')->references('id')->on('ciudades')->onDelete('set null');
             $table->timestamps();
         });
     }

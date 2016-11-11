@@ -35,17 +35,19 @@ class ImagenController extends Controller
         $rules = [
             'nombre' => 'required|mimes:jpeg,jpg,png'
         ];
-        $validator = \Validator::make($inputs, $rules);
-        if($validator->passes()){
-            $imagen = new Imagen();
-            $imagen->inmueble_id = $inmueble;
-            $imagen->fill($inputs);
-            $imagen->save();
-            $this->mensaje($this->exitoso);
-            return redirect()->route('inmueble.imagen.index', [$inmueble]);
+        foreach ($inputs['nombre'] as $key => $file) {
+            if(!is_null($file))
+            {
+                $imagen = new Imagen();
+                $imagen->inmueble_id = $inmueble;
+                $imagen->nombre = $file;
+                $imagen->save();
+            }
         }
-        $this->mensaje('Alguno de los campos no esta listo', '2');
-        return redirect()->back()->withInput()->withErrors($validator);
+        $this->mensaje($this->exitoso);
+        return redirect()->route('inmueble.imagen.index', [$inmueble]);
+        
+        
     }
     public function edit($inmueble, $imagen)
     {
