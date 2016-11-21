@@ -34,13 +34,25 @@
                                 <td>{{ $i + 1 }}</td>
                                 <td>{{ $imagen->nombre }}</td>
                                 <td>
+                                    <a href="/img/inmuebles/{{ $imagen->nombre }}" target="_blank" class="image-link label label-primary"></a>
+
                                     <a href="/img/inmuebles/{{ $imagen->nombre }}" target="_blank" class="image-link label label-primary">Ver</a>
+
                                     <a href="{{route('inmueble.imagen.destroy', [$inmueble->id, $imagen->id])}}" class="label label-danger" data-method="delete" data-token="{{csrf_token()}}" data-confirm="Esta seguro de eliminar?">Eliminar</a>
+                                    
                                     <a href="{{route('imagen.perfil', $imagen->id)}}" class="label label-{{ $imagen->class }}" data-method="put" data-token="{{csrf_token()}}" data-confirm="Esta sera su siguiente imagen de portada?">Portada</a>
+                                    
                                     <a href="{{ route('web.inmueble', $inmueble->id) }}" class="label label-warning" target="_blank">
                                         Web
                                     </a>
-
+                                    &nbsp;
+                                    <a href="{{ route('rotate.left', [$inmueble->id, $imagen->id]) }}" class="label label-success" data-method="put" data-token="{{ csrf_token() }}">
+                                        <i class="fa fa-rotate-left"></i>
+                                    </a>
+                                    
+                                    <a href="{{ route('rotate.right', [$inmueble->id, $imagen->id]) }}" class="label label-success" data-method="put" data-token="{{ csrf_token() }}">
+                                        <i class="fa fa-rotate-right"></i>
+                                    </a>
                                 </td>
                             </tr>
                         @endforeach

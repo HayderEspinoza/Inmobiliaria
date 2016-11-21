@@ -1,0 +1,38 @@
+To: contacto@inmobiliariasantodomingocartagena.com
+Subject: Me interesa este Inmueble
+MIME-Version: 1.0
+X-Mailer: Nette Framework
+Date: Mon, 21 Nov 2016 20:41:48 +0000
+From: Pagina Web <soporte@inmobiliariasantodomingocartagena.com>
+Message-ID: <qhp5n6f6ml@192.168.1.1068000>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inmueble</title>
+</head>
+<body>
+	<p>
+		<strong>Nombre:</strong> Prueba
+	</p>
+	<p>
+		<strong>Email:</strong> hayderespit@gmail.com
+	</p>
+	<p>
+		<strong>Telefono:</strong> 3733733767
+	</p>
+	<p>
+		<strong>Mensaje:</strong> Pueba
+	</p>
+	<p>
+		<strong>Interesado en el siguiente Inmueble:</strong>
+		<a href="http://192.168.1.106:8000/inmuebles/1" class="">
+			Ver
+		</a>
+	</p>
+	
+</body>
+</html>

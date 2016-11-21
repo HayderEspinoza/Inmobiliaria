@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Intervention\Image\ImageManager as Image;
 use Illuminate\Http\Request;
 use Negocio\Entities\Ciudad;
 use Negocio\Entities\Inmueble;
@@ -74,5 +75,25 @@ class ImagenController extends Controller
             $imagen->perfil = 1;
             $imagen->save();
             return redirect()->back();
+    }
+    public function rotateLeft($inmueble, $imagen)
+    {
+        $imagen = Imagen::find($imagen);
+        $manager = new Image();
+        $img = $manager->make('img/inmuebles/'.$imagen->nombre);
+        $img->rotate(90);
+        $img->save();
+        $this->mensaje($this->exitoso);
+        return redirect()->back();
+    }
+    public function rotateRight($inmueble, $imagen)
+    {
+        $imagen = Imagen::find($imagen);   
+        $manager = new Image();
+        $img = $manager->make('img/inmuebles/'.$imagen->nombre);
+        $img->rotate(-90);
+        $img->save();
+        $this->mensaje($this->exitoso);
+        return redirect()->back();
     }
 }

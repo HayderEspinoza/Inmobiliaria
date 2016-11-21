@@ -9,6 +9,8 @@ use Negocio\Entities\Oferta;
 use Negocio\Entities\Ciudad;
 use Negocio\Entities\Inmueble;
 use Negocio\Entities\Imagen;
+use Nette\Mail\Message;
+use Nette\Mail\SendmailMailer;
 use Mail;
 class HomeController extends Controller
 {
@@ -43,10 +45,11 @@ class HomeController extends Controller
         $tipos  =   ['']+Tipo::where('estado', '1')
                             ->lists('nombre', 'id')
                             ->toArray();
+        
         $ofertas =  ['']+Oferta::where('estado', '1')
                                 ->lists('nombre', 'id')
                                 ->toArray();
-        $ciudades = ['']+Ciudad::where('estado', '1')
+        $ciudades = ['Ciudad']+Ciudad::where('estado', '1')
                                 ->lists('nombre', 'id')
                                 ->toArray();
         $inmueble = (new Inmueble())->setTable('inmuebles as in');
@@ -61,12 +64,12 @@ class HomeController extends Controller
                             ->where('in.estado', '1');
 
         if(isset($inputs['buscar'])){
-            // dd($inputs);
-            if(isset($inputs['tipo_id']) > 0)
+            
+            if(isset($inputs['tipo_id']) && $inputs['tipo_id']> 0)
                 $inmuebles->where('in.tipo_id', $inputs['tipo_id']);
-            if(isset($inputs['oferta_id']) > 0)
+            if(isset($inputs['oferta_id']) && $inputs['oferta_id']> 0)
                 $inmuebles->where('in.oferta_id', $inputs['oferta_id']);
-            if(isset($inputs['ciudad_id']) > 0)
+            if(isset($inputs['ciudad_id']) && $inputs['ciudad_id'] > 0)
                 $inmuebles->where('in.ciudad_id', $inputs['ciudad_id']);
             if(isset($inputs['precio_min']) != '' && $inputs['precio_max'] != ''){
                 $inmuebles->where(function($q) use ($inputs){
@@ -74,35 +77,36 @@ class HomeController extends Controller
                     $q->where('in.precio', '<=', str_replace(',', '', $inputs['precio_max']));
                 });
             }
-            if(isset($inputs['habitacion']) != '')
+
+            if(isset($inputs['habitacion']) && $inputs['habitacion'] != '')
                 $inmuebles->where('habitacion', $inputs['habitacion']);
-            if(isset($inputs['banho']) != '')
+            if(isset($inputs['banho']) && $inputs['banho'] != '')
                 $inmuebles->where('banho', $inputs['banho']);
-            if(isset($inputs['area']) != '')
+            if(isset($inputs['area']) && $inputs['area'] != '')
                 $inmuebles->where('area', $inputs['area']);
-            if(isset($inputs['antiguedad']) != '')
+            if(isset($inputs['antiguedad']) && $inputs['antiguedad'] != '')
                 $inmuebles->where('antiguedad', $inputs['antiguedad']);
-            if(isset($inputs['antiguedad']) != '')
-                $inmuebles->where('banho', $inputs['banho']);
-            if(isset($inputs['piscina']))
+            if(isset($inputs['piscina']) && $inputs['piscina'])
                 $inmuebles->where('piscina', $inputs['piscina']);
-            if(isset($inputs['parqueadero']))
+            if(isset($inputs['parqueadero']) && $inputs['parqueadero'])
                 $inmuebles->where('parqueadero', $inputs['parqueadero']);
-            if(isset($inputs['cocina']))
+            if(isset($inputs['cocina']) && $inputs['cocina'])
                 $inmuebles->where('cocina', $inputs['cocina']);
-            if(isset($inputs['zona_residencial']))
+            if(isset($inputs['zona_residencial']) && $inputs['zona_residencial'])
                 $inmuebles->where('zona_residencial', $inputs['zona_residencial']);
-            if(isset($inputs['conjunto_cerrado']))
+            if(isset($inputs['conjunto_cerrado']) && $inputs['conjunto_cerrado'])
                 $inmuebles->where('conjunto_cerrado', $inputs['conjunto_cerrado']);
-            if(isset($inputs['porteria']))
+            if(isset($inputs['porteria']) && $inputs['porteria'])
                 $inmuebles->where('porteria', $inputs['porteria']);
-            if(isset($inputs['patio']))
+            if(isset($inputs['patio']) && $inputs['patio'])
                 $inmuebles->where('patio', $inputs['patio']);
-            if(isset($inputs['direccion']))
+            if(isset($inputs['direccion']) && $inputs['direccion'])
                 $inmuebles->where('direccion', 'like', '%'.$inputs['direccion'].'%');
         }
+        
         $inmuebles = $inmuebles->paginate();
-        return view('web.inmuebles', compact('tipos', 'ofertas', 'ciudades', 'inmuebles', 'inputs'))->withInput($inputs);
+
+        return view('web.inmuebles', compact('tipos', 'ofertas', 'ciudades', 'inmuebles', 'inputs'));
     }
     public function inmueble($id)
     {
@@ -137,14 +141,19 @@ class HomeController extends Controller
                             ->first();
         return view('web.detalle', compact('inmueble', 'imagenes', 'portada', 'destacados'));
     }
-    public function interesaInmueble(Request $request, $id)
+    public function interesaInmueble(Request $data, $id)
     {
-        $datos = $request->all();
-        Mail::send('email.inmueble', compact('datos'), function($msj){
-            $msj->subject('Me interesa este Inmueble');
-            $msj->to('contacto@inmobiliariasantodomingocartagena.com');
-            // $msj->to('hayderespit@gmail.com');
-        });
+        $datos = $data->all();
+        $vista = view('email.inmueble', compact('datos'))->render();
+        $mail = new Message;
+        $mail->setFrom('Pagina Web <soporte@inmobiliariasantodomingocartagena.com>')
+            ->addTo('contacto@inmobiliariasantodomingocartagena.com')
+            ->setSubject('Me interesa este Inmueble')
+            ->setBody($vista);
+
+        $mailer = new SendmailMailer();
+        $mailer->send($mail);
+
         $this->mensaje($this->exitoso);
         return redirect()->back();
     }
@@ -166,12 +175,18 @@ class HomeController extends Controller
     }
     public function enviar(Request $data)
     {
+        
         $datos = $data->all();
-        Mail::send('email.contacto', compact('datos'), function($msj){
-            $msj->subject('Contacto Pagina Web');
-            $msj->to('contacto@inmobiliariasantodomingocartagena.com');
-            // $msj->to('hayderespit@gmail.com');
-        });
+        $vista = view('email.contacto', compact('datos'))->render();
+        $mail = new Message;
+        $mail->setFrom('Pagina Web <soporte@inmobiliariasantodomingocartagena.com>')
+            ->addTo('contacto@inmobiliariasantodomingocartagena.com')
+            ->setSubject('Contacto Pagina Web')
+            ->setBody($vista);
+
+        $mailer = new SendmailMailer();
+        $mailer->send($mail);
+
         $this->mensaje($this->exitoso);
         return redirect()->back();
     }

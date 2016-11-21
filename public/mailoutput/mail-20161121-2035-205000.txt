@@ -1,0 +1,37 @@
+To: hayderespit@gmail.com
+Subject: Contacto Pagina Web
+MIME-Version: 1.0
+X-Mailer: Nette Framework
+Date: Mon, 21 Nov 2016 20:35:06 +0000
+From: John <john@example.com>
+Message-ID: <odbr3bib0b@192.168.1.1068000>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contacto</title>
+</head>
+<body>
+	<p>
+		<strong>Nombre:</strong> Hayder
+	</p>
+	<p>
+		<strong>Email:</strong> hayderespit@gmail.com
+	</p>
+	<p>
+		<strong>Telefono:</strong> 3014532536
+	</p>
+	<p>
+		<strong>Mensaje:</strong> Esto es una prueba bb
+	</p>
+	<p>
+		<strong>Interesado en:</strong>
+	</p>
+	<ul>
+									<li>arrendar</li>
+						</ul>
+</body>
+</html>

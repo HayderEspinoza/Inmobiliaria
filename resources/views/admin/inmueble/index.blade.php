@@ -23,7 +23,7 @@
                     {{ Form::close() }}
                 </div>
             </div>
-            <div class="bs-component">
+            <div class="bs-component table-responsive">
                 <table class="table table-striped table-hover table-bordered">
                     <thead>
                         <tr>

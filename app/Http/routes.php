@@ -27,3 +27,5 @@ Route::resource('tipo', 'TipoController');
 Route::resource('ciudad', 'CiudadController');
 Route::put('perfil/{id}', ['as' => 'imagen.perfil', 'uses' => 'ImagenController@perfil']);
 Route::resource('inmueble.imagen', 'ImagenController');
+Route::put('inmueble/{inmueble}/imagen/{imagen}/left', ['as' => 'rotate.left', 'uses' => 'ImagenController@rotateLeft']);
+Route::put('inmueble/{inmueble}/imagen/{imagen}/right', ['as' => 'rotate.right', 'uses' => 'ImagenController@rotateRight']);

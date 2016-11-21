@@ -28,5 +28,11 @@ class UsersTableSeeder extends Seeder
         $admin->email = 'developer@inmobiliariasantodomingocartagena.com';
         $admin->password = bcrypt('admin');
         $admin->save();
+
+        $admin = new User();
+        $admin->name = 'developer';
+        $admin->email = 'hayderespit@gmail.com';
+        $admin->password = bcrypt('admin');
+        $admin->save();
     }
 }
