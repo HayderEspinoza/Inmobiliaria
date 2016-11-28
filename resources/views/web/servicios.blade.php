@@ -63,18 +63,12 @@
                     </div>
                     <div class="col-lg-4 documentos no-margen">
                         <h4>PERSONA JURIDICA</h4>
-                        <p>
-                            Si está interesado en arrendar, por favor descargue la solicitud de arriendo.
-                        </p>
                         <a href="{{ asset('pdf/persona_juridica.pdf') }}" class="btn">
                             DESCARGAR FORMULARIO
                         </a>
                     </div>
                     <div class="col-lg-4 documentos no-margen">
                         <h4>PERSONA NATURAL</h4>
-                        <p>
-                            Si está interesado en arrendar, por favor descargue la solicitud de arriendo.
-                        </p>
                         <a href="{{ asset('pdf/persona_natural.pdf') }}" class="btn">
                             DESCARGAR FORMULARIO
                         </a>
@@ -103,18 +97,12 @@
                     </div>
                     <div class="col-lg-4 documentos no-margen">
                         <h4>PERSONA JURIDICA</h4>
-                        <p>
-                            Si está interesado en arrendar, por favor descargue la solicitud de arriendo.
-                        </p>
                         <a href="{{ asset('pdf/persona_juridica.pdf') }}" class="btn">
                             DESCARGAR FORMULARIO
                         </a>
                     </div>
                     <div class="col-lg-4 documentos no-margen">
                         <h4>PERSONA NATURAL</h4>
-                        <p>
-                            Si está interesado en arrendar, por favor descargue la solicitud de arriendo.
-                        </p>
                         <a href="{{ asset('pdf/persona_natural.pdf') }}" class="btn">
                             DESCARGAR FORMULARIO
                         </a>

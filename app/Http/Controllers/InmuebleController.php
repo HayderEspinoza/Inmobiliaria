@@ -7,6 +7,7 @@ use Negocio\Entities\Tipo;
 use Negocio\Entities\Oferta;
 use Negocio\Entities\Ciudad;
 use Negocio\Entities\Inmueble;
+use Negocio\Entities\Barrio;
 use App\Http\Requests;
 
 class InmuebleController extends Controller
@@ -27,6 +28,7 @@ class InmuebleController extends Controller
         if(isset($inputs['buscar'])){
             $inmuebles->where('in.descripcion', 'like', '%'.$inputs['descripcion'].'%');
         }
+
         $inmuebles = $inmuebles->paginate();
     	return view('admin.inmueble.index', compact('inmuebles', 'inputs'));
     }
@@ -38,7 +40,10 @@ class InmuebleController extends Controller
     						->lists('nombre', 'id');
         $ofertas = Oferta::where('estado', '1')
                             ->lists('nombre', 'id');
-    	return view('admin.inmueble.create', compact('tipos', 'ciudades', 'ofertas'));
+        $barrios = Barrio::where('estado', '1')
+                            ->orderBy('nombre')
+                            ->lists('nombre', 'id');
+    	return view('admin.inmueble.create', compact('tipos', 'ciudades', 'ofertas', 'barrios'));
     }
     public function store(Request $request)
     {
@@ -50,11 +55,12 @@ class InmuebleController extends Controller
             'habitacion'    => 'required|numeric',
             'banho'         => 'required|numeric',
             'area'          => 'required',
-            'antiguedad'    => 'required',
             'precio'        => 'required',
-            'oferta_id'     => 'required|numeric'
+            'oferta_id'     => 'required|numeric',
+            'barrio_id'     => 'required|numeric'
         ];
         $validator = \Validator::make($inputs, $rules);
+
         if($validator->passes()){
             $inmueble = new Inmueble();
             $inmueble->fill($inputs);
@@ -74,7 +80,11 @@ class InmuebleController extends Controller
                             ->lists('nombre', 'id');
         $ofertas = Oferta::where('estado', '1')
                             ->lists('nombre', 'id');
-        return view('admin.inmueble.show', compact('inmueble', 'tipos', 'ciudades', 'ofertas'));
+        $barrios = Barrio::where('estado', '1')
+                            ->orderBy('nombre')
+                            ->lists('nombre', 'id');
+
+        return view('admin.inmueble.show', compact('inmueble', 'tipos', 'ciudades', 'ofertas', 'barrios'));
     }
     public function edit($id)
     {
@@ -84,8 +94,11 @@ class InmuebleController extends Controller
         $ciudades = Ciudad::where('estado', '1')
                             ->lists('nombre', 'id');
         $ofertas = Oferta::where('estado', '1')
-                            ->lists('nombre', 'id');                            
-        return view('admin.inmueble.edit', compact('inmueble', 'tipos', 'ciudades', 'ofertas'));   
+                            ->lists('nombre', 'id');
+        $barrios = Barrio::where('estado', '1')
+                            ->orderBy('nombre')
+                            ->lists('nombre', 'id');                             
+        return view('admin.inmueble.edit', compact('inmueble', 'tipos', 'ciudades', 'ofertas', 'barrios'));   
     }
     public function update(Request $request, $id)
     {
@@ -99,7 +112,8 @@ class InmuebleController extends Controller
             'area'          => 'required',
             'antiguedad'    => 'required',
             'precio'        => 'required',
-            'oferta_id'     => 'required|numeric'
+            'oferta_id'     => 'required|numeric',
+            'barrio_id'     => 'required|numeric'
         ];
         $validator = \Validator::make($inputs, $rules);
         if($validator->passes()){

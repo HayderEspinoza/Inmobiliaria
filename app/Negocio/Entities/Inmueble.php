@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Inmueble extends Intermediate
 {
     protected $table = 'inmuebles';
-    protected $fillable = ['tipo_id', 'ciudad_id', 'oferta_id', 'direccion', 'habitacion', 'banho', 'area', 'parqueadero', 'piscina', 'cocina', 'zona_residencial', 'conjunto_cerrado', 'porteria', 'patio', 'antiguedad', 'precio', 'descripcion', 'estado'];
+    protected $fillable = ['tipo_id', 'ciudad_id', 'oferta_id', 'direccion', 'habitacion', 'banho', 'area', 'parqueadero', 'piscina', 'cocina', 'zona_residencial', 'conjunto_cerrado', 'porteria', 'patio', 'antiguedad', 'salon', 'cocineta', 'mezanine', 'cuarto_servicio', 'banho_servicio', 'locker','precio', 'descripcion', 'estado'];
 
     public function setParqueaderoAttribute($value='')
     {
@@ -42,6 +42,32 @@ class Inmueble extends Intermediate
         $sinComa = str_replace(',', '', $value);
         $this->attributes['precio'] = $sinComa;
     }
+
+    public function setSalonAttribute($value='')
+    {
+        $this->attributes['salon'] = $this->checkbox($value);
+    }
+    public function setCocinetaAttribute($value='')
+    {
+        $this->attributes['cocineta'] = $this->checkbox($value);
+    }
+    public function setMezanineAttribute($value='')
+    {
+        $this->attributes['mezanine'] = $this->checkbox($value);
+    }
+    public function setCuartoServicioAttribute($value='')
+    {
+        $this->attributes['cuarto_servicio'] = $this->checkbox($value);
+    }
+    public function setbanhoServicioAttribute($value='')
+    {
+        $this->attributes['banho_servicio'] = $this->checkbox($value);
+    }
+    public function setLockerAttribute($value='')
+    {
+        $this->attributes['locker'] = $this->checkbox($value);
+    }
+
     public function checkbox($value='')
     {
     	if($value == 'on')

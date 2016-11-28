@@ -3,7 +3,7 @@
         <div class="col-lg-4">
             <br>
             <div class="col-lg-12 logo">
-                <img alt="Inmobiliaria Santo Domingo" src="{{ asset('img/logo.jpg') }}" height="80px">
+                <img alt="Inmobiliaria Santo Domingo" src="{{ asset('img/logo.jpg') }}" height="120px">
             </div>
             
             <div class="col-lg-12 logo">
@@ -38,6 +38,11 @@
                     <li class="icono">
                         <a href="#">
                             <span class="icon-youtube"></span>
+                        </a>
+                    </li>
+                    <li class="icono">
+                        <a href="#">
+                            <span class="icon-twitter"></span>
                         </a>
                     </li>
                 </ul>

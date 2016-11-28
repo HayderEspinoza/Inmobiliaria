@@ -4,6 +4,9 @@
         .logo-apartamentos{
             padding: 30px 0 40px 0;
         }
+        .container{
+        	width:90%;
+        }
 	</style>
 @endsection
 @section('inmuebles')
