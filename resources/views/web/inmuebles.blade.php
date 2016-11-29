@@ -39,11 +39,15 @@
 	                {{ Form::select('oferta_id', $ofertas, @$inputs['oferta_id'], ['class' => 'form-control']) }}
 	            </div>
 	            <div class="form-group">
-	                <label for="ciudad_id">Direccion</label>
+	                <label for="ciudad_id">Ciudad</label>
 	                {{ Form::select('ciudad_id', $ciudades, @$inputs['ciudad_id'], ['class' => 'form-control']) }}
 	            </div>
 	            <div class="form-group">
-	            	{{ Form::text('direccion', @$inputs['direccion'], ['class' => 'form-control', 'placeholder' => 'Barrio']) }}
+	                <label for="barrio_id">Barrio</label>
+	                {{ Form::select('barrio_id', $barrios, @$inputs['barrio_id'], ['class' => 'form-control']) }}
+	            </div>
+	            <div class="form-group">
+	            	{{ Form::text('direccion', @$inputs['direccion'], ['class' => 'form-control', 'placeholder' => 'Direccion']) }}
 	            </div>
 	            <div class="row">
 	            	<div class="form-group col-md-6">
@@ -125,6 +129,48 @@
 					<div class="checkbox">
 	  					<label>
                             {{Form::checkbox('patio', 1, @$inputs['patio'])}} Patio
+	  					</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="checkbox">
+	  					<label>
+                            {{Form::checkbox('salon', 1, @$inputs['salon'])}} Salon
+	  					</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="checkbox">
+	  					<label>
+                            {{Form::checkbox('cocineta', 1, @$inputs['cocineta'])}} Cocineta
+	  					</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="checkbox">
+	  					<label>
+                            {{Form::checkbox('mezanine', 1, @$inputs['mezanine'])}} Mezanine
+	  					</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="checkbox">
+	  					<label>
+                            {{Form::checkbox('cuarto_servicio', 1, @$inputs['cuarto_servicio'])}} Cuarto Servicio
+	  					</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="checkbox">
+	  					<label>
+                            {{Form::checkbox('banho_servicio', 1, @$inputs['banho_servicio'])}} Baño Servicio
+	  					</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="checkbox">
+	  					<label>
+                            {{Form::checkbox('locker', 1, @$inputs['locker'])}} Locker
 	  					</label>
 					</div>
 				</div>

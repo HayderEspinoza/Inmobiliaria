@@ -83,15 +83,7 @@
                     {{ Form::select('tipo_id', $tipos, @$inputs['tipo_id'], ['class' => 'form-control']) }}
                 </div>
                 <div class="form-group">
-                    <div class="row">
-                        @foreach ($ofertas as $oferta)
-                            <div class="col-md-6 text-center">
-                                <label class="radio-inline">
-                                    {{ Form::radio('oferta_id', 1) }}{{ $oferta->nombre }}
-                                </label>
-                            </div>
-                        @endforeach
-                    </div>
+                    {{ Form::select('oferta_id', $ofertas, @$inputs['oferta_id'], ['class' => 'form-control']) }}
                 </div>
                 <div class="form-group hidden">
                     {{ Form::text('ciudad_id', 1) }}

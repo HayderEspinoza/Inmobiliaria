@@ -6,6 +6,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Negocio\Entities\Tipo;
 use Negocio\Entities\Oferta;
+use Negocio\Entities\Barrio;
 use Negocio\Entities\Ciudad;
 use Negocio\Entities\Inmueble;
 use Negocio\Entities\Imagen;
@@ -19,7 +20,9 @@ class HomeController extends Controller
         $tipos = ['TIPO DE INMUEBLE']+Tipo::where('estado', '1')
                     ->lists('nombre', 'id')
                     ->toArray();
-        $ofertas = Oferta::where('estado', '1')->get();
+        $ofertas = ['TIPO DE OFERTA'] + Oferta::where('estado', '1')
+                    ->lists('nombre', 'id')
+                    ->toArray();
         $inmueble = (new Inmueble())->setTable('inmuebles as in');
         $query = $inmueble->select('in.id', 'of.nombre as oferta', 'in.descripcion','tp.nombre as tipo', 'in.precio', 'in.area', 'in.habitacion', 'in.banho', 'in.antiguedad', 'img.nombre as imagen')
                             ->leftJoin('tipos as tp', 'tp.id', '=', 'in.tipo_id')
@@ -52,6 +55,9 @@ class HomeController extends Controller
         $ciudades = ['Ciudad']+Ciudad::where('estado', '1')
                                 ->lists('nombre', 'id')
                                 ->toArray();
+        $barrios = Barrio::where('estado', '1')
+                            ->orderBy('nombre')
+                            ->lists('nombre', 'id');
         $inmueble = (new Inmueble())->setTable('inmuebles as in');
         $inmuebles = $inmueble->select('in.id', 'of.nombre as oferta', 'tp.nombre as tipo', 'in.precio', 'in.area', 'in.habitacion', 'in.banho', 'in.antiguedad', 'img.nombre as imagen')
                             ->leftJoin('tipos as tp', 'tp.id', '=', 'in.tipo_id')
@@ -71,6 +77,8 @@ class HomeController extends Controller
                 $inmuebles->where('in.oferta_id', $inputs['oferta_id']);
             if(isset($inputs['ciudad_id']) && $inputs['ciudad_id'] > 0)
                 $inmuebles->where('in.ciudad_id', $inputs['ciudad_id']);
+            if(isset($inputs['barrio_id']) && $inputs['barrio_id'] > 0)
+                $inmuebles->where('in.barrio_id', $inputs['barrio_id']);
             if(isset($inputs['precio_min']) != '' && $inputs['precio_max'] != ''){
                 $inmuebles->where(function($q) use ($inputs){
                     $q->where('in.precio', '>=', str_replace(',', '', $inputs['precio_min']));
@@ -102,11 +110,24 @@ class HomeController extends Controller
                 $inmuebles->where('patio', $inputs['patio']);
             if(isset($inputs['direccion']) && $inputs['direccion'])
                 $inmuebles->where('direccion', 'like', '%'.$inputs['direccion'].'%');
+
+            if(isset($inputs['salon']) && $inputs['salon'])
+                $inmuebles->where('salon', $inputs['salon']);
+            if(isset($inputs['cocineta']) && $inputs['cocineta'])
+                $inmuebles->where('cocineta', $inputs['cocineta']);
+            if(isset($inputs['mezanine']) && $inputs['mezanine'])
+                $inmuebles->where('mezanine', $inputs['mezanine']);
+            if(isset($inputs['cuarto_servicio']) && $inputs['cuarto_servicio'])
+                $inmuebles->where('cuarto_servicio', $inputs['cuarto_servicio']);
+            if(isset($inputs['banho_servicio']) && $inputs['banho_servicio'])
+                $inmuebles->where('banho_servicio', $inputs['banho_servicio']);
+            if(isset($inputs['locker']) && $inputs['locker'])
+                $inmuebles->where('locker', $inputs['locker']);
         }
         
         $inmuebles = $inmuebles->paginate();
 
-        return view('web.inmuebles', compact('tipos', 'ofertas', 'ciudades', 'inmuebles', 'inputs'));
+        return view('web.inmuebles', compact('tipos', 'ofertas', 'ciudades', 'inmuebles', 'inputs', 'barrios'));
     }
     public function inmueble($id)
     {
@@ -146,10 +167,10 @@ class HomeController extends Controller
         $datos = $data->all();
         $vista = view('email.inmueble', compact('datos'))->render();
         $mail = new Message;
-        $mail->setFrom('Pagina Web <soporte@inmobiliariasantodomingocartagena.com>')
-            ->addTo('contacto@inmobiliariasantodomingocartagena.com')
+        $mail->setFrom('Pagina Web <contacto@inmobiliariasantodomingocartagena.com>')
+            ->addTo('informacion@inmobiliariasantodomingocartagena.com')
             ->setSubject('Me interesa este Inmueble')
-            ->setBody($vista);
+            ->setHtmlBody($vista);
 
         $mailer = new SendmailMailer();
         $mailer->send($mail);
@@ -175,14 +196,13 @@ class HomeController extends Controller
     }
     public function enviar(Request $data)
     {
-        
         $datos = $data->all();
-        $vista = view('email.contacto', compact('datos'))->render();
+        $vista = view('email.contacto', compact('datos'));
         $mail = new Message;
-        $mail->setFrom('Pagina Web <soporte@inmobiliariasantodomingocartagena.com>')
-            ->addTo('contacto@inmobiliariasantodomingocartagena.com')
+        $mail->setFrom('Pagina Web <contacto@inmobiliariasantodomingocartagena.com>')
+            ->addTo('informacion@inmobiliariasantodomingocartagena.com')
             ->setSubject('Contacto Pagina Web')
-            ->setBody($vista);
+            ->setHtmlBody($vista);
 
         $mailer = new SendmailMailer();
         $mailer->send($mail);

@@ -354,7 +354,6 @@ h2 {
 .pagination li a {
   margin-right: 5px;
   background: transparent;
-  color: #fff;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
   border-radius: 5px !important;
@@ -362,6 +361,7 @@ h2 {
   border-color: #333;
   padding-top: 9px;
   padding-bottom: 9px;
+  color: #333;
 }
 .pagination li a:hover {
   background: #4b4b4d;
