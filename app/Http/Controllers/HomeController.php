@@ -135,7 +135,7 @@ class HomeController extends Controller
         $inmueble = $inmueble->leftJoin('tipos as tp', 'tp.id', '=', 'in.tipo_id')
                             ->leftJoin('ofertas as of', 'of.id', '=', 'in.oferta_id')
                             ->where('in.id', $id)
-                            ->select('in.id', 'tp.nombre as tipo', 'of.nombre as oferta', 'in.direccion', 'in.precio', 'in.descripcion', 'in.area', 'in.habitacion', 'in.banho', 'in.direccion', 'in.piscina', 'in.parqueadero', 'in.cocina', 'in.zona_residencial', 'in.conjunto_cerrado', 'in.porteria', 'in.patio', 'in.destacado')
+                            ->select('in.id', 'tp.nombre as tipo', 'of.nombre as oferta', 'in.direccion', 'in.precio', 'in.descripcion', 'in.area', 'in.habitacion', 'in.banho', 'in.direccion', 'in.piscina', 'in.parqueadero', 'in.cocina', 'in.zona_residencial', 'in.conjunto_cerrado', 'in.porteria', 'in.patio', 'in.destacado', 'in.salon', 'in.cocineta', 'in.mezanine', 'in.cuarto_servicio', 'in.banho_servicio', 'in.locker')
                             ->first();
 
         $tmp = (new Inmueble())->setTable('inmuebles as in');

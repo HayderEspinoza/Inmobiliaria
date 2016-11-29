@@ -770,6 +770,7 @@ div > .item-beneficios {
 }
 .imagen-detalle {
   padding: 5px !important;
+  border: 1px solid #ddd;
   cursor: pointer;
 }
 .show-image {

@@ -33,25 +33,38 @@
 	        <br>
         </div>
 		<div class="col-md-8">
-			<div class="row">
-				<div class="col-md-12">
-					@if ($portada != null)
-						<img src="{{ asset('/img/inmuebles/'.$portada->nombre) }}" alt="" class="img-responsive show-image" id="portada">
-					@else
-						<img src="{{ asset('/img/inmuebles/default2.png') }}" alt="" class="img-responsive show-image" id="portada">
-					@endif
-				</div>
+			<div id="img-portada" class="carousel slide" data-ride="carousel">
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner show-image" role="listbox">
+			  	@foreach ($imagenes as $index => $imagen)
+			  		@if ($index == 0)
+			  			<a href="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" class="item active image-link">
+					      <img src="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" alt="Prueba">
+					    </a>
+			  		@else
+					    <a href="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" class="item image-link">
+					      <img src="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" alt="Prueba">
+					    </a>
+			  		@endif
+				@endforeach
+			  </div>
+			  <!-- Controls -->
+				<a class="left carousel-control" href="#img-portada" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#img-portada" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+				<!-- Indicators -->
 			</div>
-			<br>
-			<div class="row">
-				<div class="col-md-12">
-					@foreach ($imagenes as $imagen)
-						<div class="col-md-2 imagen-detalle">
-							<img src="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" alt="" class="img-responsive show-image" title="Ver Imagen">
-						</div>
-					@endforeach
-				</div>
-			</div>
+				@foreach ($imagenes as $index => $imagen)
+					<div data-target="#img-portada" data-slide-to="{{ $index }}" class="col-lg-3 imagen-detalle">
+						<img src="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" alt="" class="img-responsive">
+					</div>
+				@endforeach
+			
 		</div>
 		<div class="col-md-4">
 			<div class="row">
@@ -149,6 +162,31 @@
 				<tr>
 					<th>PATIO:</th>
 					<td class="text-right">{{ $inmueble->patio }}</td>
+				</tr>
+
+				<tr>
+					<th>SALON:</th>
+					<td class="text-right">{{ $inmueble->salon }}</td>
+				</tr>
+				<tr>
+					<th>COCINETA:</th>
+					<td class="text-right">{{ $inmueble->cocineta }}</td>
+				</tr>
+				<tr>
+					<th>MEZANINE:</th>
+					<td class="text-right">{{ $inmueble->mezanine }}</td>
+				</tr>
+				<tr>
+					<th>CUARTO DE SERVICIO:</th>
+					<td class="text-right">{{ $inmueble->cuarto_servicio }}</td>
+				</tr>
+				<tr>
+					<th>BAÑO DE SERVICIO:</th>
+					<td class="text-right">{{ $inmueble->banho_servicio }}</td>
+				</tr>
+				<tr>
+					<th>LOCKER:</th>
+					<td class="text-right">{{ $inmueble->locker }}</td>
 				</tr>
 			</table>
 		</div>
