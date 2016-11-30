@@ -234,22 +234,13 @@ h2 {
   font-size: 18px;
 }
 .busqueda-portada {
-  visibility: hidden;
+  margin: 50px 0;
 }
 .buscar {
   background: #ee1c24;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-}
-.formulario-portada {
-  visibility: hidden;
-}
-.formulario-portada input,
-.formulario-portada select {
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
 }
 .destacados {
   padding: 30px 0 70px 0;
@@ -882,6 +873,9 @@ div > .item-beneficios {
 .verde {
   color: #00b29f;
 }
+.camera_pag_ul {
+  background: #f00;
+}
 @media (min-width: 1200px) {
   .toggle {
     background: #ffcc29;
@@ -936,37 +930,6 @@ div > .item-beneficios {
     font-size: 50px;
     padding-top: 50px;
     vertical-align: middle;
-  }
-  .busqueda-portada {
-    visibility: visible;
-    position: absolute;
-    top: 70px;
-    left: 75%;
-    border: 1px solid #fff;
-    color: #fff;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    line-height: 15px;
-    padding: 6px;
-    cursor: pointer;
-  }
-  .busqueda-portada:hover {
-    color: #fff;
-  }
-  .busqueda-portada .icono-search {
-    padding: 6px 10px 8px 0;
-    border-right: 1px solid #fff;
-  }
-  .formulario-portada {
-    visibility: visible !important;
-    background: rgba(0,0,0,0.25);
-    width: 320px;
-    min-height: 500px;
-    padding: 50px 20px 30px 20px;
-    position: absolute;
-    top: 60px;
-    left: 75%;
   }
   .destacados .title-destacados span:after,
   .destacados .title-destacados span:before {

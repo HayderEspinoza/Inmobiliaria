@@ -33,37 +33,41 @@
 	        <br>
         </div>
 		<div class="col-md-8">
-			<div id="img-portada" class="carousel slide" data-ride="carousel">
-			  <!-- Wrapper for slides -->
-			  <div class="carousel-inner show-image" role="listbox">
-			  	@foreach ($imagenes as $index => $imagen)
-			  		@if ($index == 0)
-			  			<a href="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" class="item active image-link">
-					      <img src="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" alt="Prueba">
-					    </a>
-			  		@else
-					    <a href="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" class="item image-link">
-					      <img src="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" alt="Prueba">
-					    </a>
-			  		@endif
-				@endforeach
-			  </div>
-			  <!-- Controls -->
-				<a class="left carousel-control" href="#img-portada" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#img-portada" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
-				<!-- Indicators -->
-			</div>
+			@if (count($imagenes) > 0)
+				<div id="img-portada" class="carousel slide" data-ride="carousel">
+			  	<!-- Wrapper for slides -->
+					<div class="carousel-inner show-image" role="listbox">
+					  	@foreach ($imagenes as $index => $imagen)
+					  		@if ($index == 0)
+					  			<a href="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" class="item active image-link">
+							      <img src="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" alt="Prueba">
+							    </a>
+					  		@else
+							    <a href="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" class="item image-link">
+							      <img src="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" alt="Prueba">
+							    </a>
+					  		@endif
+						@endforeach
+					</div>
+				  	<!-- Controls -->
+					<a class="left carousel-control" href="#img-portada" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#img-portada" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+					<!-- Indicators -->
+				</div>
 				@foreach ($imagenes as $index => $imagen)
 					<div data-target="#img-portada" data-slide-to="{{ $index }}" class="col-lg-3 imagen-detalle">
 						<img src="{{ asset('/img/inmuebles/'.$imagen->nombre) }}" alt="" class="img-responsive">
 					</div>
 				@endforeach
+			@else
+				<img src="{{ asset('img/inmuebles/default2.png') }}" class="img-responsive" alt="Imagen Defautl">
+			@endif
 			
 		</div>
 		<div class="col-md-4">

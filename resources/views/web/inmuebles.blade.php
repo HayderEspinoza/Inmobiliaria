@@ -32,7 +32,7 @@
 				<br>
 				<div class="form-group">
 					<label for="tipo_id">TIPO DE PROPIEDAD</label>
-					{{ Form::select('tipo_id', $tipos, @$inputs['tipo_id'], ['class' => 'form-control']) }}
+					{{ Form::select('tipo_id', $tipos, @$inputs['tipo_id'], ['class' => 'multiselect']) }}
 				</div>
 	            <div class="form-group">
 	                <label for="oferta_id">TIPO DE OFERTA</label>

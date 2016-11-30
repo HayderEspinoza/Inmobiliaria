@@ -1,10 +1,6 @@
 $(window).on('load', init);
 
 function init(e) {
-	$('.carousel').carousel({
-        interval: 4000,
-        pause: false
-    });
 	$(".scroll").on("click", scroll);
 	$('.cerrar').on('click', cerrar);
 	$('.toggle').on('click', cerrar);
@@ -17,6 +13,14 @@ function init(e) {
 	});
 	$('.moneda').number( true, 0);
 	$('.image-link').magnificPopup({type:'image'});
+	$('.carousel').carousel({
+        interval: 4000,
+        pause: false
+    });
+    $('.multiselect').multiselect({
+        enableFiltering: true,
+        filterBehavior: 'value'
+    });
 }
 function scroll(event){
 	event.preventDefault();
@@ -29,7 +33,6 @@ function cerrar(e) {
 function showArrow(e) {
 	var y = $(this).scrollTop();
 	if (y > $(window).height()) {
-		console.log('prueba')
 		$('.scrollUp').fadeIn();
 	} else {
 		$('.scrollUp').fadeOut();

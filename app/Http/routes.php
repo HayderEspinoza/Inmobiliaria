@@ -25,6 +25,7 @@ Route::get('/home', 'InmuebleController@index');
 Route::resource('inmueble', 'InmuebleController');
 Route::resource('tipo', 'TipoController');
 Route::resource('ciudad', 'CiudadController');
+Route::resource('barrio', 'BarrioController');
 Route::put('perfil/{id}', ['as' => 'imagen.perfil', 'uses' => 'ImagenController@perfil']);
 Route::resource('inmueble.imagen', 'ImagenController');
 Route::put('inmueble/{inmueble}/imagen/{imagen}/left', ['as' => 'rotate.left', 'uses' => 'ImagenController@rotateLeft']);

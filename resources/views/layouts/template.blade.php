@@ -18,8 +18,8 @@
     <link href="{{ asset('full-slider/css/full-slider.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/pace.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/iconos.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-multiselect.css') }}">
     <link href="{{ asset('/css/estilo.css') }}" rel="stylesheet">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -119,12 +119,12 @@
 	<script src="{{asset('js/jquery.js')}}"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
-    <!-- Script to Activate the Carousel -->
-    <script src="{{asset('/js/accion.js')}}"></script>
     <!--Pace Js-->
     <script src="{{asset('/js/pace.min.js')}}"></script>
     <script src="{{ asset('js/jquery.number.min.js') }}"></script>
     <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-multiselect.js') }}"></script>
+    <!-- Script to Activate the Carousel -->
     <!--Start of Zopim Live Chat Script-->
     <script type="text/javascript">
         window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
@@ -133,8 +133,10 @@
         $.src="//v2.zopim.com/?4Djsq2Tk2jJEaWXyD64Rb2X3xzaYu6KF";z.t=+new Date;$.
         type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     </script>
+    @yield('js')
     <!--End of Zopim Live Chat Script-->
-	@yield('js')
+
+    <script src="{{asset('/js/accion.js')}}"></script>
     
 </body>
 </html>

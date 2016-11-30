@@ -1,5 +1,6 @@
 @extends('layouts.template')
 @section('estilos')
+    <link rel="stylesheet" href="{{ asset('css/camera.css') }}">
     <style>
         .fill{
             overflow: hidden;
@@ -16,233 +17,90 @@
     class="active"
 @stop
 @section('contenido')
-    <!-- Full Page Image Background Carousel Header -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-        <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <!-- Set the first background image using inline CSS below. -->
-                <div class="fill img-1" style="background-image:url('/img/portada/01.jpg')">
-                    <div class="container">
-                        <div class="col-lg-10 wrap-title">
-                            <h2 class="text-left">NUNCA ANTES FUE TAN FÁCIL CONSEGUIR PROPIEDAD EN CARTAGENA.</h2>
-                        </div>
-                    </div>
+    <div class="camera_wrap">
+        <div data-src="img/portada/01.jpg"></div>
+        <div data-src="img/portada/02.jpg"></div>
+        <div data-src="img/portada/03.jpg"></div>
+        <div data-src="img/portada/04.jpg"></div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="container">
+        <div class="row busqueda-portada">
+            {{ Form::open(['route' => 'web.inmuebles', 'method' => 'GET', 'class' => 'form']) }}
+                <div class="form-group col-md-2">
+                    <label for="tipo_id">Tipo de Inmueble</label>
+                    {{ Form::select('tipo_id', $tipos, null, ['class' => 'form-control']) }}
                 </div>
-            </div>
-            <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('/img/portada/02.jpg');">
-                    <div class="container">
-                        <div class="col-lg-7 block-center text-center wrap-title">
-                            <h2>SU INVERSIÓN EN LAS MEJORES MANOS.</h2>
-                        </div>
-                    </div>
+                <div class="form-group col-md-2">
+                    <label for="oferta_id">Oferta de Inmueble</label>
+                    {{ Form::select('oferta_id', $ofertas, null, ['class' => 'form-control']) }}
                 </div>
-            </div>
-            <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('/img/portada/03.jpg');">
-                    <div class="container">
-                        <div class="col-lg-7 wrap-title block-center text-center">
-                            <h2>AYUDAMOS A NUESTROS CLIENTES A TOMAR BUENAS DECISIONES.</h2>
-                        </div>
-                    </div>
+                <div class="form-group col-md-2">
+                    <label for="barrio_id">Barrio</label>
+                    {{ Form::select('barrio_id', $barrios, null, ['class' => 'form-control']) }}
                 </div>
-            </div>
-            <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('/img/portada/04.jpg');">
-                    <div class="container">
-                        <div class="row wrap-proyectos">
-                            <div class="col-md-4 link-proyectos block-center">
-                                <div class="caption-proyectos">
-                                    <h4 class="text-center">CONOCE NUESTROS PROYECTOS</h4>
-                                </div>
-                                <h2 class="text-center">VILLA ESCALLON</h2>
-                                <div class="col-sm-12 text-center">
-                                    <a href="{{ route('web.proyectos') }}" class="btn">VER PROYECTOS</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="form-group col-md-2">
+                    <label for="precio_min">Precio</label>
+                    {{ Form::text('precio_min', @$inputs['precio_min'], ['class' => 'form-control moneda', 'placeholder' => "Min"]) }}
                 </div>
-            </div>
-        </div>
-        <!--Formulario de busqueda-->
-        <div class="formulario-portada hidden-xs-down">
-            {{ Form::open(['route' => 'web.inmuebles', 'method' => 'get']) }}
-                <div class="form-group">
-                    {{ Form::select('tipo_id', $tipos, @$inputs['tipo_id'], ['class' => 'form-control']) }}
+                <div class="form-group col-md-2">
+                    <label for="precio_max">&nbsp;</label>
+                    {{ Form::text('precio_max', @$inputs['precio_max'], ['class' => 'form-control moneda', 'placeholder' => 'Max']) }}
                 </div>
-                <div class="form-group">
-                    {{ Form::select('oferta_id', $ofertas, @$inputs['oferta_id'], ['class' => 'form-control']) }}
-                </div>
-                <div class="form-group hidden">
-                    {{ Form::text('ciudad_id', 1) }}
-                </div>
-                <div class="form-group">
-                    {{ Form::text('direccion', @$inputs['direccion'], ['class' => 'form-control', 'placeholder' => 'Barrio']) }}
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-6">
-                        <label for="precio">Precio</label>
-                        {{ Form::text('precio_min', @$inputs['precio_min'], ['class' => 'form-control moneda', 'placeholder' => "Min"]) }}
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="precio">&nbsp;</label>
-                        {{ Form::text('precio_max', @$inputs['precio_max'], ['class' => 'form-control moneda', 'placeholder' => 'Max']) }}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-6">
-                        <label for="habitacion">Habitaciones</label>
-                        {{ Form::text('habitacion', @$inputs['habitacion'], ['class' => 'form-control']) }}
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="banho">Baños</label>
-                        {{ Form::text('banho', @$inputs['banho'], ['class' => 'form-control']) }}
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="area">Area</label>
-                        {{ Form::text('area', @$inputs['area'], ['class' => 'form-control']) }}
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="antiguedad">Antiguedad</label>
-                        {{ Form::text('antiguedad', @$inputs['antiguedad'], ['class' => 'form-control']) }}
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn-danger text-center btn-lg btn-block buscar" value="BUSCAR" name="buscar">
+                <div class="form-group col-md-2">
+                    <label for="">&nbsp;</label>
+                    <input type="submit" class="btn btn-success form-control" name="buscar" value="Buscar">
                 </div>
             {{ Form::close() }}
         </div>
-        {{-- scroll down --}}
-        <div class="scroll-down text-center">
-            <a href="#destacados" class="btn-scroll scroll">
-                <span class="icon-arrow-down arrow-scroll"></span>
-                
-                <p class="scroll-text">
-                    SCROLL DOWN
-                </p>
-            </a>
-        </div>
-    </header>
-    <!-- Destacados-->
-    <div class="destacados" id="destacados">
-        <div class="container">
-            <div class="title-destacados text-center">
-                <span>INMUEBLES DETACADOS</span>
-            </div>
-            <div class="col-lg-9 block-center intro-inmuebles">
-                @foreach($destacados as $inmueble)
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="apartamento">
-                            <div class="img-apartamento img-responsive">
-                                @if($inmueble->imagen == null)
-                                    <a href="{{ route('web.inmueble', $inmueble->id) }}">
-                                        <img class="img-responsive" src="{{asset('img/inmuebles/default2.png')}}" alt="">
-                                    </a>
-                                @else
-                                    <a href="{{ route('web.inmueble', $inmueble->id) }}">
-                                        <img class="img-responsive" src="{{asset('img/inmuebles/'.$inmueble->imagen)}}" alt="">
-                                    </a>
-                                @endif
-                            </div>
-                            <div class="tipo-apartamento text-right">
-                                {{ $inmueble->oferta }}
-                            </div>
-                            <div class="descripcion">
-                                <h3 class="text-center">
-                                    {{ $inmueble->tipo }}
-                                </h3>
-                                {{-- <p class="text-justify">
-                                    {{ $inmueble->descripcion }}
-                                </p> --}}
-                                <p class="precio text-center">
-                                    <span class="">
-                                        $ {{ number_format($inmueble->precio, 0) }}
-                                    </span>
-                                </p>
-                                <table width="100%">
-                                    <tr>
-                                        <td>Area</td>
-                                        <td>Habs</td>
-                                        <td>Baños</td>
-                                        <td>Antig</td>
-                                    </tr>
-                                    <tr>
-                                        <td> {{ $inmueble->area }} M2</td>
-                                        <td> {{ $inmueble->habitacion }}</td>
-                                        <td> {{ $inmueble->banho }}</td>
-                                        <td> {{ $inmueble->antiguedad }}</td>
-                                    </tr>
-                                </table>
-                            </div>
+        <div class="row">
+            @foreach($inmuebles as $inmueble)
+                <div class="col-lg-3 col-sm-6">
+                    <div class="apartamento">
+                        <div class="img-apartamento img-responsive">
+                            @if($inmueble->imagen == null)
+                                <a href="{{ route('web.inmuebles', ['barrio_id' => $inmueble->barrio_id, 'buscar' => 'buscar']) }}">
+                                    <img class="img-responsive" src="{{asset('img/inmuebles/default2.png')}}" alt="">
+                                </a>
+                            @else
+                                <a href="{{ route('web.inmuebles', ['barrio_id' => $inmueble->barrio_id, 'buscar' => 'buscar']) }}">
+                                    <img class="img-responsive" src="{{asset('img/inmuebles/'.$inmueble->imagen)}}" alt="">
+                                </a>
+                            @endif
+                        </div>
+                        <div class="tipo-apartamento text-center">
+                            {{ $inmueble->barrio }}
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="text-center">
+                                {{ $inmueble->tipo }}
+                            </h3>
+                            {{-- <p class="text-justify">
+                                {{ $inmueble->descripcion }}
+                            </p> --}}
+                            <p class="precio text-center">
+                                <span class="">
+                                    $ {{ number_format($inmueble->precio, 0) }}
+                                </span>
+                            </p>
+                            <table width="100%">
+                                <tr>
+                                    <td>Area</td>
+                                    <td>Habs</td>
+                                    <td>Baños</td>
+                                    <td>Antig</td>
+                                </tr>
+                                <tr>
+                                    <td> {{ $inmueble->area }} M2</td>
+                                    <td> {{ $inmueble->habitacion }}</td>
+                                    <td> {{ $inmueble->banho }}</td>
+                                    <td> {{ $inmueble->antiguedad }}</td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
-                @endforeach
-            </div>
-            <div class="clearfix"></div>
-            <div class="title-destacados text-center">
-                <span>INMUEBLES RECIENTES</span>
-            </div>
-            <div class="col-lg-9 block-center intro-inmuebles">
-                @foreach($recientes as $inmueble)
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="apartamento">
-                            <div class="img-apartamento img-responsive">
-                                @if($inmueble->imagen == null)
-                                    <a href="{{ route('web.inmueble', $inmueble->id) }}">
-                                        <img class="img-responsive" src="{{asset('img/inmuebles/default2.png')}}" alt="">
-                                    </a>
-                                @else
-                                    <a href="{{ route('web.inmueble', $inmueble->id) }}">
-                                        <img class="img-responsive" src="{{asset('img/inmuebles/'.$inmueble->imagen)}}" alt="">
-                                    </a>
-                                @endif
-                            </div>
-                            <div class="tipo-apartamento text-right">
-                                {{ $inmueble->oferta }}
-                            </div>
-                            <div class="descripcion">
-                                <h3 class="text-center">
-                                    {{ $inmueble->tipo }}
-                                </h3>
-                                {{-- <p class="text-justify">
-                                    {{ $inmueble->descripcion }}
-                                </p> --}}
-                                <p class="precio text-center">
-                                    <span class="">
-                                        $ {{ number_format($inmueble->precio, 0) }}
-                                    </span>
-                                </p>
-                                <table width="100%">
-                                    <tr>
-                                        <td>Area</td>
-                                        <td>Habs</td>
-                                        <td>Baños</td>
-                                        <td>Antig</td>
-                                    </tr>
-                                    <tr>
-                                        <td> {{ $inmueble->area }} M2</td>
-                                        <td> {{ $inmueble->habitacion }}</td>
-                                        <td> {{ $inmueble->banho }}</td>
-                                        <td> {{ $inmueble->antiguedad }}</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
         </div>
     </div>
     <!--Pie de Pagina-->
@@ -251,11 +109,27 @@
     @include('include.scrollUp', ['id' => 'myCarousel'])
 @endsection
 @section('js')
+    <script src="{{ asset('js/jquery-1.7.1.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.mobile-1.4.5.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ asset('js/camera.min.js') }}"></script>
     <script>
         $(window).on('load', function(){
             $('.busqueda-portada').on('click', function(){
                 $('.formulario-portada').slideToggle();
             });
+            $('.camera_wrap').camera({
+                loader: true,
+                autoadvance: true,
+                pagination: true ,
+                thumbnails: false,
+                height: '45%',
+                caption: false,
+                navigation: true,
+                time: 1000
+            });
+             
+            // $().UItoTop({ easingType: 'easeOutQuart' });
         });
     </script>
 @endsection

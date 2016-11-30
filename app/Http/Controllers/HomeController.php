@@ -17,30 +17,32 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $tipos = ['TIPO DE INMUEBLE']+Tipo::where('estado', '1')
+        $tipos = ['']+Tipo::where('estado', '1')
                     ->lists('nombre', 'id')
                     ->toArray();
-        $ofertas = ['TIPO DE OFERTA'] + Oferta::where('estado', '1')
+        $ofertas = [''] + Oferta::where('estado', '1')
                     ->lists('nombre', 'id')
                     ->toArray();
+
+        $barrios = Barrio::where('estado', '1')
+                ->orderBy('nombre')
+                ->lists('nombre', 'id');
+
         $inmueble = (new Inmueble())->setTable('inmuebles as in');
-        $query = $inmueble->select('in.id', 'of.nombre as oferta', 'in.descripcion','tp.nombre as tipo', 'in.precio', 'in.area', 'in.habitacion', 'in.banho', 'in.antiguedad', 'img.nombre as imagen')
+        $inmuebles = $inmueble->select( \DB::raw('distinct(in.barrio_id)'), 'in.id', 'of.nombre as oferta', 'in.descripcion','tp.nombre as tipo', 'in.precio', 'in.area', 'in.habitacion', 'in.banho', 'in.antiguedad', 'img.nombre as imagen', 'br.nombre as barrio')
                             ->leftJoin('tipos as tp', 'tp.id', '=', 'in.tipo_id')
                             ->leftJoin('ofertas as of', 'of.id', '=', 'in.oferta_id')
                             ->leftJoin('ciudades as ci', 'ci.id', '=', 'in.ciudad_id')
+                            ->leftJoin('barrios as br', 'br.id', '=', 'in.barrio_id')
                             ->leftJoin('imagenes as img', function($q){
                                 $q->on('img.inmueble_id', '=', 'in.id');
                                 $q->where('img.perfil', '=', '1');
                             })
                             ->where('in.estado', '1');
-        $recientes = clone $query;
-        $destacados =   $query->orderBy('in.destacado', 'desc')
-                            ->take(3)
-                            ->get();
-        $recientes = $recientes->orderBy('in.id')
-                            ->take(3)
-                            ->get();
-        return view('web.home', compact('tipos', 'ofertas', 'destacados', 'recientes'));
+        $inmuebles =   $inmuebles->orderBy('in.destacado', 'desc')
+                                ->get();
+        debug($inmuebles);
+        return view('web.home', compact('tipos', 'ofertas', 'inmuebles', 'barrios'));
     }
     public function inmuebles(Request $data)
     {

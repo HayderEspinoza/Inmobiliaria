@@ -74,6 +74,11 @@
                             Ciudades
                         </a>
                     </li>
+                    <li @yield('barrio')>
+                        <a href="{{route('barrio.index')}}">
+                            Barrios
+                        </a>
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
