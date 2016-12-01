@@ -29,7 +29,7 @@ class HomeController extends Controller
                 ->lists('nombre', 'id');
 
         $inmueble = (new Inmueble())->setTable('inmuebles as in');
-        $inmuebles = $inmueble->select( \DB::raw('distinct(in.barrio_id)'), 'in.id', 'of.nombre as oferta', 'in.descripcion','tp.nombre as tipo', 'in.precio', 'in.area', 'in.habitacion', 'in.banho', 'in.antiguedad', 'img.nombre as imagen', 'br.nombre as barrio')
+        $inmuebles = $inmueble->select( \DB::raw('MAX(destacado)'), 'tp.nombre as tipo', 'in.precio', 'in.area', 'in.habitacion', 'in.banho', 'in.antiguedad', 'img.nombre as imagen', 'br.nombre as barrio', 'in.barrio_id')
                             ->leftJoin('tipos as tp', 'tp.id', '=', 'in.tipo_id')
                             ->leftJoin('ofertas as of', 'of.id', '=', 'in.oferta_id')
                             ->leftJoin('ciudades as ci', 'ci.id', '=', 'in.ciudad_id')
@@ -38,9 +38,9 @@ class HomeController extends Controller
                                 $q->on('img.inmueble_id', '=', 'in.id');
                                 $q->where('img.perfil', '=', '1');
                             })
-                            ->where('in.estado', '1');
-        $inmuebles =   $inmuebles->orderBy('in.destacado', 'desc')
-                                ->get();
+                            ->where('in.estado', '1')
+                            ->groupBy('in.barrio_id');
+        $inmuebles =   $inmuebles->get();
         debug($inmuebles);
         return view('web.home', compact('tipos', 'ofertas', 'inmuebles', 'barrios'));
     }

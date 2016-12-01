@@ -71,13 +71,13 @@
                         <div class="tipo-apartamento text-center">
                             {{ $inmueble->barrio }}
                         </div>
-                        <div class="descripcion">
+                        {{-- <div class="descripcion">
                             <h3 class="text-center">
                                 {{ $inmueble->tipo }}
                             </h3>
-                            {{-- <p class="text-justify">
+                            <p class="text-justify">
                                 {{ $inmueble->descripcion }}
-                            </p> --}}
+                            </p>
                             <p class="precio text-center">
                                 <span class="">
                                     $ {{ number_format($inmueble->precio, 0) }}
@@ -97,7 +97,7 @@
                                     <td> {{ $inmueble->antiguedad }}</td>
                                 </tr>
                             </table>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             @endforeach

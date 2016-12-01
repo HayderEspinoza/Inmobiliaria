@@ -32,7 +32,7 @@
 				<br>
 				<div class="form-group">
 					<label for="tipo_id">TIPO DE PROPIEDAD</label>
-					{{ Form::select('tipo_id', $tipos, @$inputs['tipo_id'], ['class' => 'multiselect']) }}
+					{{ Form::select('tipo_id', $tipos, @$inputs['tipo_id'], ['class' => 'form-control']) }}
 				</div>
 	            <div class="form-group">
 	                <label for="oferta_id">TIPO DE OFERTA</label>
@@ -77,103 +77,106 @@
 	            		{{ Form::text('antiguedad', @$inputs['antiguedad'], ['class' => 'form-control']) }}
 	            	</div>
 	            </div>
-	            <div class="row">
-					<div class="col-lg-12 text-center title-formulario">
+					<a class="btn btn-block btn-default" style="color:black;" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 						CARACTERISTICAS EXTRAS
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-	  					<label>
-	  						{{Form::checkbox('piscina', 1, @$inputs['piscina'])}} Piscina
-	  					</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-	  					<label>
-	  						{{Form::checkbox('parqueadero', 1, @$inputs['parqueadero'])}} Parqueadero
-	  					</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-	  					<label>
-	  						{{Form::checkbox('cocina', 1, @$inputs['cocina'])}} Cocina Integral
-	  					</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-	  					<label>
-	  						{{Form::checkbox('zona_residencial', 1, @$inputs['zona_residencial'])}}
-	  						Zona Residencial
-	  					</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-	  					<label>
-	  						{{Form::checkbox('conjunto_cerrado', 1, @$inputs['conjunto_cerrado'])}} Conjunto Cerrado
-	  					</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-	  					<label>
-	  						{{Form::checkbox('porteria', 1, @$inputs['porteria'])}} Porteria
-	  					</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-	  					<label>
-                            {{Form::checkbox('patio', 1, @$inputs['patio'])}} Patio
-	  					</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-	  					<label>
-                            {{Form::checkbox('salon', 1, @$inputs['salon'])}} Salon
-	  					</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-	  					<label>
-                            {{Form::checkbox('cocineta', 1, @$inputs['cocineta'])}} Cocineta
-	  					</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-	  					<label>
-                            {{Form::checkbox('mezanine', 1, @$inputs['mezanine'])}} Mezanine
-	  					</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-	  					<label>
-                            {{Form::checkbox('cuarto_servicio', 1, @$inputs['cuarto_servicio'])}} Cuarto Servicio
-	  					</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-	  					<label>
-                            {{Form::checkbox('banho_servicio', 1, @$inputs['banho_servicio'])}} Baño Servicio
-	  					</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-	  					<label>
-                            {{Form::checkbox('locker', 1, @$inputs['locker'])}} Locker
-	  					</label>
-					</div>
-				</div>
+					</a>
+					<div class="collapse" id="collapseExample">
+						<div class="well">
+							<div class="form-group">
+								<div class="checkbox">
+				  					<label>
+				  						{{Form::checkbox('piscina', 1, @$inputs['piscina'])}} Piscina
+				  					</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+				  					<label>
+				  						{{Form::checkbox('parqueadero', 1, @$inputs['parqueadero'])}} Parqueadero
+				  					</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+				  					<label>
+				  						{{Form::checkbox('cocina', 1, @$inputs['cocina'])}} Cocina Integral
+				  					</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+				  					<label>
+				  						{{Form::checkbox('zona_residencial', 1, @$inputs['zona_residencial'])}}
+				  						Zona Residencial
+				  					</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+				  					<label>
+				  						{{Form::checkbox('conjunto_cerrado', 1, @$inputs['conjunto_cerrado'])}} Conjunto Cerrado
+				  					</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+				  					<label>
+				  						{{Form::checkbox('porteria', 1, @$inputs['porteria'])}} Porteria
+				  					</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+				  					<label>
+			                            {{Form::checkbox('patio', 1, @$inputs['patio'])}} Patio
+				  					</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+				  					<label>
+			                            {{Form::checkbox('salon', 1, @$inputs['salon'])}} Salon
+				  					</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+				  					<label>
+			                            {{Form::checkbox('cocineta', 1, @$inputs['cocineta'])}} Cocineta
+				  					</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+				  					<label>
+			                            {{Form::checkbox('mezanine', 1, @$inputs['mezanine'])}} Mezanine
+				  					</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+				  					<label>
+			                            {{Form::checkbox('cuarto_servicio', 1, @$inputs['cuarto_servicio'])}} Cuarto Servicio
+				  					</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+				  					<label>
+			                            {{Form::checkbox('banho_servicio', 1, @$inputs['banho_servicio'])}} Baño Servicio
+				  					</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+				  					<label>
+			                            {{Form::checkbox('locker', 1, @$inputs['locker'])}} Locker
+				  					</label>
+								</div>
+							</div>	
+						</div>
+					</div>	
+				<br>					
 				<div class="form-group">
 	                <input type="submit" class="btn-danger text-center btn-lg btn-block buscar" value="BUSCAR" name="buscar">
 	            </div>
