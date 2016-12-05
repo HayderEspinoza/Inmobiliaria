@@ -149,6 +149,20 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="col-md-3">
+                            <div class="checkbox">
+                                <label>
+                                    {{Form::checkbox('balcon', null)}} Balcon
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="checkbox">
+                                <label>
+                                    {{Form::checkbox('terraza', null)}} Terraza
+                                </label>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="form-group">

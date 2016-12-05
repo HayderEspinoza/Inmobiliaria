@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Inmueble extends Intermediate
 {
     protected $table = 'inmuebles';
-    protected $fillable = ['tipo_id', 'ciudad_id', 'barrio_id', 'oferta_id', 'direccion', 'habitacion', 'banho', 'area', 'parqueadero', 'piscina', 'cocina', 'zona_residencial', 'conjunto_cerrado', 'porteria', 'patio', 'antiguedad', 'salon', 'cocineta', 'mezanine', 'cuarto_servicio', 'banho_servicio', 'locker','precio', 'descripcion', 'estado'];
+    protected $fillable = ['tipo_id', 'ciudad_id', 'barrio_id', 'oferta_id', 'direccion', 'habitacion', 'banho', 'area', 'parqueadero', 'piscina', 'cocina', 'zona_residencial', 'conjunto_cerrado', 'porteria', 'patio', 'antiguedad', 'salon', 'cocineta', 'mezanine', 'cuarto_servicio', 'banho_servicio', 'locker','precio', 'descripcion', 'estado', 'terraza', 'balcon'];
 
     public function setParqueaderoAttribute($value='')
     {
@@ -66,6 +66,14 @@ class Inmueble extends Intermediate
     public function setLockerAttribute($value='')
     {
         $this->attributes['locker'] = $this->checkbox($value);
+    }
+    public function setBalconAttribute($value='')
+    {
+        $this->attributes['balcon'] = $this->checkbox($value);
+    }
+    public function setTerrazaAttribute($value='')
+    {
+        $this->attributes['terraza'] = $this->checkbox($value);
     }
 
     public function checkbox($value='')

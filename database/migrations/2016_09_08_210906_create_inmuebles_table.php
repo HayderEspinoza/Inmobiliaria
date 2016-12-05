@@ -37,6 +37,8 @@ class CreateInmueblesTable extends Migration
             $table->boolean('cuarto_servicio')->default('0');
             $table->boolean('banho_servicio')->default('0');
             $table->boolean('locker')->default('0');
+            $table->boolean('balcon')->default('0');
+            $table->boolean('terraza')->default('0');
             $table->integer('precio');
             $table->string('descripcion')->default('N/A');
             $table->integer('destacado')->default(0);

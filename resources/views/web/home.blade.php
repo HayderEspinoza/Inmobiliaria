@@ -123,7 +123,7 @@
                 autoadvance: true,
                 pagination: true ,
                 thumbnails: false,
-                height: '45%',
+                height: '35%',
                 caption: false,
                 navigation: true,
                 time: 1000
