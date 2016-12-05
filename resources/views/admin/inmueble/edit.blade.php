@@ -60,6 +60,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('piscina', false) !!}
                                     {{Form::checkbox('piscina', null)}} Piscina
                                 </label>
                             </div>
@@ -67,6 +68,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('parqueadero', false) !!}
                                     {{Form::checkbox('parqueadero', null)}} Parqueadero
                                 </label>
                             </div>
@@ -74,6 +76,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('cocina', false) !!}
                                     {{Form::checkbox('cocina', null)}} Cocina Integral
                                 </label>
                             </div>
@@ -81,6 +84,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('zona_residencial', false) !!}
                                     {{Form::checkbox('zona_residencial', null)}} Zona Residencial
                                 </label>
                             </div>
@@ -89,6 +93,7 @@
                             <div class="checkbox">
                                 <label>
 
+                                    {!! Form::hidden('conjunto_cerrado', false) !!}
                                     {{Form::checkbox('conjunto_cerrado', null)}} Conjunto Cerrado
                                 </label>
                             </div>
@@ -96,6 +101,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('porteria', false) !!}
                                     {{Form::checkbox('porteria', null)}} Porteria
                                 </label>
                             </div>
@@ -103,6 +109,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('patio', false) !!}
                                     {{Form::checkbox('patio', null)}} Patio
                                 </label>
                             </div>
@@ -110,6 +117,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('salon', false) !!}
                                     {{Form::checkbox('salon', null)}} Salón
                                 </label>
                             </div>
@@ -117,6 +125,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('cocineta', false) !!}
                                     {{Form::checkbox('cocineta', null)}} Cocineta
                                 </label>
                             </div>
@@ -124,6 +133,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('mezanine', false) !!}
                                     {{Form::checkbox('mezanine', null)}} Mezanine
                                 </label>
                             </div>
@@ -131,6 +141,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('cuarto_servicio', false) !!}
                                     {{Form::checkbox('cuarto_servicio', null)}} Cuarto Servicio
                                 </label>
                             </div>
@@ -138,6 +149,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('banho_servicio', false) !!}
                                     {{Form::checkbox('banho_servicio', null)}} Baño Servicio
                                 </label>
                             </div>
@@ -145,6 +157,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('locker', false) !!}
                                     {{Form::checkbox('locker', null)}} locker
                                 </label>
                             </div>
@@ -152,6 +165,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('balcon', false) !!}
                                     {{Form::checkbox('balcon', null)}} Balcon
                                 </label>
                             </div>
@@ -159,6 +173,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>
+                                    {!! Form::hidden('terraza', false) !!}
                                     {{Form::checkbox('terraza', null)}} Terraza
                                 </label>
                             </div>
